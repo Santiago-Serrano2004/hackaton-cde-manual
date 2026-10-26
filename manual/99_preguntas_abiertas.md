@@ -151,3 +151,23 @@ Fecha de consulta de todas: **26-oct-2026**. Herramienta: búsqueda web (resulta
 
 ### PA-23 ¿Mover reportes (T-16) de Santiago a Julián?
 - **Por qué bloquea:** Santiago acumula ~15 h nominales contra ~12 h disponibles. **Opciones:** mover T-16 a J; recortar T-14 a solo CSV. **Recomendación:** mover T-16 a J si T-25 se acaba antes. **Decide:** los tres, a las 10:00 del 28.
+
+## I. Añadidas en F9
+
+### PA-24 Costos reales de infraestructura y mantenimiento
+- **Por qué bloquea:** sostenibilidad (15 pts). **Recomendación:** cotizar un VPS equivalente y estimar horas de mantenimiento; mientras tanto presentar solo la estructura de costos. **Decide:** Julián (infraestructura) + MP (negocio).
+
+### PA-25 Nombre del producto y del equipo en el pitch
+- El chat propone un nombre de equipo. **Recomendación:** elegir el nombre del producto antes del 28. **Decide:** los tres.
+
+### PA-26 ¿Puede sumarse un asesor de negocio/diseño/derecho al equipo (interdisciplinariedad)?
+- **Decide:** equipo y CDE (reglas permiten 4 integrantes estudiantes activos).
+
+| # | Afirmación | Estado |
+|---|---|---|
+| NV-20 | HubSpot: plan gratuito (2 usuarios, 1 000 contactos), Starter ≈ US$20 por usuario/mes (lista) | Páginas de terceros; `[NO VERIFICADO]` en hubspot.com |
+| NV-21 | Salesforce Starter Suite US$25 por usuario/mes | Páginas regionales de Salesforce vía búsqueda; `[NO VERIFICADO]` directamente |
+| NV-22 | Airtable Team ≈ US$20 por editor/mes anual; 50 000 registros por base | Terceros; `[NO VERIFICADO]` |
+| NV-23 | Software de aceleradoras (AcceleratorApp, Accubate, Babele, Skipso, TheIncubatorPro, F6S): categorías y funciones | Artículos del proveedor AcceleratorApp (sesgo comercial) y GetApp; `[NO VERIFICADO]` |
+| NV-24 | Moodle Level Up XP: puntos, niveles, clasificación, notificaciones; ~25 000 sitios | moodle.org (resumen de búsqueda); licencia `[NO VERIFICADO]` |
+| NV-25 | Salesforce Nonprofit Cloud: casos y programas; Education Cloud sin evidencia de funciones para centros de emprendimiento | Parcial; `[NO VERIFICADO]` |

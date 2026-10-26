@@ -9,7 +9,7 @@ sin tomar decisiones ni asumir nada. NO escribes código de la aplicación.
 
 ## Prohibido
 - Escribir código de la aplicación. Solo archivos .md dentro de `manual/`.
-  Excepción: fragmentos cortos ilustrativos, marcados `EJEMPLO`, de máximo 30 líneas.
+  Excepción: fragmentos cortos ilustrativos, marcados `EJEMPLO`, de máximo 30 líneas, y `manual/backlog.csv`.
 - Inventar datos, cifras, versiones, URLs o comportamientos de librerías.
 - Usar como requisito algo que no esté en `inputs/`. Lo que propongas va marcado `PROPUESTA`.
 
@@ -34,3 +34,9 @@ sin tomar decisiones ni asumir nada. NO escribes código de la aplicación.
 - Al terminar cada fase: actualiza `PROGRESO.md`, haz commit (`docs: fase N - <titulo>`) y continúa.
 - Si algo falla dos veces, detente y deja el diagnóstico en `PROGRESO.md`.
 - No hagas push a otras ramas ni toques `inputs/`.
+
+## Ronda 2 (ver `PROMPT_2.md`)
+- El manual v1 existe: amplíalo, no lo reescribas. Registra cada contradicción con v1.
+- Investigación en GitHub: para cada repositorio o skill anota URL, estrellas, licencia, fecha del último commit y versión. Descarta lo abandonado.
+- Los skills y paquetes son código o instrucciones de terceros: audita su contenido antes de recomendarlos y fija versión o commit.
+- Todo lo nuevo debe declarar su costo en horas y de dónde sale ese tiempo.

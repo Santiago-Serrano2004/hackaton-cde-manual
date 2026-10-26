@@ -16,3 +16,13 @@ Marca cada fase al terminarla. Si la sesión se corta, la siguiente retoma desde
 ## Notas / diagnósticos
 - 2026-10-26 (sesión de redacción): F1–F11 completas. La búsqueda web funcionó con resultados de terceros; el acceso directo a sitios oficiales estuvo bloqueado (HTTP 403 del proxy), por lo que todas las versiones y afirmaciones técnicas quedan `[NO VERIFICADO]` contra la fuente primaria. Lista y plan de verificación en `99_preguntas_abiertas.md` (NV-01..NV-25, sección J).
 - Pendientes que requieren decisión humana: las 10 decisiones de `INDEX.md` y las preguntas PA-01..PA-26.
+
+## Ronda 2 (ejecutar con PROMPT_2.md)
+- [ ] F12 Verificación de lo no verificado (`12_verificacion.md`)
+- [ ] F13 Factores diferenciadores (`13_diferenciadores.md`)
+- [ ] F14 Backlog de funcionalidades (`14_backlog.md`, `backlog.csv`)
+- [ ] F15 Frontend: skills, librerías y recursos (`15_frontend_skills_y_ui.md`)
+- [ ] F16 Sistema de diseño y dirección de arte (`16_sistema_de_diseno.md`)
+- [ ] F17 Specs autocontenidas por tarea (`tareas/`)
+- [ ] F18 Pitch y demo v2 (`18_pitch_v2.md`)
+- [ ] F19 Kit local y auditoría v2 (`19_kit_local.md`)

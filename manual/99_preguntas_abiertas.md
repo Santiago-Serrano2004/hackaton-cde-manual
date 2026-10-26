@@ -124,3 +124,19 @@ Fecha de consulta de todas: **26-oct-2026**. Herramienta: búsqueda web (resulta
 |---|---|---|
 | NV-13 | Laravel 13 soporta cola `database`, `schedule:work`, `lockForUpdate`, cast encriptado y `Pest arch()` | `[NO VERIFICADO]` contra docs oficiales; se asumen mecanismos estables desde versiones anteriores |
 | NV-14 | Cabeceras de seguridad recomendadas (CSP, XFO, XCTO, Referrer-Policy) | Práctica general `[NO VERIFICADO]` en OWASP Secure Headers |
+
+## G. Añadidas en F6
+
+### PA-20 Identidad visual (colores, logo, tipografía) del CDE/UNAB
+- **Por qué bloquea:** consistencia de marca; la paleta es `PROPUESTA`. **Recomendación:** usar paleta neutra y cambiar tokens si el CDE entrega su manual. **Decide:** CDE.
+
+### PA-21 ¿El CDE ya ofrece capacitaciones con contenido propio (videos/material) que deban enlazarse al módulo?
+- **Recomendación:** el MVP no aloja contenido; enlaza eventos reales. **Decide:** CDE.
+
+| # | Afirmación | Estado |
+|---|---|---|
+| NV-15 | Deterding et al. (2011), MindTrek, pp. 9–15, DOI 10.1145/2181037.2181040; definición de gamificación | Metadatos y definición confirmados por varias páginas (ITU, Waterloo, OpenAlex); texto no leído |
+| NV-16 | Sailer y Homner (2020), Educ. Psychol. Rev. 32(1):77–112, DOI 10.1007/s10648-019-09498-w; g = 0,49 / 0,36 / 0,25 | Metadatos y cifras vía resumen de búsqueda (Springer, Augsburg); cifras `[NO VERIFICADO]` en el PDF |
+| NV-17 | Ryan y Deci (2000), Am. Psychol. 55(1):68–78, DOI 10.1037/0003-066X.55.1.68; tres necesidades básicas | Metadatos confirmados; contenido no leído → `[NO VERIFICADO]` |
+| NV-18 | SUS: promedio ≈ 68 (Sauro, MeasuringU); creado por Brooke; artículo canónico 1996 | Fuente secundaria; año `[NO VERIFICADO]` |
+| NV-19 | WCAG 1.4.3: 4,5:1 texto normal, 3:1 texto grande | Fuentes secundarias; `[NO VERIFICADO]` en w3.org |

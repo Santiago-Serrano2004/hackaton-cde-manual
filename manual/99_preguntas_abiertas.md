@@ -104,3 +104,17 @@ Fecha de consulta de todas: **26-oct-2026**. Herramienta: búsqueda web (resulta
 | NV-10 | Compatibilidad con Laravel 13 de spatie/laravel-permission, dompdf, php-open-source-saver/jwt-auth | `[NO VERIFICADO]` |
 | NV-11 | Vite 8 existe y exige Node ≥ 20.19 / 22.12; Tailwind 4.3.x; React 19.2.x | `[NO VERIFICADO]` contra fuentes oficiales |
 | NV-12 | pg_trgm es módulo estándar de PostgreSQL; `similarity()` devuelve 0–1; índices GIN/GiST con `gin_trgm_ops` | Fuentes de terceros (Neon); no contrastado con postgresql.org |
+
+## E. Añadidas en F4
+
+### PA-17 Estructura real del diagnóstico de madurez
+- **Por qué bloquea:** RF-05/RF-22; el modelo por dimensiones (0–100) es `PROPUESTA`.
+- **Opciones:** (a) adoptar la estructura real del CDE; (b) mantener la propuesta y mapearla luego.
+- **Recomendación:** pedir al CDE el instrumento (columnas de la hoja actual). **Decide:** CDE.
+
+### PA-18 Registro de la base de datos y política de tratamiento
+- Aspecto legal (Ley 1581 de 2012) a cargo de la UNAB; el sistema solo da las medidas técnicas. `[NO VERIFICADO]` obligaciones exactas.
+- **Decide:** UNAB/CDE.
+
+### PA-19 Formato del NIT y manejo de personas naturales sin NIT
+- **Recomendación:** NIT opcional; deduplicar por correo y nombre cuando falte. **Decide:** CDE.

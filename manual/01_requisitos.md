@@ -95,7 +95,7 @@ Aceptación en formato verificable. "Demo" = se ejecuta en vivo o con datos semb
 | ID | Requisito | Prior. | Criterio de aceptación medible | Eval. | ISO | Origen |
 |---|---|---|---|---|---|---|
 | RF-01 | Ficha de empresa: razón social/nombre, NIT (si existe), tipo de negocio, sector (catálogo 17), tamaño, rango de ingresos, estado de formalización, relación con UNAB (estudiante/graduado/colaborador/externo), contactos y emprendedor(es) | M | Crear y editar una empresa con todos los campos; el 100 % de los campos del catálogo se eligen de listas, no de texto libre | FUN | AF | RES-01 |
-| RF-02 | Deduplicación al crear/importar: detecta coincidencia por NIT normalizado, correo normalizado y similitud de nombre | M | Con 10 duplicados sembrados, el sistema marca ≥ 9 antes de guardar y ofrece fusionar | FUN | AF, FI | RES-01, CRI-07 |
+| RF-02 | Deduplicación al crear/importar: detecta coincidencia por NIT normalizado, correo normalizado y similitud de nombre | M | Con los 12 duplicados sembrados (`04`), el sistema marca ≥ 11 antes de guardar y ofrece fusionar | FUN | AF, FI | RES-01, CRI-07 |
 | RF-03 | Fusión de duplicados conservando historial (citas, proyectos, etc. migran a la empresa destino) | M | Tras fusionar, 0 registros huérfanos y el historial de ambas fichas aparece en la destino | FUN | AF, FI | CRI-07 |
 | RF-04 | Indicador de completitud de la ficha y lista de "fichas por completar" (sector/tamaño faltantes) | S | Panel muestra % completitud global; lista filtrable de fichas sin sector o sin tamaño | FUN | AF | DOL-04 |
 | RF-05 | Registro de diagnóstico de madurez (por fecha) con puntaje por dimensión y gráfica de evolución | M | Empresa con ≥ 2 diagnósticos muestra gráfica de evolución con ambos puntos | FUN | AF | RES-02 |

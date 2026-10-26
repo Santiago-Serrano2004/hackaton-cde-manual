@@ -20,7 +20,7 @@
 | 29-oct 9:15–10:30 | Pitch (5 + 5 min por equipo) |
 | 29-oct 12:00–12:30 | Anuncio del ganador |
 
-Total entre 8:00 y 9:00 del día siguiente: **25 h** de reloj. Con 8 h de sueño-descanso y 3 h de comidas/receso/validaciones no queda más de ~**14 h** de construcción por persona; el plan usa **12,75 h** por persona + 2 h de estabilización.
+Total entre 8:00 y 9:00 del día siguiente: **25 h** de reloj. Con 8 h de sueño-descanso y 3 h de comidas/receso/validaciones no queda más de ~**14 h** de construcción por persona; el plan asigna ~**12–13 h** nominales por persona y reserva ~2 h de estabilización; hay déficit declarado en §5.
 
 ## 2. Reparto de responsabilidades (PROPUESTA; PA-11)
 
@@ -125,7 +125,7 @@ Estimaciones en horas efectivas. "DoD" = definición de terminado (debe cumplirs
 | T-96 | Pruebas de seguridad y accesibilidad rápidas (listas de `08`) | S (seguridad), MP (accesibilidad) | 1,0 | T-91 | Ítems Must de los checklists en verde | RNF-03, 05 |
 | T-97 | Prueba de usabilidad con ≥ 3 personas (SUS + tarea) | MP | 0,75 | T-91 | Resultados anotados en `docs/USABILIDAD.md` | RNF-04 |
 
-Notas: (1) la suma por persona en el día 1: S ≈ 15,25 h nominales vs. 12,75 h disponibles → T-13 (2,5 h) y T-16 (1,25 h) se aceleran compartiendo (J ayuda con T-16 si adelanta T-25) y T-14 se recorta si hay retraso (ver contingencias). Los tiempos están sobrestimados a propósito en tareas de S porque es el camino crítico: **S es el cuello de botella**; por eso J y MP absorben pruebas y fixtures de S (T-30, T-45). Si el equipo lo cree razonable, mover T-16 a J (PA-23).
+Carga nominal por persona en el día 1 (suma de estimaciones de la tabla): S = 13,25 h (T-10, 11, 12, 13, 14, 16, 15); J = 13,25 h (T-02, 03, 20..25, 30); MP = 12,5 h (T-40..46). Disponibilidad día 1 con las ventanas de §4: 10:30–12:00 (1,5) + 14:00–17:00 (3) + 17:30–19:00 (1,5) + 19:45–00:30 (4,75) = **10,75 h**, más 00:30–01:30 (1 h, reservada al ensayo T-91), de modo que hay un **déficit de ~1,5–2,5 h por persona**. Se cubre así: (a) las estimaciones son nominales y las tareas con Should se recortan antes (ver `02` §3.4); (b) T-13 y T-24 incluyen tiempo de front que se puede simplificar; (c) la ventana 6:30–7:30 del día 2 corrige lo que se haya quedado en `P1`; (d) se activan las contingencias de §7 sin discutir. Si al revisar a las 10:00 el equipo no acepta el déficit, mover T-16 a J (PA-23) y recortar T-14 a CSV.
 
 ## 6. Validaciones con el CDE
 
@@ -160,5 +160,5 @@ Lo que queda **fuera** pase lo que pase: IA conversacional (RF-29), WhatsApp, ap
 
 ## Criterio de aceptación de este archivo
 - Cada requisito Must de `01` tiene tarea (ver trazabilidad en `08` §1).
-- Las horas por persona (12,75) no superan las disponibles: 10:30–12:00 (1,5), 14:00–17:00 (3), 17:30–19:00 (1,5), 19:45–02:00 (6,25) = **12,25 h** (S 5 min en V1) + ajustes; el plan declara que las estimaciones de S exceden y se mitigan (nota de §5).
+- Las horas disponibles (10,75 h en el día 1 más 1 h de ensayo) están por debajo de la carga nominal (12,5–13,25 h): el déficit está cuantificado y tiene mitigación en §5 y §7.
 - Sueño de 4 h por persona y 25 h totales respetadas.

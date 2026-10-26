@@ -3,7 +3,7 @@ Marca cada fase al terminarla. Si la sesión se corta, la siguiente retoma desde
 
 - [x] F1 Requisitos y trazabilidad (`01_requisitos.md`)
 - [x] F2 Reto, usuarios y alcance priorizado (`02_alcance_mvp.md`)
-- [ ] F3 Stack y decisiones técnicas (`03_stack.md`)
+- [x] F3 Stack y decisiones técnicas (`03_stack.md`)
 - [ ] F4 Modelo de datos y datos de demo (`04_datos.md`)
 - [ ] F5 Arquitectura, seguridad y calidad ISO 25010 (`05_arquitectura.md`)
 - [ ] F6 UX y módulo de gamificación (`06_ux_gamificacion.md`)

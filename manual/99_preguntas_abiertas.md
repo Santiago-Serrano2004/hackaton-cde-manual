@@ -82,3 +82,25 @@ Fecha de consulta de todas: **26-oct-2026**. Herramienta: búsqueda web (resulta
 | NV-06 | OWASP ASVS 5.0 publicado el 30-may-2025; OWASP Top 10 2025 existe (8.ª edición) | Parcial (owasp.org vía búsqueda) |
 | NV-07 | Hamari, Koivisto, Sarsa (2014), "Does Gamification Work?", HICSS-47, pp. 3025-3034, DOI 10.1109/HICSS.2014.377 | Verificado por metadatos; texto completo no leído |
 | NV-08 | Ley 1581 de 2012 (hábeas data), Decreto 1377 de 2013 compilado en Decreto 1074 de 2015; datos sensibles prohibidos salvo autorización explícita | Parcial; artículos exactos `[NO VERIFICADO]` |
+
+## D. Añadidas en F3
+
+### PA-13 Confirmar stack A (React + Laravel + PostgreSQL)
+- Puntaje en `03_stack.md` es `PROPUESTA`. **Recomendación:** A. **Decide:** los tres.
+
+### PA-14 Autenticación: Sanctum token vs. JWT de terceros
+- **Por qué bloquea:** primer módulo de la plantilla. **Opciones:** ver `03` §2. **Recomendación:** Sanctum Bearer. **Decide:** Santiago.
+
+### PA-15 ¿Desplegar desde `main` o `develop`?
+- **Recomendación:** `main`, con PR. **Decide:** Julián.
+
+### PA-16 ¿Hay internet estable en el laboratorio de Ingeniería Industrial, piso 7?
+- Si no lo hay, el plan B local es el principal. **Decide:** CDE/organización (preguntar el 28 a las 8:30).
+
+### NV-09 a NV-12 (adicionales)
+| # | Afirmación | Estado |
+|---|---|---|
+| NV-09 | Sanctum 13.x ofrece tokens con *abilities* | Confirmado por resumen de búsqueda de laravel.com/docs/13.x/sanctum; no se leyó la página completa |
+| NV-10 | Compatibilidad con Laravel 13 de spatie/laravel-permission, dompdf, php-open-source-saver/jwt-auth | `[NO VERIFICADO]` |
+| NV-11 | Vite 8 existe y exige Node ≥ 20.19 / 22.12; Tailwind 4.3.x; React 19.2.x | `[NO VERIFICADO]` contra fuentes oficiales |
+| NV-12 | pg_trgm es módulo estándar de PostgreSQL; `similarity()` devuelve 0–1; índices GIN/GiST con `gin_trgm_ops` | Fuentes de terceros (Neon); no contrastado con postgresql.org |

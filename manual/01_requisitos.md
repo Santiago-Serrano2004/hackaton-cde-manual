@@ -108,7 +108,7 @@ Aceptación en formato verificable. "Demo" = se ejecuta en vivo o con datos semb
 | RF-12 | Registro de asistencia (lista, código QR o enlace) y cruce inscritos vs. asistentes | M | Vista de evento: inscritos, asistentes, no-show y listado nominal; cifras suman | FUN | AF | CRI-04 |
 | RF-13 | Portal del emprendedor: etapa de acompañamiento, compromisos pendientes, citas, oferta recomendada, progreso de gamificación | M | Un emprendedor solo ve lo suyo; los 3 bloques cargan en < 2 s con datos de demo | FUN | AF, SE | CRI-05 |
 | RF-14 | Línea de tiempo del historial de la empresa (diagnósticos, proyectos, planes, citas, capacitaciones, eventos, intervenciones) sin doble registro | M | Desde el buscador a la línea de tiempo completa en ≤ 20 s (CRI-01 exige < 60 s) | FUN | AF, CI | CRI-01 |
-| RF-15 | Importación desde hojas de cálculo (CSV/XLSX) con vista previa, validación y reporte de errores/duplicados | M | Importar archivo de 500 filas en < 60 s mostrando resumen (creadas/actualizadas/rechazadas) | FUN | AF, CO | DOL-04, DOL-05 |
+| RF-15 | Importación desde hojas de cálculo (CSV/XLSX) con vista previa, validación y reporte de errores/duplicados | M | Importar archivo de 509 filas en < 60 s mostrando resumen (creadas/actualizadas/rechazadas) | FUN | AF, CO | DOL-04, DOL-05 |
 | RF-16 | Registro de intervenciones/atenciones unificado (un solo formulario alimenta línea de tiempo y reportes) | S | Un registro aparece en historial y en reportes sin captura adicional | FUN | AF | RES-07 |
 | RF-17 | Retos de formación con puntos (completar capacitación, asistir a evento, cumplir compromiso, completar ficha) | M | Completar un reto suma puntos en < 1 s y se refleja en perfil | FUN/DIF | AF, CI | RES-09 |
 | RF-18 | Niveles, insignias y rachas | M | Al cruzar un umbral, sube de nivel con retroalimentación visual; ≥ 5 insignias definidas | FUN/DIF | CI | RES-09 |
@@ -206,8 +206,8 @@ Todas las características tienen ≥ 2 requisitos Must o Should. Verificación 
 
 | # | Hallazgo | Impacto | Tratamiento |
 |---|---|---|---|
-| V-01 | El cronograma TyC dice "Desarrollo continuo" tras Validación 1 (5:00–5:30 p. m.) sin hora de fin; el .docx tiene la hora "no extraída" (nota en `01_TyC`). El pptx lo omite | Horas reales de sueño/trabajo nocturno | `99_preguntas_abiertas.md` PA-01; plan asume trabajo hasta ~10:00 p. m. + descanso (`07`) |
-| V-02 | TyC: validación 2 a las 8:00 a. m. pero "desarrollo final" 8:30–9:00 y cierre 9:00–9:15; el TyC §2 dice cierre del desarrollo a las 9:00 | El código se congela 8:00–8:30 en la práctica | Feature freeze a las 6:30 a. m. (`07`) |
+| V-01 | El cronograma TyC dice "Desarrollo continuo" tras Validación 1 (5:00–5:30 p. m.) sin hora de fin; el .docx tiene la hora "no extraída" (nota en `01_TyC`). El pptx lo omite | Horas reales de sueño/trabajo nocturno | `99_preguntas_abiertas.md` PA-01; plan asume trabajo hasta las 2:00 a. m., sueño 2:00–6:00 y regreso a las 6:00 (`07`) |
+| V-02 | TyC: validación 2 a las 8:00 a. m. pero "desarrollo final" 8:30–9:00 y cierre 9:00–9:15; el TyC §2 dice cierre del desarrollo a las 9:00 | El código se congela 8:00–8:30 en la práctica | Congelamiento de funciones (FF) a la 1:30 a. m. y solo correcciones a partir de entonces; cambios mínimos hasta las 8:45 (`07`) |
 | V-03 | Cronograma dice pitch 9:15–10:30 a. m. para 5 equipos × 10 min = 50 min, queda 25 min de holgura (cambios de turno) | Poco | Se ignora |
 | V-04 | "Cuántas personas se inscriben y asisten": no define si hay asistencia por QR, lista, etc. | Diseño de RF-12 | PA-05 |
 | V-05 | Envío de recordatorios: no se define canal (correo, WhatsApp, SMS) | RF-09 | PA-03 |

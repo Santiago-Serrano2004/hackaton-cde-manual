@@ -61,7 +61,7 @@ Formato: **HU-n** (rol) → Como… quiero… para… · *Aceptación* (Dado/Cua
 | HU-01 | Como **operador CDE** quiero buscar una empresa por nombre, NIT o correo para ver su historial completo | Dado 497 empresas, cuando escribo "Pamaderia", entonces aparece la panadería con coincidencia aproximada y al abrirla veo la línea de tiempo en ≤ 20 s totales | RF-28, RF-14 |
 | HU-02 | Como operador quiero crear una empresa y que el sistema me avise si ya existe para evitar duplicados | Dado una empresa existente con NIT 900.123.456-7, cuando creo otra con "9001234567", entonces el sistema la reconoce y ofrece abrir o fusionar | RF-02 |
 | HU-03 | Como operador quiero fusionar dos fichas duplicadas sin perder historial | Cuando fusiono A en B, entonces las citas/proyectos de A aparecen en B, A queda archivada y la fusión queda en auditoría | RF-03, RF-26 |
-| HU-04 | Como operador quiero importar la hoja de cálculo actual para no digitar | Dado un CSV de 500 filas, cuando lo cargo, entonces veo vista previa con filas válidas, duplicadas y con error, y confirmo la importación | RF-15 |
+| HU-04 | Como operador quiero importar la hoja de cálculo actual para no digitar | Dado un CSV de 509 filas, cuando lo cargo, entonces veo vista previa con filas válidas, duplicadas y con error, y confirmo la importación | RF-15 |
 | HU-05 | Como operador quiero registrar un diagnóstico y ver cómo evoluciona la madurez | Dado 2 diagnósticos, entonces veo gráfica por dimensión con ambos puntos y la diferencia | RF-05 |
 | HU-06 | Como **docente** quiero registrar un proyecto de aula con su equipo de consultores y área | Dado un semestre, asignatura, área y 3 estudiantes, entonces el proyecto aparece en la ficha de la empresa y en mi lista | RF-06 |
 | HU-07 | Como **estudiante consultor** quiero definir compromisos del plan de acción con responsable y fecha | Cada compromiso exige responsable, fecha y estado; no se guarda sin ellos | RF-07 |
@@ -90,7 +90,7 @@ Fija una **narrativa única** con una empresa protagonista sembrada: *"Panaderí
 
 | Paso | Qué se muestra | Duración | Requisito | Dolor/criterio que demuestra |
 |---|---|---|---|---|
-| 1 | Operador entra, **importa una hoja** con 500 filas → vista previa marca 12 duplicados → confirma | 40 s | RF-15, RF-02 | DOL-04, CRI-07 |
+| 1 | Operador entra, **importa una hoja** de 509 filas → vista previa marca 12 duplicados → confirma | 40 s | RF-15, RF-02 | DOL-04, CRI-07 |
 | 2 | Busca "pamaderia" → abre ficha → **línea de tiempo** completa | 30 s | RF-28, RF-14 | CRI-01 |
 | 3 | Muestra **evolución de madurez** (3 diagnósticos) y **planes de acción** con vencidos | 30 s | RF-05, RF-07 | DOL-02, CRI-03 |
 | 4 | **Cita**: el emprendedor la solicita desde su portal; operador agenda; se ve **recordatorio automático** | 40 s | RF-08, RF-09 | CRI-06 |
@@ -99,7 +99,7 @@ Fija una **narrativa única** con una empresa protagonista sembrada: *"Panaderí
 | 7 | **Dashboard** y **brechas**: "mayores brechas del sector Alimentos" → **reporte de impacto** en un clic | 50 s | RF-20..22 | CRI-02, 08, 10 |
 | 8 | Cierre: auditoría y roles (10 s) | 10 s | RF-25, 26 | ISO-SE |
 
-Tiempo de demo ≈ 4 min 20 s; el pitch de 5 min deja 40 s para propuesta de valor/negocio. Por eso la **demo larga (≈ 8 min)** se reserva para la validación del CDE y las preguntas del jurado; el pitch usa la versión de 3 minutos (pasos 2, 4–7). Guion detallado y reparto de voces en `09`.
+Tiempo de demo completa ≈ 4 min 20 s. Como el pitch dura 5 min y debe cubrir también negocio y diferenciador, el pitch usa una **versión de 2 min** (pasos 2, 4, 5, 6 y 7 resumidos, ver `09` §6) y la **demo larga (≈ 8 min, con importación, fusión, planes y auditoría)** se reserva para las validaciones del CDE y las preguntas del jurado. Guion y reparto de voces en `09`.
 
 ### Datos fijos de la demo (`04` los siembra)
 - Empresa protagonista, 1 emprendedor protagonista, 12 duplicados sembrados, 3 eventos futuros y 2 pasados con asistencia, 1 emprendedor con racha de 3 semanas.

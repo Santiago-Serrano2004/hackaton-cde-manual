@@ -171,3 +171,19 @@ Fecha de consulta de todas: **26-oct-2026**. Herramienta: búsqueda web (resulta
 | NV-23 | Software de aceleradoras (AcceleratorApp, Accubate, Babele, Skipso, TheIncubatorPro, F6S): categorías y funciones | Artículos del proveedor AcceleratorApp (sesgo comercial) y GetApp; `[NO VERIFICADO]` |
 | NV-24 | Moodle Level Up XP: puntos, niveles, clasificación, notificaciones; ~25 000 sitios | moodle.org (resumen de búsqueda); licencia `[NO VERIFICADO]` |
 | NV-25 | Salesforce Nonprofit Cloud: casos y programas; Education Cloud sin evidencia de funciones para centros de emprendimiento | Parcial; `[NO VERIFICADO]` |
+
+## J. Plan de verificación de todo lo `[NO VERIFICADO]` (F11)
+
+**Quién y cuándo:** Julián y Santiago, **antes del 27-oct a las 20:00**, con acceso directo a internet (desde una red sin el proxy de esta sesión). Tiempo estimado: 90 min.
+
+| Grupo | NV | Acción concreta | Si no se puede verificar |
+|---|---|---|---|
+| Versiones de framework | NV-01, NV-02, NV-03, NV-04, NV-11 | Ejecutar los comandos de `03` §5 y anotar versiones en `docs/VERSIONES.md`; leer laravel.com/docs/13.x/releases, react.dev, postgresql.org, nodejs.org | Usar lo que instalen los comandos (los `lock` mandan) |
+| Paquetes | NV-09, NV-10, NV-12 | `composer require ... --dry-run` y `npm install` en el esqueleto | Plan alterno: CSV nativo sin maatwebsite; PDF por impresión del navegador; Sanctum sin spatie (roles propios) |
+| Normas | NV-05, NV-06, NV-19, PA-12 | Abrir iso.org (ficha 78176), owasp.org (ASVS 5.0), w3.org (WCAG 1.4.3) | El manual ya usa los nombres del TyC; no cita números de requisitos |
+| Investigación | NV-15..NV-18 | Abrir los PDF/DOI y confirmar autor, año y cifra | Eliminar la cifra de Sailer y Homner del pitch (queda "efectos pequeños y positivos") |
+| Legal | NV-08 | Leer Ley 1581 de 2012 en SUIN-Juriscol; consultar a la oficina jurídica de la UNAB | El aviso de privacidad queda como borrador sujeto a revisión (`04` §6) |
+| Mercado | NV-20..NV-25 | Abrir las páginas de precios y comparar | Citar solo "precio de lista por usuario/mes, consulta 26-oct-2026" o retirar la cifra |
+| Laravel/OWASP técnicos | NV-13, NV-14 | Consultar docs de colas, scheduler, `lockForUpdate`, cabeceras | Sustituir el mecanismo por el más simple (cola síncrona + cron) |
+
+Ninguna decisión Must depende de un `[NO VERIFICADO]` sin alternativa: cada fila anterior tiene plan de contingencia.

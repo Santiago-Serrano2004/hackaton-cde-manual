@@ -14,3 +14,5 @@ Marca cada fase al terminarla. Si la sesión se corta, la siguiente retoma desde
 - [x] F11 Auditoría final y `INDEX.md`
 
 ## Notas / diagnósticos
+- 2026-10-26 (sesión de redacción): F1–F11 completas. La búsqueda web funcionó con resultados de terceros; el acceso directo a sitios oficiales estuvo bloqueado (HTTP 403 del proxy), por lo que todas las versiones y afirmaciones técnicas quedan `[NO VERIFICADO]` contra la fuente primaria. Lista y plan de verificación en `99_preguntas_abiertas.md` (NV-01..NV-25, sección J).
+- Pendientes que requieren decisión humana: las 10 decisiones de `INDEX.md` y las preguntas PA-01..PA-26.

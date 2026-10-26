@@ -102,13 +102,13 @@
 
 ### E6 Importación (vista previa)
 ```
-Archivo: empresas_2026.csv · 509 filas
-🟢 485 nuevas   🟡 12 posibles duplicados   🔴 12 con error
+Archivo: importacion_demo.csv · 509 filas
+🟢 497 nuevas   🟡 12 posibles duplicados   🔴 0 con error
 [Ver solo amarillas]
 Fila 41 · "Pamaderia Dulce Hogar" ≈ "Panadería Dulce Hogar" (0,82)  [Omitir][Fusionar][Es otra]
 [Cancelar]                                  [Confirmar importación]
 ```
-(En el CSV de demo los 12 amarillos son los duplicados sembrados; si se desea también mostrar errores rojos, siembrar otros 12 filas con errores; PROPUESTA.)
+(En el CSV de demo los 12 amarillos son los duplicados sembrados; para mostrar errores rojos se puede añadir una variante del archivo con filas inválidas, `PROPUESTA`.)
 
 ## 5. Sistema de diseño mínimo (PROPUESTA)
 

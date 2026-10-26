@@ -97,7 +97,7 @@ Sin versiones inventadas: los comandos instalan lo vigente que cumple las restri
 5. `docker compose up -d` levanta `db` (postgres), `backend` (php-fpm + nginx o `php artisan serve` en dev), `frontend` (vite dev) y `mailpit` (correo de pruebas) `PROPUESTA`.
 6. Registrar versiones: `php -v`, `composer show laravel/framework`, `psql --version`, `node -v`, `npm ls react vite tailwindcss` → `docs/VERSIONES.md`.
 
-**Criterio de aceptación de la plantilla (debe estar lista el 27-oct):** login funcional con 5 roles, un CRUD de ejemplo (Empresa) con paginación, CI verde, despliegue en el servidor, `docker compose up` en máquina limpia ≤ 15 min.
+**Criterio de aceptación de la plantilla (lista el 27-oct):** *esqueleto sin código de dominio*: Laravel y Vite recién creados con las dependencias de la §5 instaladas, Docker Compose, CI (pint, pest, eslint, build) en verde, página "hola" desplegada en el servidor y `docker compose up` en máquina limpia ≤ 15 min. **No** incluir modelos, pantallas ni lógica del CDE: el TyC §11 exige que "cada equipo debe desarrollar su solución durante la Hackatón" y el reto vigente se conoce desde el 28-oct; ver PA-22. Login, roles y CRUD se construyen el 28 (tareas T-10, T-40 en `07`).
 
 ## 6. Convenciones
 

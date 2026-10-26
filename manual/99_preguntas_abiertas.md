@@ -140,3 +140,14 @@ Fecha de consulta de todas: **26-oct-2026**. Herramienta: búsqueda web (resulta
 | NV-17 | Ryan y Deci (2000), Am. Psychol. 55(1):68–78, DOI 10.1037/0003-066X.55.1.68; tres necesidades básicas | Metadatos confirmados; contenido no leído → `[NO VERIFICADO]` |
 | NV-18 | SUS: promedio ≈ 68 (Sauro, MeasuringU); creado por Brooke; artículo canónico 1996 | Fuente secundaria; año `[NO VERIFICADO]` |
 | NV-19 | WCAG 1.4.3: 4,5:1 texto normal, 3:1 texto grande | Fuentes secundarias; `[NO VERIFICADO]` en w3.org |
+
+## H. Añadidas en F7
+
+### PA-22 ¿Se permite llevar un esqueleto técnico preparado antes del 28-oct?
+- **Por qué bloquea:** el TyC §11 dice "Cada equipo debe desarrollar su solución durante la Hackatón". El chat habla de una "plantilla" previa.
+- **Opciones:** (a) no llevar nada; (b) llevar solo esqueleto técnico sin lógica de dominio (Docker, CI, framework recién creado) y declararlo; (c) llevar plantilla con auth y CRUD.
+- **Recomendación:** (b) y preguntar al CDE a las 8:30 del 28 si es aceptable; (c) puede interpretarse como incumplir el TyC. La planificación de `07` asume (b).
+- **Decide:** CDE (organización); el equipo declara.
+
+### PA-23 ¿Mover reportes (T-16) de Santiago a Julián?
+- **Por qué bloquea:** Santiago acumula ~15 h nominales contra ~12 h disponibles. **Opciones:** mover T-16 a J; recortar T-14 a solo CSV. **Recomendación:** mover T-16 a J si T-25 se acaba antes. **Decide:** los tres, a las 10:00 del 28.

@@ -1,0 +1,210 @@
+Los mensajes y las llamadas están cifrados de extremo a extremo. Nadie fuera de este chat, ni siquiera WhatsApp, puede leerlos ni escucharlos.
+[9/11/26, 12:45:15 PM] - Tú creó el grupo
+[9/11/26, 12:45:15 PM] - Los mensajes y las llamadas están cifrados de extremo a extremo. Nadie fuera de este chat, ni siquiera WhatsApp, puede leerlos ni escucharlos. Toca para obtener más información.
+[9/11/26, 12:45:31 PM] - Paula Saavedra añadió a [TELEFONO-OCULTO]
+[9/11/26, 12:45:58 PM] Tú: @Fabián Suárez Profe ya hablé con los muchachos y cuadramos para estar Paula Nicolás y yo
+[9/11/26, 12:46:24 PM] Tú: Entonces profe ahí en la reunión hablamos que probablemente sea un full stack de market place, hay alguna otra info
+[9/11/26, 12:47:21 PM] Tú: para ponernos de acuerdo los 3 para ir hablando del stack de tecnologías y ponernos juiciosos a estudiar y prepararnos
+[9/11/26, 1:10:56 PM] - Tú eliminó a [TELEFONO-OCULTO]
+[9/11/26, 1:11:36 PM] Tú: Eliminaste este mensaje.
+[9/11/26, 1:16:15 PM] - Tú añadió a Julián Arteaga
+[9/11/26, 1:16:50 PM] Tú: Ya confirmados profe Paula, Julián y yo
+[9/14/26, 10:12:43 AM] Fabián Suárez Profe: Hola Santiago
+[9/14/26, 10:12:44 AM] Fabián Suárez Profe: Excelente
+[9/14/26, 10:12:53 AM] Fabián Suárez Profe: No más detalles no tengo, solo eso
+[9/14/26, 10:23:37 AM] Tú: Vale profe cualquier info estamos al pendiente
+[9/14/26, 10:23:42 AM] Tú: Feliz semana
+[9/30/26, 11:40:06 AM] Tú: Muchachos me pueden pasar por aquí o por interno número de cédula y correo Unab porfa
+[9/30/26, 11:40:25 AM] Julián Arteaga: [DOCUMENTO-OCULTO]
+[9/30/26, 11:40:27 AM] Julián Arteaga: [CORREO-OCULTO]
+[9/30/26, 11:41:46 AM] Tú: Ahora pa que Paula conteste
+[9/30/26, 11:41:49 AM] Tú: <sticker omitido>
+[9/30/26, 11:42:05 AM] Tú: Mientras tanto mi Juli
+[9/30/26, 11:42:09 AM] Tú: Nombre pal equipo
+[9/30/26, 11:42:18 AM] Tú: Propongo
+[9/30/26, 11:42:53 AM] Tú: Metrolinea devs ✨
+[9/30/26, 11:43:01 AM] Tú: <sticker omitido>
+[9/30/26, 11:46:13 AM] Julián Arteaga: Me gusta
+[9/30/26, 11:46:15 AM] Julián Arteaga: Aprovado
+[9/30/26, 11:46:17 AM] Julián Arteaga: <sticker omitido>
+[9/30/26, 11:46:59 AM] Tú: @Paula Saavedra
+[9/30/26, 11:46:59 AM] Tú: <sticker omitido>
+[9/30/26, 12:12:13 PM] Tú: Listo muchachos entonces
+[9/30/26, 12:12:13 PM] Tú: <imagen omitida>
+[9/30/26, 12:13:03 PM] Tú: 28 de octubre desde las 8 de la mañana
+[9/30/26, 12:13:25 PM] Julián Arteaga: Osea que ya tenemos el reto
+[9/30/26, 12:13:34 PM] Julián Arteaga: Entonces se puede ir haciendo
+[9/30/26, 12:17:15 PM] Tú: <mensaje de voz omitido>
+[9/30/26, 12:25:43 PM] Julián Arteaga: Eso era lo que iba a decir
+[9/30/26, 12:26:12 PM] Julián Arteaga: Crear una plantilla y cuando digan bien el reto ahí si adaptamos lo que ya tenemos a esa idea
+[9/30/26, 12:52:52 PM] Tú: Encuesta: Front
+    - React
+    - Next.js
+    - Vue
+    - Angular
+    - Otra
+[9/30/26, 12:53:36 PM] Paula Saavedra: Sisi
+[9/30/26, 12:54:18 PM] Paula Saavedra: Y backend?
+[9/30/26, 12:54:39 PM] Tú: Encuesta: Back
+    - Django
+    - Laravel
+    - Otra
+[9/30/26, 12:55:45 PM] Tú: Encuesta: BD
+    - Postgres
+    - Mysql
+    - Firebase
+    - Supabase
+    - Mongo
+    - Otra
+[9/30/26, 12:56:11 PM] Paula Saavedra: Aunque buena la bd si depende del sistema
+[9/30/26, 12:56:23 PM] Paula Saavedra: Pero diria qué seria relacional no?
+[9/30/26, 12:56:38 PM] Tú: Si pero puse mongo por si a caso
+[9/30/26, 12:56:53 PM] Paula Saavedra: Si trabajamos con laravel es más fácil MySQL
+[9/30/26, 12:57:10 PM] Paula Saavedra: Pero digo qué Postgres es fácil y rápida
+[9/30/26, 12:58:29 PM] Tú: Encuesta: Autho
+    - Jwt con tokens
+    - Sesiones y cookies
+    - OAuth con Google
+    - Firebase para autenticar
+    - Supabase auth
+    - Auth0
+    - Otra
+[9/30/26, 12:58:48 PM] Paula Saavedra: Él tema de laravel es qué hay qué configurarlo muy bien
+[9/30/26, 12:59:19 PM] Tú: Yo en larvale siempre he trabajado Postgres si uno levanta los servicios y no usa xampp es fácil
+[9/30/26, 12:59:33 PM] Paula Saavedra: Si x2
+[9/30/26, 12:59:41 PM] Paula Saavedra: Pero Julian si le gusta xampp
+[9/30/26, 12:59:47 PM] Paula Saavedra: Jajajaj
+[9/30/26, 1:00:24 PM] Tú: Encuesta: Arquitectura
+    - Monolito
+    - API REST
+    - Micro servicios
+    - Otra
+[9/30/26, 1:01:02 PM] Tú: Pues el juli voto postgres, yo levanto los servicios si algo
+[9/30/26, 1:01:11 PM] Tú: Bueno y ya por último
+[9/30/26, 1:01:22 PM] Tú: No se si esto lo incluya en el hackaton
+[9/30/26, 1:01:34 PM] Tú: Pero
+[9/30/26, 1:01:41 PM] Tú: Por si acaso
+[9/30/26, 1:03:07 PM] Tú: Encuesta: Despliegue
+    - Vercel
+    - Azure patrocinado por Javier 🤑
+    - Aws
+[9/30/26, 1:03:10 PM] Paula Saavedra: Monolito modular
+[9/30/26, 1:03:25 PM] Paula Saavedra: En vercel solo se puede él frontend
+[9/30/26, 1:03:26 PM] Tú: Uy y eso como se come
+[9/30/26, 1:03:40 PM] Julián Arteaga: Yo ya no utilizo xamp jeje
+[9/30/26, 1:04:07 PM] Tú: Eso no vendría siendo microservicios
+[9/30/26, 1:04:10 PM] Julián Arteaga: En el servidor de javier
+[9/30/26, 1:04:14 PM] Paula Saavedra: Casi
+[9/30/26, 1:04:15 PM] Julián Arteaga: Yo tengo las credenciales
+[9/30/26, 1:04:15 PM] Paula Saavedra: Pero
+[9/30/26, 1:04:17 PM] Paula Saavedra: No
+[9/30/26, 1:04:17 PM] Julián Arteaga: <sticker omitido>
+[9/30/26, 1:04:18 PM] Paula Saavedra: Jajaja
+[9/30/26, 1:04:24 PM] Paula Saavedra: Son módulos independientes
+[9/30/26, 1:04:31 PM] Tú: <sticker omitido>
+[9/30/26, 1:04:38 PM] Paula Saavedra: Pero al final se despliegan todos
+[9/30/26, 1:05:01 PM] Julián Arteaga: En el servidor de javier está mi proyecto de grado
+[9/30/26, 1:05:42 PM] Tú: X2 JAJAJAJAJAJA
+[9/30/26, 1:06:13 PM] Paula Saavedra: Bueno ahí esta
+[9/30/26, 1:06:15 PM] Paula Saavedra: Ahora la idea
+[9/30/26, 1:06:19 PM] Paula Saavedra: Lo importante
+[9/30/26, 1:06:32 PM] Julián Arteaga: un docker y listo
+[9/30/26, 1:06:32 PM] Tú: Solo queda ahí pendiente definir arquitectura
+[9/30/26, 1:06:46 PM] Paula Saavedra: Yep
+[9/30/26, 1:06:51 PM] Paula Saavedra: Modular
+[9/30/26, 1:06:51 PM] Julián Arteaga: lo de menos es ya tener la plantilla creada y desplegada
+[9/30/26, 1:07:01 PM] Paula Saavedra: Es más facil
+[9/30/26, 1:07:13 PM] Julián Arteaga: y solo se hace el redeploy con los cambios
+[9/30/26, 1:07:21 PM] Paula Saavedra: Exacto
+[9/30/26, 1:09:28 PM] Tú: Listo pues entonces e-commerce en react con back en Laravel, Postgres, jwt para la autenticacion
+[9/30/26, 1:09:43 PM] Tú: Y desplegado en azure
+[9/30/26, 1:10:11 PM] Julián Arteaga: nao nao
+[9/30/26, 1:10:16 PM] Julián Arteaga: no es en azure
+[9/30/26, 1:10:29 PM] Julián Arteaga: es en el servidor de javier de la oficina
+[9/30/26, 1:11:48 PM] Tú: Ahhhhhhhh ya le entendí yayaya, ah pero entonces mi Juli pa que tengas listo el ssh pa conectarte ese día
+[9/30/26, 1:12:40 PM] Julián Arteaga: es por coolify
+[9/30/26, 1:12:58 PM] Julián Arteaga: lo unico es que no tengo acceso al cloudflare
+[9/30/26, 1:13:06 PM] Julián Arteaga: que eso si toca con javier
+[9/30/26, 1:13:15 PM] Tú: Jmmmm
+[9/30/26, 1:13:29 PM] Tú: Y si desplegamos una  en azure con el crédito de estudiantes
+[9/30/26, 1:16:30 PM] Julián Arteaga: A mi ya se me venció la cuenta
+[9/30/26, 1:17:18 PM] Julián Arteaga: Lo de menos es hablar con Javier antes para que nos arregle el puerto por donde se va a exponer la pagina
+[9/30/26, 1:25:28 PM] Tú: Yo la tengo todavía
+[9/30/26, 1:25:42 PM] Tú: También
+[9/30/26, 1:25:49 PM] Tú: Pregúntale a ver si se puede
+[9/30/26, 1:25:57 PM] Tú: Sino lo montamos en azure
+[9/30/26, 1:49:46 PM] Tú: Bueno muchachos, esta tarde noche creo el repo de GitHub pa tener ahí todo, pásenme los correos o usuario de GitHub
+[9/30/26, 1:50:25 PM] Julián Arteaga: Andrejulian21
+[9/30/26, 1:50:43 PM] Julián Arteaga: [CORREO-OCULTO]
+[9/30/26, 1:52:15 PM] Julián Arteaga: estoy en eso
+[9/30/26, 2:23:38 PM] Julián Arteaga: Que Javier nos patrocina
+[9/30/26, 2:23:40 PM] Julián Arteaga: <sticker omitido>
+[9/30/26, 2:32:16 PM] Tú: <sticker omitido>
+[9/30/26, 2:34:26 PM] Paula Saavedra: Muchachos
+[9/30/26, 2:34:32 PM] Paula Saavedra: Cuando se cierran notas?
+[9/30/26, 2:34:35 PM] Paula Saavedra: <sticker omitido>
+[9/30/26, 2:35:01 PM] Paula Saavedra: Nos avisas para mirar él usuario
+[9/30/26, 2:35:10 PM] Tú: Hoy
+[9/30/26, 2:35:14 PM] Tú: 😂
+[9/30/26, 2:35:17 PM] Paula Saavedra: Pero
+[9/30/26, 2:35:22 PM] Paula Saavedra: Ahhh
+[9/30/26, 2:35:24 PM] Paula Saavedra: Julian
+[9/30/26, 2:35:29 PM] Paula Saavedra: Tú estás con dilan?
+[9/30/26, 2:35:32 PM] Paula Saavedra: <sticker omitido>
+[9/30/26, 2:36:19 PM] Julián Arteaga: No
+[9/30/26, 2:36:24 PM] Julián Arteaga: No fui a clase
+[9/30/26, 2:36:24 PM] Paula Saavedra: <imagen omitida>
+[9/30/26, 2:36:27 PM] Paula Saavedra: Es que
+[9/30/26, 2:36:29 PM] Paula Saavedra: Fuck
+[9/30/26, 2:36:39 PM] Paula Saavedra: Él no me califico unos talleres
+[9/30/26, 2:36:41 PM] Paula Saavedra: Estoy jodida
+[9/30/26, 2:36:53 PM] Paula Saavedra: Y dice qué mañana las quejas
+[9/30/26, 2:36:53 PM] Julián Arteaga: Pues ahorita está en el csu
+[10/5/26, 4:48:56 PM] Paula Saavedra: Holis
+[10/5/26, 4:48:58 PM] Paula Saavedra: Muchachos
+[10/5/26, 4:49:16 PM] Paula Saavedra: ¿Cuando pueden reunirse? Jueves o viernes?
+[10/5/26, 4:49:16 PM] Julián Arteaga: toy ocupado
+[10/5/26, 4:49:22 PM] Julián Arteaga: viernes
+[10/5/26, 4:49:25 PM] Julián Arteaga: <sticker omitido>
+[10/5/26, 4:49:28 PM] Paula Saavedra: <sticker omitido>
+[10/5/26, 4:49:37 PM] Paula Saavedra: <sticker omitido>
+[10/5/26, 4:50:25 PM] Tú: <sticker omitido>
+[10/5/26, 4:50:27 PM] Tú: <sticker omitido>
+[10/5/26, 4:51:42 PM] Paula Saavedra: <sticker omitido>
+[10/5/26, 4:52:14 PM] Tú: <sticker omitido>
+[10/8/26, 5:54:51 PM] Fabián Suárez Profe: <mensaje de voz omitido>
+[10/8/26, 6:06:27 PM] Tú: Muchachos si pueden el martes?
+[10/8/26, 6:48:37 PM] Paula Saavedra: Si santy ya depende de Juli
+[10/8/26, 7:42:49 PM] Julián Arteaga: A esa ya no aplicó profe, ya me entre con Nicolás y con zabdiel
+[10/8/26, 7:43:50 PM] Julián Arteaga: Nao nao ya participó con otro equipo
+[10/8/26, 7:43:58 PM] Julián Arteaga: <sticker omitido>
+[10/9/26, 11:35:53 AM] Fabián Suárez Profe: El martes?
+[10/9/26, 11:37:21 AM] Julián Arteaga: Si profe
+[10/9/26, 11:38:04 AM] Fabián Suárez Profe: <mensaje de voz omitido>
+[10/9/26, 11:38:19 AM] Julián Arteaga: Listo profe
+[10/19/26, 12:16:19 PM] Paula Saavedra: @Santiago Serrano Tu nos inscribiste?
+[10/19/26, 12:16:34 PM] Tú: Obvio muchachos
+[10/19/26, 12:18:47 PM] Julián Arteaga: Si
+[10/19/26, 12:19:04 PM] Julián Arteaga: Me extraña que María Paula dude del santi
+[10/19/26, 12:27:22 PM] Tú: Así son las mujeres
+[10/19/26, 12:29:42 PM] Julián Arteaga: Y cuando nos reunimos pa configurar las cosas ?
+[10/19/26, 12:29:46 PM] Julián Arteaga: <sticker omitido>
+[10/19/26, 12:34:39 PM] Paula Saavedra: Hay que plantear bien la solucion muchachos
+[10/19/26, 12:35:05 PM] Julián Arteaga: Por ahora solo sabemos que es un ecommerce
+[10/19/26, 12:36:12 PM] Tú: <mensaje de voz omitido>
+[10/19/26, 12:37:00 PM] Julián Arteaga: Un PDF?
+[10/19/26, 12:37:21 PM] Julián Arteaga: Un shoppify
+[10/19/26, 12:37:29 PM] Julián Arteaga: El PDF creo que nunca lo mandó
+[10/19/26, 12:37:34 PM] Tú: Voy
+[10/19/26, 12:38:04 PM] Tú: https://unab.edu.co/wp-content/uploads/2026/09/TyC_UNAB_Venture_Challenge_Hackaton_1.pdf
+[10/19/26, 3:53:56 PM] Julián Arteaga: Y cuando nos reunimos?
+[10/19/26, 7:37:28 PM] Paula Saavedra: Tengo entendido que nos van a mezclar con biomedica
+[10/20/26, 4:35:03 PM] Paula Saavedra: Buenas muchachos
+[10/22/26, 3:57:14 PM] Paula Saavedra: Holi
+[10/22/26, 3:57:19 PM] Paula Saavedra: <imagen omitida> Ya enviaron esto?
+[10/22/26, 4:01:19 PM] Julián Arteaga: Nop
+[10/22/26, 4:05:10 PM] Fabián Suárez Profe: <mensaje de voz omitido>
+[10/22/26, 4:06:24 PM] Paula Saavedra: vale profe si
+[10/22/26, 4:06:47 PM] Paula Saavedra: En la ficha dice que los equipos son de 4
+[10/22/26, 4:06:52 PM] Paula Saavedra: Nosotros somos 3
+[10/22/26, 4:07:44 PM] Fabián Suárez Profe: <mensaje de voz omitido>

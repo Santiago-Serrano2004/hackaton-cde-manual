@@ -118,3 +118,9 @@ Fecha de consulta de todas: **26-oct-2026**. Herramienta: búsqueda web (resulta
 
 ### PA-19 Formato del NIT y manejo de personas naturales sin NIT
 - **Recomendación:** NIT opcional; deduplicar por correo y nombre cuando falte. **Decide:** CDE.
+
+## F. Añadidas en F5
+| # | Afirmación | Estado |
+|---|---|---|
+| NV-13 | Laravel 13 soporta cola `database`, `schedule:work`, `lockForUpdate`, cast encriptado y `Pest arch()` | `[NO VERIFICADO]` contra docs oficiales; se asumen mecanismos estables desde versiones anteriores |
+| NV-14 | Cabeceras de seguridad recomendadas (CSP, XFO, XCTO, Referrer-Policy) | Práctica general `[NO VERIFICADO]` en OWASP Secure Headers |

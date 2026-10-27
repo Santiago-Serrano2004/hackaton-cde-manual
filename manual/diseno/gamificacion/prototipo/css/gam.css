@@ -281,3 +281,5 @@ details[open]>summary .ic{transform:rotate(180deg)}
 .g-mision input[type=radio],.g-preg input[type=radio]{appearance:none;-webkit-appearance:none;width:24px;height:24px;border:2px solid var(--tinta);border-radius:50%;background:var(--superficie);display:inline-grid;place-content:center;margin:0;flex:none}
 .g-mision input[type=radio]:checked,.g-preg input[type=radio]:checked{background:radial-gradient(circle,var(--tinta) 0 42%,var(--superficie) 46%)}
 .g-mision input[type=radio]:focus-visible,.g-preg input[type=radio]:focus-visible{outline:3px solid var(--foco);outline-offset:2px}
+@media (max-width:640px){.g-rol{display:none}}
+.marca{white-space:nowrap}

@@ -20,7 +20,7 @@ Marca cada fase al terminarla. Si la sesión se corta, la siguiente retoma desde
 ## Ronda 2 (ejecutar con PROMPT_2.md)
 - [x] F12 Verificación de lo no verificado (`12_verificacion.md`)
 - [x] F13 Factores diferenciadores (`13_diferenciadores.md`)
-- [ ] F14 Backlog de funcionalidades (`14_backlog.md`, `backlog.csv`)
+- [x] F14 Backlog de funcionalidades (`14_backlog.md`, `backlog.csv`)
 - [ ] F15 Frontend: skills, librerías y recursos (`15_frontend_skills_y_ui.md`)
 - [ ] F16 Sistema de diseño y dirección de arte (`16_sistema_de_diseno.md`)
 - [ ] F17 Specs autocontenidas por tarea (`tareas/`)
@@ -30,3 +30,4 @@ Marca cada fase al terminarla. Si la sesión se corta, la siguiente retoma desde
 ### Notas Ronda 2
 - 2026-10-27 F12: acceso a npm, Packagist, php.net, nodejs.org, react.dev, laravel.com, postgresql.org, w3.org, owasp.org y docs.docker.com OK. Bloqueados: api.github.com y github.com (403, repo no habilitado), iso.org (403), funcionpublica.gov.co. La resolución de dependencias con composer/npm funciona; la descarga de paquetes no. Cambios frente a v1: C-01..C-10 en `99` §K.
 - 2026-10-27 F13: 15 candidatos, portafolio 5+1 en niveles con puertas. Costo bruto +6,5 h; ahorros −1,5 h; el balance por persona no cierra si se hace todo (María Paula +3,0 h), por eso Nivel 2 y 3 son condicionales. Contradicciones C-11..C-14 y PA-27 en `99` §K.2. Pendiente de F14: reflejar horas en `07`.
+- 2026-10-27 F14: 48 tareas (33 de v1 + 15 nuevas) y 4 filas futuras en `backlog.csv`; 9 rebanadas; 25/25 historias con tarea; 0 dependencias rotas. Horas reconciliadas en `07` §5.1–5.3. Déficit real con el Núcleo: S 2,5 h, J 3,0 h, MP 2,5 h (C-18 en `99` §K.3). Generado con un script del scratchpad (no está en el repo).

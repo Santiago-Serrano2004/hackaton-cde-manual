@@ -97,11 +97,11 @@ Estimaciones en horas efectivas. "DoD" = definición de terminado (debe cumplirs
 | T-03 | Cola `database`, scheduler, Mailpit, `/health` | J | 0,5 | T-02 | Job de ejemplo ejecuta; correo llega a Mailpit; `/health` 200 | RF-09, RNF-06 |
 | T-10 | Auth Sanctum, 5 roles (spatie), policies base, middleware de auditoría, tabla `auditoria`, throttle | S | 1,5 | T-00 | Login/logout/me; usuario por rol sembrado; test rol×endpoint con 3 casos; login queda en auditoría | RF-25, 26 |
 | T-11 | Empresas: migraciones, modelos, normalizadores (NIT/correo/nombre), CRUD API, filtros; front E2/E3 (cabecera, pestañas vacías) | S | 3,0 | T-10, T-40 | Crear/editar/listar con paginación; catálogos desde listas; ficha navegable | RF-01 |
-| T-12 | Detección de duplicados (pg_trgm) + fusión transaccional + banner front | S | 1,5 | T-11 | Prueba: 12 duplicados sembrados → ≥ 11 detectados; fusión mueve historial; auditoría | RF-02, 03 |
-| T-13 | Búsqueda global tolerante + front E4/E5 (alta con aviso, fusión) | S | 2,5 | T-12 | "pamaderia" encuentra "panadería"; ≤ 2 acciones | RF-28 |
-| T-14 | Importación CSV/XLSX: subir, mapear, vista previa, confirmar, revertir | S | 2,0 | T-12 | 509 filas < 60 s; resumen correcto; reversión funciona | RF-15 |
+| T-12 | Detección de duplicados (pg_trgm) + fusión transaccional + banner front | S | 2,25 (R2; antes 1,5) | T-11 | Prueba: 12 duplicados sembrados → ≥ 11 detectados; fusión mueve historial; auditoría | RF-02, 03 |
+| T-13 | Búsqueda global tolerante + front E4/E5 (alta con aviso, fusión) | S | 2,75 (R2; antes 2,5) | T-12 | "pamaderia" encuentra "panadería"; ≤ 2 acciones | RF-28 |
+| T-14 | Importación CSV (R2: sin XLSX ni reversión): subir, mapear, vista previa, confirmar | S | 1,5 (R2; antes 2,0) | T-12 | 509 filas < 60 s; resumen correcto; reversión funciona | RF-15 |
 | T-15 | Historial: listeners → `intervenciones`; API de línea de tiempo; pestaña front | S | 1,5 | T-20, T-23, T-41, T-42 | Empresa protagonista muestra ≥ 15 hitos de ≥ 5 tipos; ≤ 12 consultas SQL | RF-14, RF-16 |
-| T-16 | Reportes back: vistas de caracterización, brechas (último diagnóstico), KPIs de impacto, exportación CSV/XLSX/PDF | S | 1,25 | T-41, T-11 | Cifras = consultas SQL de control (`08`); reporte ≤ 10 s | RF-20..22, RF-21 |
+| T-16 | Reportes back: vistas de caracterización, brechas (último diagnóstico), KPIs de impacto, exportación CSV (UTF-8 con BOM) y vista imprimible para PDF (R2; XLSX solo si sobra tiempo) | S | 0,75 (R2; antes 1,25) | T-41, T-11 | Cifras = consultas SQL de control (`08`); reporte ≤ 10 s | RF-20..22, RF-21 |
 | T-20 | Citas: modelos, estados, solicitar/agendar/resultado/cancelar, policies | J | 1,5 | T-10 | Flujo completo vía API; toda cita con empresa | RF-08 |
 | T-21 | Recordatorios: creación al agendar, job de envío, plantillas, reintentos, bandeja "Notificaciones" | J | 1,0 | T-20, T-03 | Recordatorio 24 h/1 h generado; job lo envía y marca; fallo reintenta 3 veces | RF-09 |
 | T-22 | Front citas: M4 (emprendedor), E9 (bandeja) | J | 1,0 | T-20, T-40 | Solicitud → agenda → resultado desde la UI | RF-08 |
@@ -109,7 +109,7 @@ Estimaciones en horas efectivas. "DoD" = definición de terminado (debe cumplirs
 | T-24 | Front eventos: E10, M5 (oferta), pantalla de QR/asistencia | J | 2,0 | T-23, T-40 | Inscripción ≤ 3 clics; asistencia en celular | RF-11, 12 |
 | T-25 | Recomendación por reglas con motivo | J | 0,75 | T-23, T-41 | 2 perfiles distintos obtienen listas distintas con motivo | RF-10 |
 | T-30 | DemoSeeder + factories de todos los módulos + validador de totales + `importacion_demo.csv` | J | 3,0 (distribuida: parte 1 a las 23:30; parte 2 a las 00:30) | T-11, T-20, T-23, T-41, T-42 | Totales de `04` §7.1 exactos; `DatosDemoTest` verde; `migrate:fresh --seed` < 3 min | RNF-14 |
-| T-40 | Design system (tokens, componentes base), layout por rol, router, cliente API, pantalla de login y rutas protegidas | MP | 1,5 | T-00 | Tokens de `06` §5; Button/Input/Table/Card/Modal/Toast/Timeline; rutas por rol; contrastes ≥ 4,5:1 | RNF-04, 05 |
+| T-40 | Design system (tokens, componentes base), layout por rol, router, cliente API, pantalla de login y rutas protegidas | MP | 1,0 (R2; antes 1,5) | T-00 | Tokens de `06` §5; Button/Input/Table/Card/Modal/Toast/Timeline; rutas por rol; contrastes ≥ 4,5:1 | RNF-04, 05 |
 | T-41 | Diagnósticos back+front (E7) con evolución | MP | 1,5 | T-11 | Empresa con 3 diagnósticos muestra gráfica | RF-05 |
 | T-42 | Proyectos de aula, planes, compromisos, vencidos (back+front E8, D1–D2) | MP | 2,0 | T-11 | Compromiso exige responsable/fecha; filtro vencidos | RF-06, 07 |
 | T-43 | Gamificación back: retos, puntos (idempotentes), niveles, insignias, rachas, listeners, cola de validación | MP | 2,5 | T-23, T-42 | Asistir suma 30 puntos una sola vez; subir de nivel dispara insignia; sin doble cobro | RF-17, 18 |
@@ -126,6 +126,30 @@ Estimaciones en horas efectivas. "DoD" = definición de terminado (debe cumplirs
 | T-97 | Prueba de usabilidad con ≥ 3 personas (SUS + tarea) | MP | 0,75 | T-91 | Resultados anotados en `docs/USABILIDAD.md` | RNF-04 |
 
 Carga nominal por persona en el día 1 (suma de estimaciones de la tabla): S = 13,25 h (T-10, 11, 12, 13, 14, 16, 15); J = 13,25 h (T-02, 03, 20..25, 30); MP = 12,5 h (T-40..46). Disponibilidad día 1 con las ventanas de §4: 10:30–12:00 (1,5) + 14:00–17:00 (3) + 17:30–19:00 (1,5) + 19:45–00:30 (4,75) = **10,75 h**, más 00:30–01:30 (1 h, reservada al ensayo T-91), de modo que hay un **déficit de ~1,5–2,5 h por persona**. Se cubre así: (a) las estimaciones son nominales y las tareas con Should se recortan antes (ver `02` §3.4); (b) T-13 y T-24 incluyen tiempo de front que se puede simplificar; (c) la ventana 6:30–7:30 del día 2 corrige lo que se haya quedado en `P1`; (d) se activan las contingencias de §7 sin discutir. Si al revisar a las 10:00 el equipo no acepta el déficit, mover T-16 a J (PA-23) y recortar T-14 a CSV.
+
+### 5.1 Ronda 2: tareas añadidas y cambios de horas (detalle en `14_backlog.md`, fuente única de IDs y horas)
+
+Las horas de T-12, T-13, T-14, T-16 y T-40 de la tabla de §5 ya incluyen el cambio de la Ronda 2 (se indica la cifra anterior). Tareas nuevas (descripción, criterio de aceptación y dependencias en `14_backlog.md` §4 y `backlog.csv`):
+
+| Nivel | Tareas | Horas por persona |
+|---|---|---|
+| Núcleo (Must) | T-17 (MP 0,5), T-19 (MP 0,25), T-27 (MP 0,5), T-31 (J 0,5) | MP 1,25 · J 0,5 |
+| Nivel 2 (Should, con puerta) | T-18 (S 0,5), T-26 (J 0,25), T-28 (MP 0,5), T-47 (MP 1,25), T-48 (S 0,5), T-49 (MP 0,75) | S 1,0 · J 0,25 · MP 2,5 |
+| Nivel 3 (Could, con puerta) | T-50 (MP 0,5), T-51 (S 0,25), T-52 (J 0,5), T-53 (J 0,5), T-54 (MP 0,25) | S 0,25 · J 1,0 · MP 0,75 |
+
+### 5.2 Balance de horas por persona (actualiza el párrafo anterior)
+
+| Persona | v1 | Núcleo R2 | + Nivel 2 | + Nivel 3 | Disponible día 1 | Déficit Núcleo |
+|---|---|---|---|---|---|---|
+| Santiago | 13,25 | 13,25 | 14,25 | 14,5 | 10,75 (+1,0 ensayo H2) | 2,5 |
+| Julián | 13,25 | 13,75 | 14,0 | 15,0 | 10,75 (+1,0) | 3,0 |
+| María Paula | 12,5 | 13,25 | 15,75 | 16,5 | 10,75 (+1,0) | 2,5 |
+
+El déficit **no desaparece** con la Ronda 2: el Núcleo sube 0,5 h a Julián y 0,75 h a María Paula y deja igual a Santiago. Las puertas de nivel (14 §5) impiden empezar Nivel 2 y 3 sin holgura real. Las contingencias de §7 se aplican sin cambios; se añaden dos: (1) si a las 22:15 T-12 sigue abierta, T-19 se aplaza y la fusión queda sin vista lado a lado; (2) si MP supera +1,5 h sobre su cola Núcleo a las 23:30, se descarta T-47 (queda la lista de retos de v1).
+
+### 5.3 Rebanadas verticales
+
+Las tareas se agrupan en rebanadas S0..S8 (`14` §2). H0 = S0, H1 = S1. El resto de hitos de §3 no cambia.
 
 ## 6. Validaciones con el CDE
 

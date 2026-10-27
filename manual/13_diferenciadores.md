@@ -182,7 +182,6 @@ El plan v1 ya parte con déficit de 1,5–2,5 h por persona (`07` §5). **No hay
 | A1 | Importación solo CSV, sin XLSX ni reversión (contingencia de `07` §7 convertida en decisión) | −0,5 h (T-14) | S |
 | A2 | Reporte: CSV + vista imprimible (D-11) en vez de PDF/XLSX | −0,5 h (T-16) | S |
 | A3 | Componentes ya hechos en el sistema de UI (F15/F16) en lugar de componentes propios | −0,5 h (T-40) `[estimación sin medir]` | MP |
-| A4 | RF-04 (Should) deja de ser tarea separada: lo cubre D-03 | −0,25 h implícito | — |
 | **Total ahorro** | | **−1,5 h** | |
 
 **Balance por persona (horas sobre el plan v1, que ya tiene déficit):**
@@ -191,10 +190,10 @@ El plan v1 ya parte con déficit de 1,5–2,5 h por persona (`07` §5). **No hay
 |---|---|---|---|---|---|
 | Santiago | +1,0 (0,25+0,75) | −1,0 | **0** | +1,0 (0,5+0,5) | +1,0 |
 | Julián | +0,5 | 0 | **+0,5** | +0,25 | +0,75 |
-| María Paula | +1,25 (1,0+0,25) | −0,5 | **+0,75** | +2,25 (0,5+1,25+0,75−0,25 de solapes) | +3,0 |
-| **Equipo** | **+2,75** | **−1,5** | **+1,25** | **+3,5** | **+4,75** |
+| María Paula | +1,25 (1,0+0,25) | −0,5 | **+0,75** | +2,5 (0,5+1,25+0,75) | +3,25 |
+| **Equipo** | **+2,75** | **−1,5** | **+1,25** | **+3,75** | **+5,0** |
 
-Lectura honesta: con todo el portafolio el equipo carga **+4,75 h netas sobre un plan que ya está en déficit** y María Paula queda en +3,0 h, **no viable**. Por eso el portafolio se ejecuta por niveles con puertas:
+Lectura honesta: con todo el portafolio el equipo carga **+5,0 h netas sobre un plan que ya está en déficit** y María Paula queda en +3,25 h, **no viable**. Por eso el portafolio se ejecuta por niveles con puertas:
 
 | Nivel | Qué | Puerta para empezar | Si la puerta falla |
 |---|---|---|---|

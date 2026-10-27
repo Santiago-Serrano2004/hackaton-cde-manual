@@ -216,3 +216,12 @@ Resultados completos en `12_verificacion.md`. Ya corregidos en cascada en `03_st
 | C-13 | RF-27 se queda Should y pasa a Nivel 3 | Costo/valor | Equipo |
 | C-14 | Decisión D-05 de `02` pasa de 3 a 5 diferenciadores + 1 transversal, con niveles y puertas | `13` §4 | Equipo |
 | PA-27 | Pregunta abierta: ¿el CDE usa hoy una paleta/atajos o prefiere menús? ¿Qué indicador quiere ver primero (duplicados, calidad, brechas, recompensas)? | Ordena el Nivel 2 | MP y S preguntan el 28-oct 8:30 |
+
+### K.3 Contradicciones con v1 introducidas por F14 (`14_backlog.md` §6)
+
+| # | Contradicción | Motivo | Decide |
+|---|---|---|---|
+| C-15 | T-14 pasa de CSV/XLSX con reversión (2,0 h) a solo CSV sin reversión (1,5 h) | Ahorro A1 de `13` §4.1; la importación se rehace desde cero con el reinicio de datos de demo | Santiago |
+| C-16 | T-12 sube a 2,25 h (puntuación y deshacer), T-13 a 2,75 h, T-16 baja a 0,75 h, T-40 a 1,0 h (esta última condicionada a F15) | `13` | Equipo en T-01 |
+| C-17 | Se añaden 15 tareas (T-17, T-18, T-19, T-26, T-27, T-28, T-31, T-47..T-54); el Núcleo sube 0,5 h a Julián y 0,75 h a María Paula | Diferenciadores | Equipo en T-01 |
+| C-18 | El déficit de v1 (1,5–2,5 h por persona) pasa a 2,5 h (S), 3,0 h (J) y 2,5 h (MP) solo con el Núcleo | Aritmética de `07` §5.2; v1 usaba 10,75 h de disponibilidad frente a 12,5–13,25 h | Equipo: decidir a las 10:00 si recorta Núcleo |

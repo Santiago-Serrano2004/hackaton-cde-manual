@@ -56,3 +56,17 @@ Todas las fases F12–F19 completas. Pendiente humano: las 18 decisiones de `IND
 
 ## Cierre de la Ronda 3
 Todas las fases F20–F24 completas. Nada de lo propuesto está aplicado: espera la ratificación del equipo en T-01 (28-oct 10:00). Pendiente humano: decisiones 19–27 de `INDEX.md`, trabajo previo «verde» de esta noche, y la verificación de NV-27/NV-28 por un asesor del CDE.
+
+## Misión de diseño de interfaz (`diseno/`)
+- [x] Paso 1 investigación (`diseno/00_investigacion.md`)
+- [x] Paso 2 brief e IA (`diseno/01_brief_y_ia.md`)
+- [x] Paso 3 sistema de diseño (`02_tokens.md`, `03_componentes.md`, `prototipo/componentes.html`, `prototipo/css/`)
+- [x] Paso 4 prototipo navegable: 13 pantallas, guion de 120 s, índice (`prototipo/`)
+- [x] Paso 5 validación con evidencia (`90_revision.md`, `capturas/`)
+- [x] Paso 6 especificaciones (`10_especificacion_01…13`) e `INDEX.md`
+
+### Notas
+- 2026-10-27 Diseño: axe-core 4.14.0 en 240 combinaciones (página × estado × ancho × tema): 360 violaciones iniciales → 0. Lighthouse 13.5.0: accesibilidad 100, rendimiento ≥ 99, buenas prácticas 100, CLS 0 en 34 mediciones. 20 defectos reales corregidos (lista en `90_revision.md` §3). Contraste: 78 pares calculados, 0 fallos; se corrigió el borde oscuro de `16` (2,84:1 → 3,72:1). Tailwind 4.3.3 compila el tema (`@theme inline`).
+- Contradicciones y decisiones en `diseno/99_decisiones.md`: DEC-01..DEC-19, CON-01..CON-11, PD-01..PD-08. Las de mayor impacto: dígitos de verificación de los NIT de `21_casos_demo` (5 de 6 inválidos; las pantallas usan los corregidos), la «lista de 25 puntos» que no existe en `16` (14 + 12), ventana de «deshacer» (30 s / 24 h / 30 días), cola de validación en `18` frente a R3, y E1 y E15 sin tarea en `backlog.csv`.
+- Pendiente humano: prueba de usabilidad de 2 min (`16` §13 ítem 14), lector de pantalla real, Firefox/Safari, anchos 1366/1920/360, validar la escala de calor oscura con una persona con daltonismo, y que el CDE autorice paleta y logotipo (PA-29).
+- Los generadores de las páginas, de las especificaciones y de las mediciones están en el espacio de trabajo de la sesión (no en el repositorio); el prototipo HTML/CSS/JS sí está en `diseno/prototipo/`.

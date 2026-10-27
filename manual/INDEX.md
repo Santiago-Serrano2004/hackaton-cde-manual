@@ -149,3 +149,7 @@ Manual para construir, sin tomar decisiones adicionales, el sistema de gestión 
 | 27 | Conseguir 2 personas externas para el simulacro y T-97 (PA-33) | Pedirlas a otros equipos o al laboratorio durante la cena | `22` §4.3 |
 
 Las decisiones 1 a 18 siguen vigentes; las 11 (PA-30) y 12 (portafolio de diferenciadores) quedan **sustituidas** por la 19 y la 23 si se ratifican.
+
+
+## Diseño de interfaz (misión 3)
+Mockups navegables, sistema de diseño y especificaciones por pantalla: ver `diseno/INDEX.md` (abrir `diseno/prototipo/index.html`). Evidencia de validación: `diseno/90_revision.md`. Decisiones y contradicciones: `diseno/99_decisiones.md`.

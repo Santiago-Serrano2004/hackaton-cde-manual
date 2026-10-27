@@ -1,0 +1,60 @@
+---
+title: "Fallos de la infraestructura y su plan de cambio · tiempos máximos del manual (23 §3)"
+config:
+  theme: base
+  look: classic
+  fontFamily: "Inter, Carlito, Arial, sans-serif"
+  themeVariables:
+    fontFamily: "Inter, Carlito, Arial, sans-serif"
+    fontSize: "16px"
+    lineColor: "#1B2340"
+    primaryTextColor: "#1B2340"
+    primaryColor: "#E8EDFB"
+    primaryBorderColor: "#2F4A9E"
+    edgeLabelBackground: "#F7F4EF"
+    background: "#F7F4EF"
+  flowchart:
+    curve: basis
+    htmlLabels: true
+    wrappingWidth: 330
+    nodeSpacing: 45
+    rankSpacing: 80
+---
+flowchart LR
+  classDef persona fill:#16265C,stroke:#16265C,color:#FFFFFF,stroke-width:2px
+  classDef cont fill:#FFFFFF,stroke:#2F4A9E,color:#1B2340,stroke-width:3px
+  classDef mod fill:#E8EDFB,stroke:#2F4A9E,color:#1B2340,stroke-width:3px
+  classDef comp fill:#F3F5FA,stroke:#2F4A9E,color:#1B2340,stroke-width:2px
+  classDef compP fill:#FFF4D6,stroke:#B34700,color:#6B4200,stroke-width:3px,stroke-dasharray:7 4
+  classDef compR fill:#F3F5FA,stroke:#2F4A9E,color:#1B2340,stroke-width:2px,stroke-dasharray:2 3
+  classDef datos fill:#FFFFFF,stroke:#2F4A9E,color:#1B2340,stroke-width:3px
+  classDef ext fill:#EDEFF5,stroke:#4B5575,color:#1B2340,stroke-width:2px
+  classDef extP fill:#FFF4D6,stroke:#B34700,color:#6B4200,stroke-width:3px,stroke-dasharray:7 4
+  classDef sistema fill:#E8EDFB,stroke:#2F4A9E,color:#1B2340,stroke-width:4px
+  classDef falla fill:#FDE8E8,stroke:#A31D1D,color:#8F1515,stroke-width:3px
+  classDef plan fill:#E4F5EA,stroke:#1B6B3A,color:#14532D,stroke-width:3px
+
+  F1>"<b>F1 · Servidor del patrocinador caído</b><br/>/health no responde; la URL no abre"]:::falla
+  P1["<b>Servidor local en el portátil de demostración</b><br/>[docker compose up]<br/>Datos sembrados en localhost"]:::plan
+  F2>"<b>F2 · Red del laboratorio caída</b><br/>Fallan git push, composer y npm"]:::falla
+  P2["<b>Punto de acceso del celular y trabajo local</b><br/>[commit sin push]<br/>La demo no depende de internet"]:::plan
+  F3>"<b>F3 · Base de datos corrupta o migración rota</b><br/>DatosDemoTest en rojo"]:::falla
+  P3["<b>migrate:fresh --seed y luego dump.sql</b><br/>[Respaldo pg_dump horario]<br/>Último recurso: etiqueta ff-1"]:::plan
+  F4>"<b>F4 · Correo no entrega</b><br/>Bandeja Notificaciones muestra fallido"]:::falla
+  P4["<b>Mailpit local y captura D3</b><br/>[Reiniciar worker y planificador]<br/>Se muestra el estado programado"]:::plan
+  F14>"<b>F14 · Un despliegue rompe la versión estable</b><br/>/health en rojo tras el despliegue"]:::falla
+  P14["<b>Volver a la etiqueta anterior</b><br/>[ff-1 o v1.0-rc]<br/>Redesplegar esa etiqueta"]:::plan
+  FR>"<b>Registro mercantil no responde (propuesta)</b><br/>Tiempo agotado, 429 o error de red"]:::falla
+  PR["<b>Caché de 24 h o mensaje legible</b><br/>[consultas_registro]<br/>El resto de la ficha sigue usable (RNF-19)"]:::plan
+  F1 -->|"Cambia a los 15 min [responsable: Julián]"| P1
+  F2 -->|"Cambia a los 10 min [responsable: Julián]"| P2
+  F3 -->|"Cambia a los 10 min [responsable: Julián]"| P3
+  F4 -->|"Cambia a los 5 min [responsable: Julián]"| P4
+  F14 -->|"Cambia a los 10 min [responsable: Julián]"| P14
+  FR -.->|"Cambia a los 5 s [respuesta automática]"| PR
+  subgraph LEY["Leyenda"]
+    direction LR
+    LG0>"Falla"]:::falla
+    LG1["Plan de cambio"]:::plan
+    LG2["Línea continua: relación decidida · línea discontinua: propuesta o por confirmar"]:::comp
+  end

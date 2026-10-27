@@ -242,3 +242,18 @@ Resultados completos en `12_verificacion.md`. Ya corregidos en cascada en `03_st
 |---|---|---|---|
 | C-22 | La paleta azul genérica de `06` §5 se reemplaza por la derivada de los originales del CDE (marino #16265C, naranja #F47B20, amarillo #FFCC4D, crema #FDEFE2); fuente de documentos: Arial/Calibri, la app usa Manrope y Source Sans 3 | Los XML de los originales traen la paleta; v1 decía que no se conocía | María Paula |
 | PA-29 | ¿El CDE permite usar su paleta (sin logotipo) y entrega manual de marca? Opciones: (a) paleta como inspiración sin logos, (b) pedir manual, (c) paleta neutra. Recomendación: (a) y preguntar el 28-oct. Por qué bloquea: coherencia y permiso | `PROMPT_2` prohíbe logos sin permiso | CDE |
+
+### K.6 Hallazgo de F17: el Núcleo no cabe antes del congelamiento (`tareas/_INDEX.md`)
+
+**PA-30 · ¿Cómo se cierra la brecha entre la carga y las 11,75 h útiles hasta el FF?** (decide el equipo en T-01, 28-oct 10:00)
+
+- **Por qué bloquea:** el calendario nominal de `tareas/_INDEX.md` muestra que, con el Núcleo completo, Santiago termina T-15 a las 03:00, Julián termina T-30/T-31 a las 03:00–03:30 y María Paula termina T-27 a las 03:00; el FF es a las 01:30 y T-91 (ensayo) a las 00:30–01:30.
+- **Aritmética (horas útiles hasta FF: 11,75 por persona = 35,25 h de equipo):** carga del plan v1 con los ahorros A1–A3 = S 12,25 + J 13,25 + MP 12,0 = **37,5 h** (déficit del equipo: 2,25 h, ya existía); añadir los incrementos del Núcleo de la Ronda 2 (T-17 0,5, T-19 0,25, T-27 0,5, T-31 0,5 y +1,0 en T-12/T-13) = **40,25 h** (déficit: 5,0 h, ≈ 14 %).
+- **Opciones:**
+  1. **Dos pasadas** (recomendada): lo que ya está al final de cada cola (T-19, T-17, T-27, T-31) se construye solo si el resto de la cola está terminada y probada, y los incrementos de T-12 (+0,75) y T-13 (+0,25) se hacen en una segunda pasada tras T-15 (ya escrito en sus specs). Con esto, el Núcleo «seguro» vuelve a la carga de v1 + ahorros.
+  2. Equilibrar con el resto: mover T-25 (recomendación por reglas, 0,75 h) de Julián a María Paula, porque depende de los diagnósticos que ella construye; queda ≈ 0,75 h de déficit por persona, que se absorbe con la ventana de corrección 6:30–7:30 del día 2 y las contingencias de `07` §7 (p. ej. T-15 como consulta directa).
+  3. Aplicar de entrada la contingencia de `07` §7 a T-15 (línea de tiempo con UNION de tablas, −0,75 h) y reducir T-30 a solo los totales de la demo (−0,5 h).
+  4. Dormir 3 h en lugar de 4 (no recomendada: `07` §8 pide ≥ 4 h por seguridad y errores nocturnos).
+- **Recomendación:** opciones 1 + 2 + 3. **Decide:** Santiago, Julián y María Paula en T-01 (se registra en `docs/DECISIONES.md`).
+
+(Si adoptan 1 + 2 + 3, los cambios de responsable y horas se reflejan en `backlog.csv` y `07` antes de las 10:30.)

@@ -109,6 +109,27 @@ Resultado de conjunto: con las elecciones de §3, `npm install --package-lock-on
 | NV-14 | Cabeceras de seguridad | No consultado | ❌ |
 | NV-20, 21, 23, 24, 25 | Precios y funciones de competidores | HubSpot (JS), Salesforce (404), resto no consultado | ❌ |
 
+### 2.5 Medición propia de `pg_trgm` (PostgreSQL 16.15 local, 27-oct-2026)
+
+En una instancia temporal de PostgreSQL 16.15 con `CREATE EXTENSION pg_trgm` se midieron las puntuaciones con nombres normalizados (minúsculas, sin tildes, sin sufijos societarios). El servidor objetivo es PostgreSQL 18.6: **repetir estas consultas en la plantilla** (paso 6 de la lista de pasos).
+
+| Par (a, b) | `similarity` | `word_similarity(a, b)` |
+|---|---|---|
+| pamaderia dulce hogar / panaderia dulce hogar | 0,76 | 0,77 |
+| panaderia dulce hogar sas / panaderia dulce hogar | 0,85 | 0,85 |
+| dulce hogar panaderia / panaderia dulce hogar | 1,00 | 1,00 |
+| panaderia dulce hogar / panaderia la espiga (empresas distintas) | 0,31 | 0,45 |
+| panaderia dulce hogar / panaderia el trigal (distintas) | 0,31 | 0,45 |
+| tienda don pepe / tienda don pedro (distintas) | 0,65 | 0,81 |
+| restaurante el fogon / restaurante el fogon sabor | 0,78 | 1,00 |
+| distribuciones andina / distribuciones andinas | 0,88 | 0,95 |
+| búsqueda "pamaderia" contra "panaderia dulce hogar" | 0,28 | **0,54** |
+| búsqueda "panadria" contra "panaderia dulce hogar" | 0,29 | 0,58 |
+| búsqueda "dulse hogar" contra "panaderia dulce hogar" | 0,36 | 0,60 |
+| búsqueda "pamader" (7 letras) contra el mismo nombre | 0,15 | 0,36 |
+
+Conclusiones para las specs: (1) los umbrales de v1 para duplicados (probable ≥ 0,6 con municipio o contacto igual; posible ≥ 0,45) separan los pares de prueba, pero "tienda don pepe / don pedro" (0,65) queda como falso positivo si solo se usa el nombre: por eso la regla de v1 exige además municipio o contacto igual. (2) Para la **búsqueda tolerante** se usa `word_similarity` ≥ 0,5 evaluada con la función, no con el operador `<%`, cuyo umbral por defecto (documentado en postgresql.org como parámetro `pg_trgm.word_similarity_threshold`, valor por defecto `[NO VERIFICADO: leer en la doc de 18]`) podría dejar fuera "pamaderia" (0,54). (3) Con 7 letras o menos de consulta la tolerancia a errores se degrada: la búsqueda exige al menos 3 caracteres y complementa con `ILIKE`.
+
 ## 3. Decisiones que cambian respecto a v1 (registradas en `99` §K)
 
 | ID | Cambio | Motivo (fuente en §2) | Costo |

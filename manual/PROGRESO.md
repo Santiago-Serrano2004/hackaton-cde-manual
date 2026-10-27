@@ -23,7 +23,7 @@ Marca cada fase al terminarla. Si la sesión se corta, la siguiente retoma desde
 - [x] F14 Backlog de funcionalidades (`14_backlog.md`, `backlog.csv`)
 - [x] F15 Frontend: skills, librerías y recursos (`15_frontend_skills_y_ui.md`)
 - [x] F16 Sistema de diseño y dirección de arte (`16_sistema_de_diseno.md`)
-- [ ] F17 Specs autocontenidas por tarea (`tareas/`)
+- [x] F17 Specs autocontenidas por tarea (`tareas/`)
 - [ ] F18 Pitch y demo v2 (`18_pitch_v2.md`)
 - [ ] F19 Kit local y auditoría v2 (`19_kit_local.md`)
 
@@ -33,3 +33,4 @@ Marca cada fase al terminarla. Si la sesión se corta, la siguiente retoma desde
 - 2026-10-27 F14: 48 tareas (33 de v1 + 15 nuevas) y 4 filas futuras en `backlog.csv`; 9 rebanadas; 25/25 historias con tarea; 0 dependencias rotas. Horas reconciliadas en `07` §5.1–5.3. Déficit real con el Núcleo: S 2,5 h, J 3,0 h, MP 2,5 h (C-18 en `99` §K.3). Generado con un script del scratchpad (no está en el repo).
 - 2026-10-27 F15: 11 repos investigados (★ por deps.dev, último commit por clon superficial); 3 skills auditadas e instalables con commit y hash (frontend-design, composition-patterns, ui-ux-pro-max parcial); `web-design-guidelines` rechazada (descarga instrucciones de `main` en cada uso) y su contenido queda como copia fija. 14 entradas de UI compiladas y montadas (pesos gzip medidos). `npx shadcn` no se ejecutó (rechazado por el clasificador de seguridad como código externo no revisado): queda como tarea previa humana de 1,25 h (`15` §7). C-19..C-21, PA-28, NV-26 en `99` §K.4.
 - 2026-10-27 F16: paleta extraída de los XML de los originales (marino/naranja/amarillo/crema; fuentes Arial/Calibri). Dirección recomendada "Hilo de ruta". Contrastes calculados; hallazgo clave: blanco sobre #F47B20 = 2,73:1 (prohibido) y #F47B20 como texto tampoco; se define `--naranja-texto` #B34700. Fuentes Manrope + Source Sans 3 (53,7 KB). C-22 y PA-29 en `99` §K.5; `06` §5 marcado como superado.
+- 2026-10-27 F17: 43 specs (todas las Must y Should de `backlog.csv`) + `_PLANTILLA.md` + `_INDEX.md` (orden de ejecución, niveles de dependencia, calendario nominal). Medición real de `pg_trgm` en PostgreSQL 16.15 local (umbrales de duplicados y de búsqueda; `12` §2.5). Hallazgo: el calendario nominal del Núcleo termina ≈ 1,5–2 h después del FF (PA-30 en `99` §K.6, con 4 opciones y recomendación). Specs generadas con un script del scratchpad (no está en el repo). No se escribió código de la aplicación.

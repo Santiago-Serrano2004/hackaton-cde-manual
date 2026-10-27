@@ -187,7 +187,7 @@ Convenciones: "vacío" explica qué falta y ofrece la acción; "cargando" usa es
 
 | Decisión | Valor | Motivo |
 |---|---|---|
-| Paginación | **Del servidor, 50 filas por defecto** (25 y 100 opcionales); `per_page` máx. 100 | RNF-02: ninguna lista carga más de 50 filas sin paginar |
+| Paginación | **Del servidor, 50 filas por defecto** (25 opcional); `per_page` máx. 50 | RNF-02 y `05` §3: ninguna lista carga más de 50 filas sin paginar |
 | Ordenar y filtrar | Se envían al servidor; los filtros activos se muestran como chips quitables | Consistencia con cifras y reportes |
 | Virtualización (`@tanstack/react-virtual`) | Solo donde el cliente ya tiene muchas filas: **vista previa de importación (509 filas)** y línea de tiempo con más de 200 hitos | Para 509 filas el DOM completo sería lento en un portátil de gama media |
 | Búsqueda en tabla | La paleta Ctrl+K cubre la búsqueda global; la tabla tiene un filtro propio por texto | Dos patrones claros |

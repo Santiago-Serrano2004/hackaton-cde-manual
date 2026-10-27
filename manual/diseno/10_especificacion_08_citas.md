@@ -56,7 +56,7 @@ Errores comunes: 401 sin sesión → `ERR.401`; 403 → `ERR.403`; 422 → `ERR.
 | `M4.modalidad` | Presencial o virtual |
 | `M4.enviada` | Recibimos tu solicitud. El equipo te confirmará la fecha por correo. |
 | `M4.vacio` | No tienes citas próximas. Solicita una cuando la necesites. |
-| `MAIL.cita_24h` | Recordatorio: tu cita es mañana |
+| `MAIL.cita_24h (asunto)` | Recordatorio: tu cita es mañana |
 
 ## 5. Estados
 

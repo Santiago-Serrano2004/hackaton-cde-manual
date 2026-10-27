@@ -70,3 +70,18 @@ Todas las fases F20–F24 completas. Nada de lo propuesto está aplicado: espera
 - Contradicciones y decisiones en `diseno/99_decisiones.md`: DEC-01..DEC-19, CON-01..CON-11, PD-01..PD-08. Las de mayor impacto: dígitos de verificación de los NIT de `21_casos_demo` (5 de 6 inválidos; las pantallas usan los corregidos), la «lista de 25 puntos» que no existe en `16` (14 + 12), ventana de «deshacer» (30 s / 24 h / 30 días), cola de validación en `18` frente a R3, y E1 y E15 sin tarea en `backlog.csv`.
 - Pendiente humano: prueba de usabilidad de 2 min (`16` §13 ítem 14), lector de pantalla real, Firefox/Safari, anchos 1366/1920/360, validar la escala de calor oscura con una persona con daltonismo, y que el CDE autorice paleta y logotipo (PA-29).
 - Los generadores de las páginas, de las especificaciones y de las mediciones están en el espacio de trabajo de la sesión (no en el repositorio); el prototipo HTML/CSS/JS sí está en `diseno/prototipo/`.
+
+## Misión de formación por recompensas (`diseno/gamificacion/`)
+- [x] Paso 1 investigación (`diseno/gamificacion/00_investigacion.md`)
+- [x] Paso 2 dirección y mecánicas (`01_direccion_y_mecanicas.md`, `02_ilustraciones.md`, `99_decisiones.md`)
+- [x] Paso 3 prototipo navegable (`prototipo/`, 7 páginas) e ilustraciones SVG (`ilustraciones/`, 14 archivos)
+- [x] Paso 4 validación con evidencia (`90_revision.md`, `capturas/`, 83 archivos)
+- [x] Paso 5 entrega (`10_especificacion_G1…G6`, `INDEX.md`, `05_prueba_de_usuario.md`, `99_cambios.md`)
+
+### Notas
+- 2026-10-27 Internet: probado primero (W3C, NN/g, MDN, npm, Crossref, OpenAlex, Semantic Scholar: HTTP 200; `selfdeterminationtheory.org` 403; la página de Robertson sobre «pointsification» redirige hoy a un sitio ajeno y se descartó). Tres DOI propuestos de memoria resultaron ser de otros artículos y se descartaron; solo se citan los DOI cuyo título coincide.
+- Recomendación de metáfora: **«El hilo»** (34 de 35 puntos frente a «camino» 23 y «huerto» 17). Sin confeti, sin sonido, sin ventanas que bloqueen; tres intensidades (Completo, Discreto, Oculto).
+- Medición: axe-core 4.14.0 en 120 combinaciones, 36 violaciones iniciales → **0**; Lighthouse 13.5.0 en 14 corridas: accesibilidad 100, buenas prácticas 100, rendimiento 98–100, **CLS 0** (empezó en 0,01–0,31); 36 de 36 pruebas funcionales; 54 contrastes calculados; 23 defectos corregidos; peso añadido ≈ 6,7 KB gzip (CSS + sprite) y 0 KB de dependencias nuevas.
+- Costo (estimación propia, **no medida**): MÍNIMA 1,30 h; ESTÁNDAR 2,85 h; COMPLETA ≈ 6,55 h. Colchón de María Paula: 1,5 h en A y 0 h en B → supuesto S-1 por confirmar al empezar T-44 (`01` §10, PD-G01).
+- Pendiente humano: decidir PD-G01..PD-G08 (`99_decisiones.md`); **hacer la prueba con ≥ 5 personas adultas** (`05_prueba_de_usuario.md`; no hay resultados todavía); lector de pantalla real, Firefox y Safari; medir en el portátil del laboratorio; aplicar los cambios propuestos de `99_cambios.md` §3 si se ratifica.
+- Los generadores de páginas, sprite, capturas y mediciones están en el espacio de trabajo de la sesión (no en el repositorio); el prototipo HTML/CSS/JS sí está en `diseno/gamificacion/prototipo/`.

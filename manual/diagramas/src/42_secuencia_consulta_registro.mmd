@@ -1,0 +1,78 @@
+---
+title: "Secuencia · Consulta al registro mercantil con caché y degradación (propuesta de la Ronda 4, RF-32 y RNF-19)"
+config:
+  theme: base
+  look: classic
+  fontFamily: "Inter, Carlito, Arial, sans-serif"
+  themeVariables:
+    fontFamily: "Inter, Carlito, Arial, sans-serif"
+    fontSize: "16px"
+    lineColor: "#1B2340"
+    primaryTextColor: "#1B2340"
+    primaryColor: "#E8EDFB"
+    primaryBorderColor: "#2F4A9E"
+    edgeLabelBackground: "#F7F4EF"
+    background: "#F7F4EF"
+    actorBkg: "#E8EDFB"
+    actorBorder: "#2F4A9E"
+    actorTextColor: "#1B2340"
+    actorLineColor: "#4B5575"
+    signalColor: "#1B2340"
+    signalTextColor: "#1B2340"
+    noteBkgColor: "#FFF4D6"
+    noteTextColor: "#6B4200"
+    noteBorderColor: "#B34700"
+    labelBoxBkgColor: "#E8EDFB"
+    labelBoxBorderColor: "#2F4A9E"
+    labelTextColor: "#1B2340"
+    loopTextColor: "#1B2340"
+    activationBkgColor: "#E8EDFB"
+    activationBorderColor: "#2F4A9E"
+    sequenceNumberColor: "#FFFFFF"
+  sequence:
+    mirrorActors: false
+    wrap: true
+    width: 190
+    actorMargin: 40
+    messageMargin: 36
+    noteMargin: 12
+    useMaxWidth: true
+---
+sequenceDiagram
+  autonumber
+  actor EQ as Equipo CDE
+  participant SPA as Aplicación web SPA
+  participant API as API Laravel
+  participant CRM as Consulta al registro mercantil
+  participant DB as Base de datos PostgreSQL
+  participant REG as Registro mercantil abierto (datos.gov.co)
+  participant AUD as Auditor::registrar()
+  EQ->>SPA: Pulsa Consultar registro mercantil
+  SPA->>API: POST /empresas/{id}/consulta-registro (HTTPS · JSON · Bearer)
+  alt NIT no elegible
+    API-->>SPA: 422 NIT_NO_ELEGIBLE
+  else NIT elegible
+    API->>CRM: Pide propuestas para nit_norm
+    CRM->>REG: GET datos.gov.co/resource/c82u-588k.json con $where nit (HTTPS · JSON · 5 s · 1 reintento)
+    alt El registro responde
+      REG-->>CRM: Coincidencias sin nombres de personas
+      CRM->>DB: Guarda en consultas_registro (SQL)
+      CRM-->>API: Propuestas
+      API-->>SPA: 200 con tabla lo que tenemos y lo que dice el registro
+    else Tiempo agotado, 429 o error de red
+      CRM->>DB: Lee consultas_registro (SQL · vigencia 24 h)
+      alt Hay resultado guardado
+        API-->>SPA: 200 con Resultado guardado el {fecha}
+      else No hay resultado guardado
+        API-->>SPA: 502 REGISTRO_NO_DISPONIBLE
+      end
+    end
+    Note over SPA,API: La caída del registro no impide editar ni fusionar (RNF-19)
+  end
+  EQ->>SPA: Acepta o rechaza cada fila
+  SPA->>API: POST /empresas/{id}/consulta-registro/aceptar con campos (HTTPS · JSON · Bearer)
+  API->>DB: Escribe el valor con origen registro_mercantil y estado verificado (SQL)
+  API->>AUD: Registra valor anterior, nuevo, origen y usuario
+  AUD->>DB: INSERT en auditoria (SQL)
+  API-->>SPA: 200
+  Note over EQ,AUD: Leyenda: flecha continua = petición o paso · flecha discontinua = respuesta · actor = persona · caja amarilla = nota · alt, opt y loop = alternativa, opcional y repetición

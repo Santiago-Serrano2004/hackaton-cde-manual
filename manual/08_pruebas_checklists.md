@@ -29,7 +29,7 @@ Tipos: **A** automática (Pest/Vitest), **M** manual (caso §2), **SQL** consult
 | RF-17 | T-43 | `PuntosTest`: asistir suma 30 una sola vez (idempotente); tope mensual | A + M-07 | MP |
 | RF-18 | T-43 | `NivelesTest`: umbral 100 → nivel 2 + insignia | A + M-07 | MP |
 | RF-20 | T-16/T-45 | `CaracterizacionTest` contra SQL-01 | A + SQL-01 | S |
-| RF-21 | T-16 | `ReporteTest`: PDF/CSV/XLSX generados < 10 s; cifras = SQL-02 | A + M-08 | S |
+| RF-21 | T-16 | `ReporteTest`: CSV (BOM) y vista imprimible < 10 s (R2, C-11); cifras = SQL-02 | A + M-08 | S |
 | RF-22 | T-16/T-45 | `BrechasTest`: Alimentos devuelve ranking; n < 5 muestra advertencia | A + M-08 | S |
 | RF-25 | T-10 | `MatrizRolesTest` (rol × endpoint de `05` §4) | A | S |
 | RF-26 | T-10 | `AuditoriaTest`: crear/editar/fusionar/login generan entrada | A | S |
@@ -43,11 +43,34 @@ Tipos: **A** automática (Pest/Vitest), **M** manual (caso §2), **SQL** consult
 | RNF-09 | T-11.. | Cada Form Request tiene prueba de datos inválidos | A | dueño |
 | RNF-10 | T-14, T-16 | CSV con tildes se abre en Excel sin corrupción (BOM) | M-08 | S |
 | RNF-11 | T-02 | `docker compose up` en máquina limpia ≤ 15 min | CK-Despliegue | J |
-| RNF-12 | T-12 | Fusión e importación reversibles; borrado lógico; confirmación modal | M-05 | S |
+| RNF-12 | T-12 | Fusión reversible (R2: la importación completa ya no se revierte, C-15); borrado lógico; confirmación modal | M-05 | S |
 | RNF-13 | T-46 | Sin consentimiento no entra; "Descargar mis datos" devuelve JSON | A + M-06 | MP |
 | RNF-14 | T-30 | `DatosDemoTest` (totales exactos); búsqueda de correos reales = 0 | A | J |
 
 Cobertura: los 22 RF Must y los 13 RNF Must tienen tarea, prueba y responsable (verificación en `INDEX.md` y la auditoría F11).
+
+### 1.1 Pruebas añadidas o cambiadas por la Ronda 2 (fuente: `tareas/T-XX.md` §7)
+
+| Tarea | Prueba nueva o cambiada | Tipo | Req. |
+|---|---|---|---|
+| T-10 | `AuthTest` (throttle 6.º intento → 429), `MatrizRolesTest` rol × endpoint, `AuditoriaTest` (la tabla no se actualiza) | A | RF-25, RF-26, RNF-03 |
+| T-11 | `NormalizadorTest` (NIT/correo/nombre), `EmpresaCrudTest` | A | RF-01, RNF-09 |
+| T-12 | `DuplicadosTest` (12 sembrados: ≥ 11 detectados, ≤ 2 falsos positivos), `FusionTest` (0 huérfanos, deshacer restaura), fusión concurrente | A | RF-02, RF-03, RNF-12 |
+| T-13 | `BusquedaTest` («pamaderia» ≥ 0,5; inyección sin efecto), p95 ≤ 1 s con 5 000 empresas, `EXPLAIN` usa el índice | A + SQL | RF-28, RNF-01/02 |
+| T-14 | `ImportacionTest` (509 filas: 497 / 12 / 0 en < 60 s; separador `;` y tildes) | A | RF-15, RNF-10 |
+| T-15 | `HistorialTest` (≥ 15 hitos de ≥ 5 tipos; ≤ 12 consultas; idempotencia) | A | RF-14 |
+| T-16 | `ReportesTest` (cifras = SQL de control; CSV con BOM abre con tildes) | A + SQL | RF-20..22, RNF-10 |
+| T-21 | `RecordatoriosTest` (2 recordatorios 24 h y 1 h; reintentos; cancelar) | A | RF-09 |
+| T-23 | `CupoConcurrenciaTest` (1 cupo, 2 solicitudes), QR vencido rechazado, feed público sin datos personales | A | RF-11, RF-12 |
+| T-25 | `RecomendacionTest` (perfiles distintos → listas y motivos distintos) | A | RF-10 |
+| T-30 | `DatosDemoTest` (todos los totales de `04` §7.1) | A | RNF-14 |
+| T-31 | `DemoResetTest` (404 con `APP_DEMO=false`; palabra de confirmación) | A | RNF-12, RNF-14 |
+| T-43 | Idempotencia de puntos, topes mensuales, rachas, cola de validación | A | RF-17, RF-18 |
+| T-48 | `PreguntasTest` (cada pregunta = SQL de control; inyección → 422) | A | RF-22 |
+| T-17, T-19, T-27, T-47, T-49 | Vitest + Playwright + `axe` sobre paleta, comparador, línea de tiempo, mapa de ruta y mapa de calor | A | RF-28, RF-02/03, RF-14, RF-17/18, RF-22, RNF-05 |
+| T-96 | `axe` sobre las 8 pantallas del camino dorado (manda sobre los contrastes calculados de `16`) | A + CK | RNF-03, RNF-05 |
+
+Pruebas que **ya no aplican**: reversión de la importación completa (C-15), PDF/XLSX generados en servidor (C-11).
 
 ## 2. Casos manuales de la demo (guion de prueba)
 
@@ -120,7 +143,7 @@ Cada una se guarda en `docs/sql_control.sql` y su resultado esperado figura en `
 - [ ] SE: 403 en intento no autorizado + auditoría visible.
 - [ ] MA: árbol de módulos, CI verde, agregar un reto sin tocar otros módulos.
 - [ ] FL: `docker compose up` en máquina limpia; catálogo cambiado sin código.
-- [ ] PR: fusión/importación reversible; borrado lógico; confirmaciones.
+- [ ] PR: fusión reversible (R2: no la importación completa); borrado lógico; confirmaciones.
 
 ### 5.3 Accesibilidad (RNF-05) - revisión manual de las 8 pantallas del camino dorado
 - [ ] Contraste ≥ 4,5:1 (tokens de `06` §5).

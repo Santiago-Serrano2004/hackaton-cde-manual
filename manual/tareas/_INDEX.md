@@ -36,20 +36,20 @@ Este índice lista las 43 tareas Must y Should con especificación (`tareas/T-XX
 | 10 | [T-42](T-42.md) | Proyectos de aula, planes, compromisos, vencidos (back+front E8, D1–D2) | MP | 2,0 | Must | S3 | T-11 | 28-oct 15:00 | 17:00 |  |
 | 11 | [T-21](T-21.md) | Recordatorios: creación al agendar, job de envío, plantillas, reintentos, bandej… | J | 1,0 | Must | S1 | T-20, T-03 | 28-oct 15:30 | 16:30 |  |
 | 12 | [T-22](T-22.md) | Front citas: M4 (emprendedor), E9 (bandeja) | J | 1,0 | Must | S1 | T-20, T-40 | 28-oct 16:30 | 18:00 |  |
-| 13 | [T-12](T-12.md) | Detección de duplicados con puntuación (NIT, correo, nombre con pg_trgm) + fusió… | S | 2,25 | Must | S1 | T-11 | 28-oct 17:30 | 20:30 |  |
+| 13 | [T-12](T-12.md) | Detección de duplicados (pg_trgm) + fusión transaccional + banner front | S | 1,5 | Must | S1 | T-11 | 28-oct 17:30 | 19:00 |  |
 | 14 | [T-43](T-43.md) | Gamificación back: retos, puntos (idempotentes), niveles, insignias, rachas, lis… | MP | 2,5 | Must | S4 | T-23, T-42 | 28-oct 17:30 | 20:45 |  |
 | 15 | [T-23](T-23.md) | Eventos back: CRUD, publicar, inscripción con cupo (lock), asistencia manual y Q… | J | 2,5 | Must | S4 | T-10 | 28-oct 18:00 | 21:15 |  |
 | 16 | [T-90](T-90.md) | Verificación de H1 en el servidor | Todos | 0,25 | Must | S1 | T-11, T-20, T-22 | 28-oct 19:00 | 19:45 |  |
-| 17 | [T-13](T-13.md) | Búsqueda global tolerante (endpoint agrupado: empresas, contactos, eventos) + fr… | S | 2,75 | Must | S2 | T-12 | 28-oct 20:30 | 23:15 |  |
+| 17 | [T-13](T-13.md) | Búsqueda global tolerante + front E4/E5 (alta con aviso, fusión) | S | 2,5 | Must | S2 | T-12 | 28-oct 19:45 | 22:15 |  |
 | 18 | [T-44](T-44.md) | Portal del emprendedor M2–M7 con animaciones de logro | MP | 3,0 | Must | S4 | T-43, T-22, T-24 | 28-oct 20:45 | 23:45 |  |
 | 19 | [T-24](T-24.md) | Front eventos: E10, M5 (oferta), pantalla de QR/asistencia | J | 2,0 | Must | S4 | T-23, T-40 | 28-oct 21:15 | 23:15 |  |
-| 20 | [T-14](T-14.md) | Importación CSV (UTF-8): subir, mapear, vista previa, confirmar | S | 1,5 | Must | S2 | T-12 | 28-oct 23:15 | 00:45 (29-oct) |  |
+| 20 | [T-14](T-14.md) | Importación CSV/XLSX: subir, mapear, vista previa, confirmar, revertir | S | 2,0 | Must | S2 | T-12 | 28-oct 22:15 | 00:15 (29-oct) |  |
 | 21 | [T-25](T-25.md) | Recomendación por reglas con motivo | J | 0,75 | Must | S4 | T-23, T-41 | 28-oct 23:15 | 00:00 (29-oct) |  |
 | 22 | [T-46](T-46.md) | Consentimiento, "Descargar mis datos", solicitud de corrección | MP | 0,5 | Must | S4 | T-10 | 28-oct 23:45 | 00:15 (29-oct) |  |
 | 23 | [T-30](T-30.md) | DemoSeeder + factories de todos los módulos + validador de totales + `importacio… | J | 3,0 | Must | S8 | T-11, T-20, T-23, T-41, T-42 | 29-oct 00:00 | 03:00 (29-oct) | ⚠ termina después del congelamiento (01:30): aplicar el corte |
-| 24 | [T-45](T-45.md) | Dashboard, brechas y reporte (E11–E13) | MP | 1,5 | Must | S5 | T-16 | 29-oct 00:15 | 01:45 (29-oct) | ⚠ termina después del congelamiento (01:30): aplicar el corte |
-| 25 | [T-91](T-91.md) | Ensayo del camino dorado y lista de bloqueantes | Todos | 1,0 | Must | S8 | T-45, T-15, T-30 | 29-oct 00:30 | 01:30 |  |
-| 26 | [T-16](T-16.md) | Reportes back: vistas de caracterización, brechas (último diagnóstico), KPIs de … | S | 0,75 | Must | S5 | T-41, T-11 | 29-oct 00:45 | 01:30 (29-oct) |  |
+| 24 | [T-16](T-16.md) | Reportes back: vistas de caracterización, brechas (último diagnóstico), KPIs de … | S | 1,25 | Must | S5 | T-41, T-11 | 29-oct 00:15 | 01:30 (29-oct) |  |
+| 25 | [T-45](T-45.md) | Dashboard, brechas y reporte (E11–E13) | MP | 1,5 | Must | S5 | T-16 | 29-oct 00:15 | 01:45 (29-oct) | ⚠ termina después del congelamiento (01:30): aplicar el corte |
+| 26 | [T-91](T-91.md) | Ensayo del camino dorado y lista de bloqueantes | Todos | 1,0 | Must | S8 | T-45, T-15, T-30 | 29-oct 00:30 | 01:30 |  |
 | 27 | [T-15](T-15.md) | Historial: listeners → `intervenciones`; API de línea de tiempo; pestaña front | S | 1,5 | Must | S3 | T-20, T-23, T-41, T-42 | 29-oct 01:30 | 03:00 (29-oct) | ⚠ termina después del congelamiento (01:30): aplicar el corte |
 | 28 | [T-92](T-92.md) | Congelamiento, etiqueta `ff-1`, respaldo `pg_dump`, backlog de errores | J | 0,5 | Must | S8 | T-91 | 29-oct 01:30 | 02:00 |  |
 | 29 | [T-19](T-19.md) | Vista lado a lado de duplicados con diferencias resaltadas y botón Deshacer | MP | 0,25 | Must | S2 | T-12, T-40 | 29-oct 01:45 | 02:00 (29-oct) | ⚠ termina después del congelamiento (01:30): aplicar el corte |

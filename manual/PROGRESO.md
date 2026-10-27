@@ -25,7 +25,7 @@ Marca cada fase al terminarla. Si la sesión se corta, la siguiente retoma desde
 - [x] F16 Sistema de diseño y dirección de arte (`16_sistema_de_diseno.md`)
 - [x] F17 Specs autocontenidas por tarea (`tareas/`)
 - [x] F18 Pitch y demo v2 (`18_pitch_v2.md`)
-- [ ] F19 Kit local y auditoría v2 (`19_kit_local.md`)
+- [x] F19 Kit local y auditoría v2 (`19_kit_local.md`)
 
 ### Notas Ronda 2
 - 2026-10-27 F12: acceso a npm, Packagist, php.net, nodejs.org, react.dev, laravel.com, postgresql.org, w3.org, owasp.org y docs.docker.com OK. Bloqueados: api.github.com y github.com (403, repo no habilitado), iso.org (403), funcionpublica.gov.co. La resolución de dependencias con composer/npm funciona; la descarga de paquetes no. Cambios frente a v1: C-01..C-10 en `99` §K.
@@ -35,3 +35,7 @@ Marca cada fase al terminarla. Si la sesión se corta, la siguiente retoma desde
 - 2026-10-27 F16: paleta extraída de los XML de los originales (marino/naranja/amarillo/crema; fuentes Arial/Calibri). Dirección recomendada "Hilo de ruta". Contrastes calculados; hallazgo clave: blanco sobre #F47B20 = 2,73:1 (prohibido) y #F47B20 como texto tampoco; se define `--naranja-texto` #B34700. Fuentes Manrope + Source Sans 3 (53,7 KB). C-22 y PA-29 en `99` §K.5; `06` §5 marcado como superado.
 - 2026-10-27 F17: 43 specs (todas las Must y Should de `backlog.csv`) + `_PLANTILLA.md` + `_INDEX.md` (orden de ejecución, niveles de dependencia, calendario nominal). Medición real de `pg_trgm` en PostgreSQL 16.15 local (umbrales de duplicados y de búsqueda; `12` §2.5). Hallazgo: el calendario nominal del Núcleo termina ≈ 1,5–2 h después del FF (PA-30 en `99` §K.6, con 4 opciones y recomendación). Specs generadas con un script del scratchpad (no está en el repo). No se escribió código de la aplicación.
 - 2026-10-27 F18: guion de 300 s (suma verificada), demo de 120 s segundo a segundo con plan B por paso, tres versiones A/B/C con regla de decisión a las 7:30, banco de 55 preguntas, argumentos para los 2 jurados de negocio, ensayos R0–R3. Ajuste de coherencia: Marcela Rojas con 435 puntos en el seeder (T-30) y +25 por compromiso (corregido en `16`, T-47). C-23..C-25 y Q-26..Q-29 en `99` §K.7 y `10`.
+- 2026-10-27 F19: kit local con 5 subagentes (`kit/agentes/`), skills auditadas con commit y hash (incl. `verification-before-completion`), Laravel Boost 2.10.3 auditado (tinker desactivado, consultas de docs salen a boost.laravel.com), Playwright MCP opcional fijado en 0.0.83; rechazados Context7, server-postgres/github (deprecated), inspector (postinstall). Auditoría: 43/43 specs, 35/35 requisitos Must con tarea Must, 0 dependencias rotas; contradicciones anotadas con «R2». `INDEX.md` y `PROYECTO_CLAUDE.md` actualizados. **Hallazgo central pendiente de decisión humana: el Núcleo no cabe antes del FF (PA-30).**
+
+## Cierre de la Ronda 2
+Todas las fases F12–F19 completas. Pendiente humano: las 18 decisiones de `INDEX.md`, verificación manual de lo `[NO VERIFICADO]` restante (`19` §2.5) y la prueba previa de instalación (`12` y `15` §7).

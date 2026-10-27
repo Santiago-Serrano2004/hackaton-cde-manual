@@ -266,3 +266,6 @@ Resultados completos en `12_verificacion.md`. Ya corregidos en cascada en `03_st
 | C-24 | La demo de 2 min pasa de 5 pasos (`09` §6) a 7 microescenas con tres versiones A/B/C | Portafolio de `13` | Equipo |
 | C-25 | Marcela Rojas arranca con 435 puntos (no 280 como en el wireframe de `06`/`16`) para que el cierre de un compromiso (+25) cruce el Nivel 4 (450) durante la demo | Coherencia de la demo con `06` §7.2 | Julián (T-30) |
 | Q-26..Q-29 | Preguntas nuevas al CDE añadidas en `10` | Ronda 2 | — |
+
+## K.8 Decisiones y riesgos nuevos de F19 (`19_kit_local.md` §2.6–§2.7)
+Decisiones 11–18 añadidas a `INDEX.md`. Hallazgos de la auditoría: 8 contradicciones de redacción corregidas con marca «R2» (`19` §2.3); el déficit de horas se mantiene y se decide en PA-30. Base de horas: 10,75 h (`07`) o 11,75 h con la hora de ensayo (`99` §K.6).

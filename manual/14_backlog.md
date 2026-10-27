@@ -54,28 +54,28 @@ Columnas: **Tarea · Resp. · Horas · Prior. · Depende de · ISO · Historias 
 |---|---|---|---|---|---|---|---|---|---|---|
 | T-00 | Levantar esqueleto en las 3 máquinas; accesos al servidor y GitHub | Todos | 0,5 | Must | Esqueleto | FL | — | Real | `docker compose up` ok en las 3; acceso SSH/Coolify probado | RNF-11 |
 | T-01 | Reconciliar respuestas del CDE con alcance; actualizar `docs/DECISIONES.md` | Todos | 0,5 | Must | — | — | — | Real | Lista de cambios firmada por los 3 | — |
-| T-02 | Despliegue del esqueleto y CI en servidor (Coolify) con variables de entorno | J | 1,0 | Must | T-00 | FI, FL | — | Real: despliegue; Simulado: ninguno | URL pública (o local) responde; push a `main` redepliega; CI verde | RNF-07, 11 |
+| T-02 | Despliegue del esqueleto y CI en servidor (Coolify) con variables de entorno | J | 1,0 | Must | T-00 | FI, FL | — | Real: despliegue; Simulado: ninguno | URL pública (o local) responde; push a `main` redepliega; CI verde | RNF-07, 11, RNF-08 |
 | T-03 | Cola `database`, scheduler, Mailpit, `/health` | J | 0,5 | Must | T-02 | FI | — | Real: cola y scheduler; Simulado: correo capturado por Mailpit | Job de ejemplo ejecuta; correo llega a Mailpit; `/health` 200 | RF-09, RNF-06 |
 | T-40 | Design system (tokens, componentes base), layout por rol, router, cliente API, pantalla de login y rutas protegidas | MP | 1,0 | Must | T-00 | CI | — | Real | Tokens de 16_sistema_de_diseno; Button/Input/Table/Card/Modal/Toast/Timeline listos; rutas por rol; contrastes ≥ 4,5:1 (decisión A3: supone librería de componentes de 15; si no se confirma, vuelve a 1,5) | RNF-04, 05 |
 
-### S1 · Recorrido de punta a punta (10,5 h)
+### S1 · Recorrido de punta a punta (9,75 h)
 
 | ID | Tarea | Resp. | h | Prior. | Depende de | ISO | HU | Real / simulado | Criterio de aceptación / DoD | Req. |
 |---|---|---|---|---|---|---|---|---|---|---|
-| T-10 | Auth Sanctum, 5 roles (spatie), policies base, middleware de auditoría, tabla `auditoria`, throttle | S | 1,5 | Must | T-00 | SE | HU-23, HU-24 | Real | Login/logout/me; usuario por rol sembrado; test rol×endpoint con 3 casos; login queda en auditoría | RF-25, 26 |
-| T-11 | Empresas: migraciones, modelos, normalizadores (NIT/correo/nombre), CRUD API, filtros; front E2/E3 (cabecera, pestañas vacías) | S | 3,0 | Must | T-10, T-40 | AF | HU-02 | Real | Crear/editar/listar con paginación; catálogos desde listas; ficha navegable | RF-01 |
-| T-12 | Detección de duplicados con puntuación (NIT, correo, nombre con pg_trgm) + fusión transaccional con deshacer + banner front | S | 2,25 | Must | T-11 | AF, FI | HU-02, HU-03 | Real | Prueba: 12 duplicados sembrados → ≥ 11 detectados con puntuación; fusión mueve historial; "Deshacer" dentro de 30 s restaura fichas e historial; todo en auditoría | RF-02, 03 |
-| T-20 | Citas: modelos, estados, solicitar/agendar/resultado/cancelar, policies | J | 1,5 | Must | T-10 | AF | HU-09, HU-10, HU-11 | Real | Flujo completo vía API; toda cita con empresa | RF-08 |
+| T-10 | Auth Sanctum, 5 roles (spatie), policies base, middleware de auditoría, tabla `auditoria`, throttle | S | 1,5 | Must | T-00 | SE | HU-23, HU-24 | Real | Login/logout/me; usuario por rol sembrado; test rol×endpoint con 3 casos; login queda en auditoría | RF-25, 26, RNF-03 |
+| T-11 | Empresas: migraciones, modelos, normalizadores (NIT/correo/nombre), CRUD API, filtros; front E2/E3 (cabecera, pestañas vacías) | S | 3,0 | Must | T-10, T-40 | AF | HU-02 | Real | Crear/editar/listar con paginación; catálogos desde listas; ficha navegable | RF-01, RNF-02, RNF-09 |
+| T-12 | Detección de duplicados (pg_trgm) + fusión transaccional + banner front | S | 1,5 | Must | T-11 | AF, FI | HU-02, HU-03 | Real | Prueba: 12 duplicados sembrados → ≥ 11 detectados; fusión mueve historial; auditoría | RF-02, 03, RNF-09, RNF-12 |
+| T-20 | Citas: modelos, estados, solicitar/agendar/resultado/cancelar, policies | J | 1,5 | Must | T-10 | AF | HU-09, HU-10, HU-11 | Real | Flujo completo vía API; toda cita con empresa | RF-08, RNF-09 |
 | T-21 | Recordatorios: creación al agendar, job de envío, plantillas, reintentos, bandeja "Notificaciones" | J | 1,0 | Must | T-20, T-03 | AF, FI | HU-10 | Real: job; Simulado: entrega al buzón de pruebas hasta definir SMTP (PA-03) | Recordatorio 24 h/1 h generado; job lo envía y marca; fallo reintenta 3 veces | RF-09 |
 | T-22 | Front citas: M4 (emprendedor), E9 (bandeja) | J | 1,0 | Must | T-20, T-40 | CI | HU-09 | Real | Solicitud → agenda → resultado desde la UI | RF-08 |
 | T-90 | Verificación de H1 en el servidor | Todos | 0,25 | Must | T-11, T-20, T-22 | FI | — | Real | Recorrido H1 sin errores | — |
 
-### S2 · Conocer a cada empresa (5 h)
+### S2 · Conocer a cada empresa (5,25 h)
 
 | ID | Tarea | Resp. | h | Prior. | Depende de | ISO | HU | Real / simulado | Criterio de aceptación / DoD | Req. |
 |---|---|---|---|---|---|---|---|---|---|---|
-| T-13 | Búsqueda global tolerante (endpoint agrupado: empresas, contactos, eventos) + front E4/E5 (alta con aviso, fusión) | S | 2,75 | Must | T-12 | AF, CI, ED | HU-01 | Real | "pamaderia" encuentra "panadería"; ≤ 2 acciones; el endpoint devuelve resultados agrupados por tipo en ≤ 1 s con 5 000 empresas | RF-28 |
-| T-14 | Importación CSV (UTF-8): subir, mapear, vista previa, confirmar | S | 1,5 | Must | T-12 | CO, AF | HU-04 | Real; el archivo de demo es sintético | 509 filas < 60 s; resumen correcto (creadas/actualizadas/rechazadas); sin XLSX ni reversión (decisión A1 de 13 §4.1) | RF-15 |
+| T-13 | Búsqueda global tolerante + front E4/E5 (alta con aviso, fusión) | S | 2,5 | Must | T-12 | AF, CI, ED | HU-01 | Real | "pamaderia" encuentra "panadería"; ≤ 2 acciones | RF-28, RNF-01 |
+| T-14 | Importación CSV/XLSX: subir, mapear, vista previa, confirmar, revertir | S | 2,0 | Must | T-12 | CO, AF | HU-04 | Real; el archivo de demo es sintético | 509 filas < 60 s; resumen correcto; reversión funciona | RF-15, RNF-10 |
 | T-17 | Paleta de comandos Ctrl+K: grupos (Empresas, Eventos, Contactos), recientes, atajos, navegación por teclado | MP | 0,5 | Must | T-13, T-40 | CI, AF | HU-01 | Real | Ctrl+K abre en < 100 ms; "pamaderia" → ficha con línea de tiempo en ≤ 20 s cronometrado; Esc cierra; funciona solo con teclado; hay plan alterno sin la librería | RF-28; D-01 |
 | T-19 | Vista lado a lado de duplicados con diferencias resaltadas y botón Deshacer | MP | 0,25 | Must | T-12, T-40 | AF, CI | HU-03 | Real | Dos columnas con campos distintos resaltados; elegir qué valor conservar por campo; toast con Deshacer 30 s | RF-02, RF-03; D-02 |
 
@@ -99,11 +99,11 @@ Columnas: **Tarea · Resp. · Horas · Prior. · Depende de · ISO · Historias 
 | T-44 | Portal del emprendedor M2–M7 con animaciones de logro | MP | 3,0 | Must | T-43, T-22, T-24 | CI, SE | HU-16 | Real | Los 3 bloques de CRI-05 cargan < 2 s; toast de puntos y subida de nivel | RF-13, 17, 18 |
 | T-46 | Consentimiento, "Descargar mis datos", solicitud de corrección | MP | 0,5 | Must | T-10 | SE, PR | HU-25 | Real: pantalla y descarga; Simulado: texto legal es borrador (04 §6) | Primer ingreso exige aceptar; JSON descargable | RNF-13 |
 
-### S5 · Conocimiento e impacto (2,25 h)
+### S5 · Conocimiento e impacto (2,75 h)
 
 | ID | Tarea | Resp. | h | Prior. | Depende de | ISO | HU | Real / simulado | Criterio de aceptación / DoD | Req. |
 |---|---|---|---|---|---|---|---|---|---|---|
-| T-16 | Reportes back: vistas de caracterización, brechas (último diagnóstico), KPIs de impacto, exportación CSV (UTF-8 con BOM) y vista imprimible para PDF | S | 0,75 | Must | T-41, T-11 | AF, CO | HU-20, HU-22 | Real | Cifras = consultas SQL de control (08); reporte ≤ 10 s; CSV abre en Excel con tildes correctas (decisión A2 de 13 §4.1) | RF-20..22, RF-21 |
+| T-16 | Reportes back: vistas de caracterización, brechas (último diagnóstico), KPIs de impacto, exportación CSV/XLSX/PDF | S | 1,25 | Must | T-41, T-11 | AF, CO | HU-20, HU-22 | Real | Cifras = consultas SQL de control (`08`); reporte ≤ 10 s | RF-20..22, RF-21, RNF-01, RNF-10 |
 | T-45 | Dashboard, brechas y reporte (E11–E13) | MP | 1,5 | Must | T-16 | AF, CI | HU-20, HU-21, HU-22 | Real | Filtros funcionan; pregunta modelo en ≤ 3 interacciones | RF-20..22 |
 
 ### S6 · Diferenciadores Nivel 2 (3,75 h)
@@ -166,10 +166,10 @@ Cada persona trabaja su cola en orden. Una tarea de nivel superior **no empieza*
 |---|---|---|---|---|---|
 | 1 | T-10 | Auth Sanctum, 5 roles (spatie), policies base, middleware de auditoría, tabla `auditoria`,… | Must | 1,5 | 1,5 |
 | 2 | T-11 | Empresas: migraciones, modelos, normalizadores (NIT/correo/nombre), CRUD API, filtros; fro… | Must | 3,0 | 4,5 |
-| 3 | T-12 | Detección de duplicados con puntuación (NIT, correo, nombre con pg_trgm) + fusión transacc… | Must | 2,25 | 6,75 |
-| 4 | T-13 | Búsqueda global tolerante (endpoint agrupado: empresas, contactos, eventos) + front E4/E5 … | Must | 2,75 | 9,5 |
-| 5 | T-14 | Importación CSV (UTF-8): subir, mapear, vista previa, confirmar | Must | 1,5 | 11 |
-| 6 | T-16 | Reportes back: vistas de caracterización, brechas (último diagnóstico), KPIs de impacto, e… | Must | 0,75 | 11,75 |
+| 3 | T-12 | Detección de duplicados (pg_trgm) + fusión transaccional + banner front | Must | 1,5 | 6 |
+| 4 | T-13 | Búsqueda global tolerante + front E4/E5 (alta con aviso, fusión) | Must | 2,5 | 8,5 |
+| 5 | T-14 | Importación CSV/XLSX: subir, mapear, vista previa, confirmar, revertir | Must | 2,0 | 10,5 |
+| 6 | T-16 | Reportes back: vistas de caracterización, brechas (último diagnóstico), KPIs de impacto, e… | Must | 1,25 | 11,75 |
 | 7 | T-15 | Historial: listeners → `intervenciones`; API de línea de tiempo; pestaña front | Must | 1,5 | 13,25 |
 | 8 | T-18 | Puntaje de calidad de datos por ficha y global (completitud 70 % + consistencia 30 %) y li… | Should | 0,5 | 13,75 |
 | 9 | T-48 | Catálogo de 6 preguntas guiadas (vistas SQL parametrizadas) y endpoint | Should | 0,5 | 14,25 |

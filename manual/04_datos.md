@@ -171,10 +171,10 @@ Un seeder **valida** al terminar: si no cuadra algún total, falla (prueba `Dato
 
 ## 8. Importación desde hojas de cálculo (RF-15)
 
-1. **Formatos:** CSV UTF-8 (separador `,` o `;` detectado) y XLSX (maatwebsite/excel).
+1. **Formatos:** CSV UTF-8 (separador `,` o `;` detectado). **R2 (C-15):** XLSX (maatwebsite/excel) queda fuera del camino crítico y solo se hace si sobra tiempo.
 2. **Plantilla descargable** con columnas: `razon_social, nombre_comercial, nit, sector, tamano, ingresos, formalizacion, relacion_unab, municipio, contacto_nombre, contacto_correo, contacto_telefono`.
 3. **Flujo:** subir → mapeo de columnas (automático por nombre; ajustable) → **vista previa** con semáforo (verde nueva, amarillo posible duplicado, rojo error) → el operador resuelve duplicados (omitir/actualizar/fusionar) → confirmar → resumen (creadas/actualizadas/rechazadas) → descarga del reporte de errores en CSV.
-4. **Reglas:** las filas se procesan en lotes de 100 dentro de transacciones; no se confirma nada hasta que el operador acepta; la importación completa es reversible dentro de 24 h (marca `importaciones.id` en cada fila creada) `PROPUESTA`.
+4. **Reglas:** las filas se procesan en lotes de 100 dentro de transacciones; no se confirma nada hasta que el operador acepta; ~~la importación completa es reversible dentro de 24 h~~ **R2 (C-15):** sin reversión de la importación completa (sí hay deshacer de fusiones, T-12); `importaciones.id` se sigue marcando en cada fila creada para auditoría.
 5. **Rendimiento:** 509 filas < 60 s (RF-15); comparación de duplicados con índice GIN de `pg_trgm` en `nombre_norm`.
 6. **Compatibilidad:** valores de catálogo se reconocen por sinónimos (tabla `sinonimos` o lista en configuración, p. ej. "Alimentos y bebidas" → Alimentos) `PROPUESTA`.
 

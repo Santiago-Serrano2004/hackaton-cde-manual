@@ -101,7 +101,7 @@ Correo: plantillas con el nombre del emprendedor, dato accionable y enlace al po
 
 - **Caracterización (RF-20):** vistas SQL `v_caracterizacion` (conteos por sector, tamaño, ingresos, formalización, relación UNAB); la UI aplica filtros y muestra también el % "sin dato" (deja visible el problema de calidad).
 - **Brechas (RF-22):** promedio de `brecha` por dimensión y sector/tamaño, tomando el **último diagnóstico** de cada empresa; muestra *n* (empresas) y advierte si *n* < 5 (no inferir). Pregunta modelo: "¿Mayores brechas del sector Alimentos?" → ranking de dimensiones.
-- **Impacto (RF-21):** KPIs por periodo: empresas atendidas, atenciones, proyectos, compromisos cumplidos/vencidos, variación media del puntaje de madurez entre primer y último diagnóstico, asistencia a eventos. Exporta PDF (dompdf), CSV y XLSX.
+- **Impacto (RF-21):** KPIs por periodo: empresas atendidas, atenciones, proyectos, compromisos cumplidos/vencidos, variación media del puntaje de madurez entre primer y último diagnóstico, asistencia a eventos. Exporta CSV (UTF-8 con BOM) y una vista imprimible para guardar como PDF (**R2, C-11:** dompdf y XLSX solo si sobra tiempo).
 - **Cuadre:** cada cifra del dashboard tiene su consulta SQL de control en `08`.
 - **Rendimiento:** las agregaciones leen de vistas con índices; si superan 1 s con 5 000 empresas sintéticas, se pasa a vistas materializadas refrescadas por tarea (`PROPUESTA`).
 
@@ -122,7 +122,7 @@ Se muestran los 3 mejores, con el **motivo** textual (HU-13). Pesos `PROPUESTA`,
 | Control de acceso roto | Policies + matriz §4; denegar por defecto; IDs no adivinables no son el único control | Test rol×endpoint; intentar leer empresa ajena → 403 |
 | Fallas criptográficas | HTTPS; hash de contraseñas; `documento` cifrado (cast encriptado de Laravel); secretos en variables de entorno | Revisión de `.env.example`; búsqueda de secretos en el repo |
 | Inyección | Eloquent/consultas parametrizadas; nunca concatenar SQL; validación por Form Request; escape de salida en React | Test con entrada `'; DROP TABLE--` devuelve 422/sin efecto |
-| Diseño inseguro | Soft delete, confirmaciones, límites de tasa, importación con vista previa y reversión | Revisión en `08` |
+| Diseño inseguro | Soft delete, confirmaciones, límites de tasa, importación con vista previa y fusiones reversibles (**R2, C-15:** la importación completa ya no se revierte) | Revisión en `08` |
 | Configuración incorrecta | `APP_DEBUG=false` en producción; cabeceras de seguridad (CSP, X-Content-Type-Options, X-Frame-Options, Referrer-Policy) en el proxy; CORS limitado al dominio | Inspección de cabeceras |
 | Componentes vulnerables | `composer audit` y `npm audit` en CI; versiones bloqueadas | CI |
 | Identificación y autenticación | Límite de intentos; expiración de token; revocación al logout; contraseña mínima | Test de throttle |
@@ -143,7 +143,7 @@ Se muestran los 3 mejores, con el **motivo** textual (HU-13). Pesos `PROPUESTA`,
 Índices (`04` §9), paginación obligatoria, *eager loading* (evitar N+1; prueba que cuenta consultas en `historial` ≤ 12), caché de catálogos y de KPIs (5 min), compresión gzip del proxy, *code splitting* en el front. Prueba con 5 000 empresas sintéticas (`08`).
 
 ## 11. Interoperabilidad (ISO-CO)
-Importar/exportar CSV (UTF-8 con BOM para Excel) y XLSX; API REST JSON documentada; plantilla de importación; `GET /publico/eventos` como feed. Google Workspace (Calendar/Sheets) solo si el CDE lo usa (PA-04): diseño de `eventos` y `citas` guarda `ics_uid` para exportar `.ics` (RF-30, Could).
+Importar/exportar CSV (UTF-8 con BOM para Excel) y, solo si sobra tiempo, XLSX (**R2, C-15:** la importación del MVP es solo CSV); API REST JSON documentada; plantilla de importación; `GET /publico/eventos` como feed. Google Workspace (Calendar/Sheets) solo si el CDE lo usa (PA-04): diseño de `eventos` y `citas` guarda `ics_uid` para exportar `.ics` (RF-30, Could).
 
 ## 12. Tabla ISO/IEC 25010 → decisión → cómo se demuestra a los jurados
 
@@ -151,13 +151,13 @@ Importar/exportar CSV (UTF-8 con BOM para Excel) y XLSX; API REST JSON documenta
 |---|---|---|
 | **Adecuación funcional** | 22 requisitos Must mapeados 1:1 a los 10 resultados y 10 criterios del CDE (`01`); camino dorado (`02`) | Diapositiva "Reto → pantalla": cada criterio CRI-01..10 con captura/demostración y cifra |
 | **Eficiencia de desempeño** | Índices, paginación, vistas para KPIs, caché, `EXPLAIN` | Búsqueda con 5 000 empresas < 1 s; tiempo mostrado en pantalla (indicador de latencia en modo demo) |
-| **Compatibilidad** | CSV/XLSX/JSON, plantilla, API, `.ics` | Importar la hoja y exportar el reporte abriéndolo en Excel |
+| **Compatibilidad** | CSV/JSON (XLSX opcional, R2), plantilla, API, `.ics` | Importar la hoja y exportar el reporte abriéndolo en Excel |
 | **Capacidad de interacción** | Portal por rol, mensajes accionables, confirmaciones, accesibilidad AA, gamificación, español | Prueba con usuarios (≥ 3) y resultado (`08`), tour de 20 s |
 | **Fiabilidad** | Transacciones, reintentos, respaldo/restauración, idempotencia, `/health`, plan B | "Matar" el contenedor del worker y mostrar que el recordatorio se envía al reiniciar; restaurar un respaldo |
 | **Seguridad** | Roles/policies, hash, throttle, auditoría, Ley 1581 | Intentar entrar como emprendedor a `/api/v1/auditoria` → 403; mostrar la auditoría del cambio recién hecho |
 | **Mantenibilidad** | Monolito modular con límites, eventos, Pint, CI, pruebas, Actions | Mostrar árbol de módulos y agregar un reto nuevo editando solo `Gamificacion` |
 | **Flexibilidad** | Docker Compose, variables de entorno, catálogos administrables, sin dependencias de nube propietarias | `docker compose up` en máquina limpia; cambiar un catálogo sin tocar código |
-| **Protección (safety)** | Soft delete, confirmaciones, reversión de importación/fusión, minimización de datos, sin datos sensibles, mensajes sin fugas | Fusionar y luego deshacer; intentar borrar con confirmación |
+| **Protección (safety)** | Soft delete, confirmaciones, reversión de fusión (R2: no de la importación completa), minimización de datos, sin datos sensibles, mensajes sin fugas | Fusionar y luego deshacer; intentar borrar con confirmación |
 
 ## 13. Decisiones registradas
 | # | Decisión |

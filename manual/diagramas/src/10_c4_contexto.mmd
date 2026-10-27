@@ -1,0 +1,60 @@
+---
+title: "C4 nivel 1 · Contexto del sistema · Sistema de información del CDE"
+config:
+  theme: base
+  look: classic
+  fontFamily: "Inter, Carlito, Arial, sans-serif"
+  themeVariables:
+    fontFamily: "Inter, Carlito, Arial, sans-serif"
+    fontSize: "16px"
+    lineColor: "#1B2340"
+    primaryTextColor: "#1B2340"
+    primaryColor: "#E8EDFB"
+    primaryBorderColor: "#2F4A9E"
+    edgeLabelBackground: "#F7F4EF"
+    background: "#F7F4EF"
+  flowchart:
+    curve: basis
+    htmlLabels: true
+    wrappingWidth: 330
+    nodeSpacing: 45
+    rankSpacing: 80
+---
+flowchart LR
+  classDef persona fill:#16265C,stroke:#16265C,color:#FFFFFF,stroke-width:2px
+  classDef sistema fill:#E8EDFB,stroke:#2F4A9E,color:#1B2340,stroke-width:4px
+  classDef externo fill:#EDEFF5,stroke:#4B5575,color:#1B2340,stroke-width:2px
+  classDef propuesto fill:#FFF4D6,stroke:#B34700,color:#6B4200,stroke-width:3px,stroke-dasharray:7 4
+
+  ADM(["<b>Administrador</b><br/>[Persona · rol administrador]<br/>Gestiona usuarios, catálogos<br/>y consulta la auditoría"]):::persona
+  EQ(["<b>Equipo CDE</b><br/>[Persona · rol equipo_cde]<br/>Gestiona empresas, citas,<br/>eventos y reportes"]):::persona
+  DOC(["<b>Docente</b><br/>[Persona · rol docente]<br/>Sigue los proyectos de aula<br/>de sus estudiantes"]):::persona
+  CON(["<b>Estudiante consultor</b><br/>[Persona · rol estudiante_consultor]<br/>Registra avances del proyecto<br/>que acompaña"]):::persona
+  EMP(["<b>Emprendedor</b><br/>[Persona · rol emprendedor]<br/>Pide citas, se inscribe<br/>y sigue su ruta y sus puntos"]):::persona
+
+  subgraph LIM["Límite del sistema (lo que construye el equipo)"]
+    SIS["<b>Sistema de información del CDE</b><br/>[Sistema de software]<br/>Reúne cada empresa sin duplicados,<br/>da seguimiento al acompañamiento<br/>y convierte los datos en conocimiento"]:::sistema
+  end
+
+  subgraph FUERA["Fuera del límite (sin responsabilidad nuestra)"]
+    REG{{"<b>Registro mercantil abierto (datos.gov.co)</b><br/>[Sistema externo · propuesta Ronda 4]<br/>Datos públicos de matrícula mercantil<br/>publicados por Confecámaras"}}:::propuesto
+    COR{{"<b>Servicio de correo SMTP</b><br/>[Sistema externo]<br/>Entrega los correos<br/>de recordatorio"}}:::externo
+    COO{{"<b>Coolify</b><br/>[Plataforma de despliegue]<br/>Construye y ejecuta el sistema<br/>en el servidor del patrocinador"}}:::externo
+  end
+
+  ADM -->|"Administra"| SIS
+  EQ -->|"Gestiona"| SIS
+  DOC -->|"Consulta"| SIS
+  CON -->|"Registra avances en"| SIS
+  EMP -->|"Solicita y consulta"| SIS
+  SIS -->|"Consulta el estado de la matrícula por NIT"| REG
+  SIS -->|"Envía recordatorios por"| COR
+  COO -->|"Despliega y ejecuta"| SIS
+
+  subgraph LEY["Leyenda"]
+    direction LR
+    L1(["Persona"]):::persona
+    L2["Sistema que se construye"]:::sistema
+    L3{{"Sistema externo"}}:::externo
+    L4{{"Propuesta de la Ronda 4,<br/>aún sin ratificar"}}:::propuesto
+  end

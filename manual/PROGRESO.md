@@ -39,3 +39,10 @@ Marca cada fase al terminarla. Si la sesión se corta, la siguiente retoma desde
 
 ## Cierre de la Ronda 2
 Todas las fases F12–F19 completas. Pendiente humano: las 18 decisiones de `INDEX.md`, verificación manual de lo `[NO VERIFICADO]` restante (`19` §2.5) y la prueba previa de instalación (`12` y `15` §7).
+
+## Ronda 3 (ejecutar con PROMPT_3.md)
+- [ ] F20 Plan que cabe (`20_plan_que_cabe.md`)
+- [ ] F21 Contenido de formación y microcopy (`21_contenido_formacion.md`, `21_microcopy.md`)
+- [ ] F22 Auditoría adversarial con cinco jurados simulados (`22_auditoria_adversarial.md`)
+- [ ] F23 Contingencias y simulacro (`23_contingencias_y_simulacro.md`)
+- [ ] F24 Cierre e INDEX

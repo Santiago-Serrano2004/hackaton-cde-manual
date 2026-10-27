@@ -225,3 +225,13 @@ Resultados completos en `12_verificacion.md`. Ya corregidos en cascada en `03_st
 | C-16 | T-12 sube a 2,25 h (puntuación y deshacer), T-13 a 2,75 h, T-16 baja a 0,75 h, T-40 a 1,0 h (esta última condicionada a F15) | `13` | Equipo en T-01 |
 | C-17 | Se añaden 15 tareas (T-17, T-18, T-19, T-26, T-27, T-28, T-31, T-47..T-54); el Núcleo sube 0,5 h a Julián y 0,75 h a María Paula | Diferenciadores | Equipo en T-01 |
 | C-18 | El déficit de v1 (1,5–2,5 h por persona) pasa a 2,5 h (S), 3,0 h (J) y 2,5 h (MP) solo con el Núcleo | Aritmética de `07` §5.2; v1 usaba 10,75 h de disponibilidad frente a 12,5–13,25 h | Equipo: decidir a las 10:00 si recorta Núcleo |
+
+### K.4 Contradicciones con v1 introducidas por F15 (`15_frontend_skills_y_ui.md` §6)
+
+| # | Contradicción | Motivo | Decide |
+|---|---|---|---|
+| C-19 | `recharts` (+101,8 KB gzip) se carga por ruta con `React.lazy`, no en la carga inicial | Medición real | Julián |
+| C-20 | `cmdk` se mantiene (monta con React 19.3.1); el diálogo propio queda solo como plan B | Prueba de montaje | Equipo |
+| C-21 | El ahorro A3 (T-40 de 1,5 a 1,0 h por shadcn/ui) queda condicionado a la prueba previa de `15` §7 | La CLI de shadcn no se pudo ejecutar en esta sesión | María Paula |
+| PA-28 | Pregunta abierta: ¿Python 3 está instalado en los tres portátiles? (la skill `ui-ux-pro-max` lo exige) | Si no, se omite esa skill (Could) | Equipo |
+| NV-26 | `[NO VERIFICADO]` rendimiento (LCP/INP) en el portátil y proyector del laboratorio; hay presupuesto y método, no medición | Sin acceso al hardware | María Paula |

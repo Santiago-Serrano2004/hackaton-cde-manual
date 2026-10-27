@@ -4,7 +4,7 @@
 
 **Entradas.** `01_requisitos.md`, `02_alcance_mvp.md`, preferencias del chat (resumen: el equipo votó React para el front, Laravel para el back, PostgreSQL, autenticación con JWT, monolito modular, Docker y despliegue en el servidor de un patrocinador con Coolify; Azure con crédito estudiantil como alternativa; las tres personas ya han trabajado con Laravel/PostgreSQL y Docker; el chat dice que se prepara una "plantilla" previa al hackatón).
 
-**Regla de verificación.** Fecha de consulta de todo este archivo: **26-oct-2026**. Búsqueda web disponible solo con resultados de terceros; sitios oficiales no accesibles por proxy. Lo que no se pudo contrastar con la fuente primaria lleva `[NO VERIFICADO]` y está listado en `99_preguntas_abiertas.md` (NV-*). **Antes del 28-oct el equipo debe ejecutar los comandos de la §5 y anotar las versiones reales instaladas en `docs/VERSIONES.md` del repo de desarrollo.**
+**Regla de verificación.** Fecha de consulta de todo este archivo: **26-oct-2026**. Búsqueda web disponible solo con resultados de terceros; sitios oficiales no accesibles por proxy. Lo que no se pudo contrastar con la fuente primaria lleva `[NO VERIFICADO]` y está listado en `99_preguntas_abiertas.md` (NV-*). **Antes del 28-oct el equipo debe ejecutar los comandos de la §5 y anotar las versiones reales instaladas en `docs/VERSIONES.md` del repo de desarrollo.** Ronda 2: las versiones de §3 se verificaron contra fuentes primarias (`12_verificacion.md`).
 
 ---
 
@@ -37,19 +37,22 @@ El chat pidió "JWT con tokens". Opciones:
 
 ## 3. Versiones
 
-| Componente | Versión objetivo | Fuente / fecha | Estado |
+Actualizado en la Ronda 2 (F12). Detalle, fuentes y fechas en `12_verificacion.md` §2. Consulta: 26/27-oct-2026.
+
+| Componente | Versión objetivo | Fuente primaria | Estado |
 |---|---|---|---|
-| PHP | 8.3 o 8.4 (mínimo 8.3 para Laravel 13) | laravel.com/docs/13.x/releases (vía búsqueda, 26-oct-2026) | Parcial: mínimo confirmado por resumen de búsqueda; ver NV-01 |
-| Laravel | 13.x (lanzamiento ~17-mar-2026 según tercero; bug fixes hasta Q3 2027; seguridad hasta Q1 2028 según Laravel News) | laravel.com/docs/13.x/releases; laravel-news.com | `[NO VERIFICADO]` la fecha exacta; versión menor la fija `composer.lock` |
-| PostgreSQL | 17 o 18 (menores vigentes ago-2026: 18.6, 17.11) | docs de Neon citando postgresql.org, 26-oct-2026 | `[NO VERIFICADO]` en postgresql.org; PG 19 anunciado para oct-2026: **no usar** una versión recién salida |
-| Node.js | 24 LTS (o 26 LTS si ya es LTS el 28-oct) | nodejs.org/en/blog/announcements/evolving-the-nodejs-release-schedule | `[NO VERIFICADO]`; basta Node ≥ 20.19 o ≥ 22.12 para Vite 7/8 |
-| React | 19.2.x | versionlog.com (19.2.7, 1-jun-2026) | `[NO VERIFICADO]` en react.dev |
-| Vite | 8.x (Vite 7 y 8 exigen Node ≥ 20.19 o ≥ 22.12) | vite.dev/blog/announcing-vite7; guía de terceros para Vite 8 | `[NO VERIFICADO]` el número exacto de Vite 8 |
-| Tailwind CSS | 4.3.x (4.3.1 el 12-jun-2026; 4.3.2 sin confirmar) | releases.sh/tailwind-css | `[NO VERIFICADO]` en GitHub oficial |
-| Docker / Compose | Docker Engine actual y Compose v2 | no consultado | `[NO VERIFICADO]`; el equipo registra `docker --version` |
-| Coolify | v4.x (v4.1.2 el 4-jun-2026 según tercero; puede haber más nuevas) | comparadores de terceros | `[NO VERIFICADO]`; depende de lo que ya tenga instalado el servidor del patrocinador |
-| Paquetes PHP | `laravel/sanctum`, `spatie/laravel-permission` (roles/permisos), `maatwebsite/excel` (Packagist indica soporte ^13.0, actualizado 10-jul-2026), `barryvdh/laravel-dompdf` (PDF) `[NO VERIFICADO: compatibilidad con Laravel 13 de permission y dompdf]`, `pestphp/pest` | packagist.org | Comprobar con `composer require` |
-| Paquetes JS | `react-router`, `@tanstack/react-query`, `axios`, `react-hook-form` + `zod`, `recharts`, `framer-motion` (animaciones de nivel), `lucide-react` (iconos) | no consultado | `[NO VERIFICADO]` todos |
+| PHP | 8.4 en Docker (8.4.27); 8.3 también vale | php.net/releases, 21-oct-2026; laravel.com/docs/13.x/releases (Laravel 13: PHP 8.3–8.5) | Verificado |
+| Laravel | 13.x (13.38.0 el 20-oct-2026; esqueleto `laravel/laravel` v13.11.0) | Packagist; laravel.com/docs/13.x/releases (lanzamiento 17-mar-2026, correcciones hasta Q3 2027, seguridad hasta 17-mar-2028) | Verificado |
+| PostgreSQL | **17.11 o 18.6** (usar 18.6); PG 19 está en RC 1: **no usar** | postgresql.org/support/versioning, 26-oct-2026 | Verificado |
+| Node.js | **24 LTS (24.22.1)**; no usar 26 (pasa a LTS el 28-oct) | nodejs.org/dist/index.json | Verificado |
+| React | **19.3.1** | react.dev/versions; npm | Verificado |
+| Vite | **8.3.5** (Node ^20.19 o >=22.12) | npm; vite.dev/guide | Verificado |
+| Tailwind CSS | **4.3.3** con `@tailwindcss/vite` 4.3.3 | npm | Verificado |
+| TypeScript | **5.9.3** fijo (la 7.0.2 existe; compatibilidad con el ecosistema sin verificar) `PROPUESTA` | npm | Verificado (existencia); decisión propia |
+| Docker / Compose | Engine serie 29 (29.9 en las notas de versión); Compose v2 | docs.docker.com | Parcial: registrar `docker --version` |
+| Coolify | v4.x; la versión instalada en el servidor del patrocinador manda | raw GitHub `config/constants.php` (4.5.1 en desarrollo) | Parcial |
+| Paquetes PHP | `laravel/sanctum` 4.3.3; `spatie/laravel-permission` 8.3.2; `maatwebsite/excel` **4.0.6**; `barryvdh/laravel-dompdf` 3.1.2; `pestphp/pest` **^4** (4.7.8) + `pestphp/pest-plugin-laravel` ^4.1; `laravel/pint` 1.32.1 | Packagist, resolución real con Composer 2.8.12 | Resolución verificada; instalación no (descargas bloqueadas en la sesión) |
+| Paquetes JS | `react-router` **7.18.4**; `@tanstack/react-query` 5.105.0; `@tanstack/react-table` **8.21.3**; `axios` 1.20.0; `react-hook-form` 7.91.0; `zod` 4.6.7; `@hookform/resolvers` **5.9.2**; `recharts` 3.10.1; `motion` 14.6.0; `lucide-react` 1.61.0; `vitest` 5.0.5; `eslint` 10.13.0; `prettier` 3.9.10 | npm, resolución real con `npm install --package-lock-only` | Resolución verificada |
 
 Regla: **bloquear versiones** con `composer.lock` y `package-lock.json` el día de la plantilla (antes del hackatón) y **no actualizar** dependencias durante las 25 h.
 
@@ -91,9 +94,9 @@ Cada módulo expone solo: rutas, *Actions* (casos de uso), *Resources* (JSON) y 
 Sin versiones inventadas: los comandos instalan lo vigente que cumple las restricciones y luego se congela con los *lock files*.
 
 1. `composer create-project laravel/laravel backend` (si el instalador da otra versión mayor que 13, abortar y fijar `"laravel/framework": "^13.0"`).
-2. `cd backend && composer require laravel/sanctum spatie/laravel-permission maatwebsite/excel barryvdh/laravel-dompdf` y `composer require --dev pestphp/pest laravel/pint`.
+2. `cd backend && composer require laravel/sanctum spatie/laravel-permission maatwebsite/excel barryvdh/laravel-dompdf`; luego `composer remove phpunit/phpunit --dev` y `composer require --dev pestphp/pest:^4 pestphp/pest-plugin-laravel:^4.1 -W` (Pest 5 exige PHP 8.4; esta combinación se resolvió con PHP 8.3 y Laravel 13.38.0). Pint ya viene en el esqueleto.
 3. Configurar `.env` con `DB_CONNECTION=pgsql`; en PostgreSQL: `CREATE EXTENSION IF NOT EXISTS pg_trgm;` (necesario para la búsqueda aproximada y deduplicación por similitud; módulo estándar de PostgreSQL, docs de Neon, 26-oct-2026).
-4. `npm create vite@latest frontend -- --template react-ts` (o la plantilla equivalente actual) y `npm i react-router @tanstack/react-query axios react-hook-form zod recharts framer-motion lucide-react tailwindcss @tailwindcss/vite` `[NO VERIFICADO: nombres y compatibilidad]`.
+4. `npm create vite@9 frontend -- --template react-ts`; dentro: `npm i react@19 react-dom@19 react-router@7 @tanstack/react-query axios react-hook-form zod @hookform/resolvers@5 recharts motion lucide-react @tanstack/react-table@8` y `npm i -D tailwindcss @tailwindcss/vite typescript@5 vitest eslint prettier`. La resolución de este conjunto se verificó el 27-oct-2026 (`12_verificacion.md` §2.3); no se probó el `build`.
 5. `docker compose up -d` levanta `db` (postgres), `backend` (php-fpm + nginx o `php artisan serve` en dev), `frontend` (vite dev) y `mailpit` (correo de pruebas) `PROPUESTA`.
 6. Registrar versiones: `php -v`, `composer show laravel/framework`, `psql --version`, `node -v`, `npm ls react vite tailwindcss` → `docs/VERSIONES.md`.
 

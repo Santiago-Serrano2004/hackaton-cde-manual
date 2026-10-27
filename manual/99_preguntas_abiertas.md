@@ -75,7 +75,7 @@ Fecha de consulta de todas: **26-oct-2026**. Herramienta: búsqueda web (resulta
 | # | Afirmación | Estado |
 |---|---|---|
 | NV-01 | Laravel 13 requiere PHP ≥ 8.3, lanzado ~17-mar-2026; correcciones hasta Q3 2027, seguridad hasta Q1 2028 | Fuente oficial (laravel.com/docs/13.x/releases) listada pero contenido leído vía resumen de búsqueda; fecha exacta `[NO VERIFICADO]` |
-| NV-02 | React en línea 19.2.x (19.2.7 según versionlog.com, 1-jun-2026) | `[NO VERIFICADO]` contra react.dev / GitHub |
+| NV-02 | React en línea 19.2.x (19.2.7 según versionlog.com, 1-jun-2026) | **Corregido en F12:** react.dev y npm dan 19.3.1 (14-oct-2026). Ver `12_verificacion.md` |
 | NV-03 | PostgreSQL: menores de ago-2026 18.6, 17.11, 16.15 (Neon docs); PG 19 anunciado para oct-2026 | `[NO VERIFICADO]` contra postgresql.org |
 | NV-04 | Node.js 24 LTS (24.19.0 en 3-ago-2026 según blog de terceros); Node 26 entra en LTS oct-2026 | `[NO VERIFICADO]` contra nodejs.org |
 | NV-05 | ISO/IEC 25010:2023, 2.ª edición, nueve características | Parcial (catálogo ISO); nombres de las 9 tomados del TyC |
@@ -102,7 +102,7 @@ Fecha de consulta de todas: **26-oct-2026**. Herramienta: búsqueda web (resulta
 |---|---|---|
 | NV-09 | Sanctum 13.x ofrece tokens con *abilities* | Confirmado por resumen de búsqueda de laravel.com/docs/13.x/sanctum; no se leyó la página completa |
 | NV-10 | Compatibilidad con Laravel 13 de spatie/laravel-permission, dompdf, php-open-source-saver/jwt-auth | `[NO VERIFICADO]` |
-| NV-11 | Vite 8 existe y exige Node ≥ 20.19 / 22.12; Tailwind 4.3.x; React 19.2.x | `[NO VERIFICADO]` contra fuentes oficiales |
+| NV-11 | Vite 8 existe y exige Node ≥ 20.19 / 22.12; Tailwind 4.3.x; React 19.2.x | Verificado en F12 (Vite 8.3.5, Tailwind 4.3.3); React corregido a 19.3.1 |
 | NV-12 | pg_trgm es módulo estándar de PostgreSQL; `similarity()` devuelve 0–1; índices GIN/GiST con `gin_trgm_ops` | Fuentes de terceros (Neon); no contrastado con postgresql.org |
 
 ## E. Añadidas en F4
@@ -187,3 +187,22 @@ Fecha de consulta de todas: **26-oct-2026**. Herramienta: búsqueda web (resulta
 | Laravel/OWASP técnicos | NV-13, NV-14 | Consultar docs de colas, scheduler, `lockForUpdate`, cabeceras | Sustituir el mecanismo por el más simple (cola síncrona + cron) |
 
 Ninguna decisión Must depende de un `[NO VERIFICADO]` sin alternativa: cada fila anterior tiene plan de contingencia.
+
+## K. Ronda 2 · F12: contradicciones con v1 y estado de verificación (27-oct-2026)
+
+Resultados completos en `12_verificacion.md`. Ya corregidos en cascada en `03_stack.md`.
+
+| # | Contradicción con v1 | Motivo | Decide |
+|---|---|---|---|
+| C-01 | React 19.3.1, no 19.2.x | react.dev/npm | Informativo |
+| C-02 | Node 24 LTS (24.22.1); v1 citaba 24.19.0 y la opción de Node 26 | Node 26 es LTS desde el 28-oct; se evita estrenar LTS el primer día | Santiago |
+| C-03 | `react-router` fijado en 7.18.4 | La 8.5.0 exige Node ≥ 22.22.0 | Informativo |
+| C-04 | `@tanstack/react-table` 8.21.3, no 9.x | Salto mayor sin beneficio para el MVP | Julián |
+| C-05 | `@hookform/resolvers` 5.9.2 | La 6.0.0 rompe `npm install` por peers | Informativo |
+| C-06 | `typescript` 5.9.3 fijo | La 7.0.2 existe; compatibilidad sin verificar | Santiago |
+| C-07 | Pest ^4 y plugin ^4.1; quitar `phpunit/phpunit` del esqueleto | Pest 5 exige PHP 8.4; la combinación elegida se resolvió con PHP 8.3 | Julián |
+| C-08 | `maatwebsite/excel` es 4.x | Packagist | Informativo |
+| C-09 | `motion` en lugar de `framer-motion` | Mismo autor y versión; nombre actual | Informativo |
+| C-10 | `cmdk` sin publicar desde mar-2025 | npm; evaluar alternativa en F13/F15 | Julián |
+
+**Sigue `[NO VERIFICADO]` tras F12:** NV-05 (iso.org 403), NV-08 (Ley 1581, sin respuesta), NV-14, NV-18, NV-20, NV-21, NV-23, NV-24, NV-25, las cifras g de NV-16, el OWASP Top 10 2025 de NV-06 y la **instalación real** de los paquetes (descargas de GitHub bloqueadas en la sesión). Plan: §J sin cambios. Estrellas, licencias y últimos commits de GitHub no se pueden leer desde esta sesión (api.github.com devuelve 403): afecta a F15.

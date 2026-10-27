@@ -18,7 +18,7 @@ Marca cada fase al terminarla. Si la sesión se corta, la siguiente retoma desde
 - Pendientes que requieren decisión humana: las 10 decisiones de `INDEX.md` y las preguntas PA-01..PA-26.
 
 ## Ronda 2 (ejecutar con PROMPT_2.md)
-- [ ] F12 Verificación de lo no verificado (`12_verificacion.md`)
+- [x] F12 Verificación de lo no verificado (`12_verificacion.md`)
 - [ ] F13 Factores diferenciadores (`13_diferenciadores.md`)
 - [ ] F14 Backlog de funcionalidades (`14_backlog.md`, `backlog.csv`)
 - [ ] F15 Frontend: skills, librerías y recursos (`15_frontend_skills_y_ui.md`)
@@ -26,3 +26,6 @@ Marca cada fase al terminarla. Si la sesión se corta, la siguiente retoma desde
 - [ ] F17 Specs autocontenidas por tarea (`tareas/`)
 - [ ] F18 Pitch y demo v2 (`18_pitch_v2.md`)
 - [ ] F19 Kit local y auditoría v2 (`19_kit_local.md`)
+
+### Notas Ronda 2
+- 2026-10-27 F12: acceso a npm, Packagist, php.net, nodejs.org, react.dev, laravel.com, postgresql.org, w3.org, owasp.org y docs.docker.com OK. Bloqueados: api.github.com y github.com (403, repo no habilitado), iso.org (403), funcionpublica.gov.co. La resolución de dependencias con composer/npm funciona; la descarga de paquetes no. Cambios frente a v1: C-01..C-10 en `99` §K.

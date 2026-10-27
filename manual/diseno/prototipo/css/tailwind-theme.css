@@ -1,0 +1,37 @@
+/* Tema de Tailwind 4 para el CDE (manual/diseno/02_tokens.md). Se importa DESPUÉS de tokens.css.
+   "inline" hace que las utilidades usen var(--papel) etc. y así el modo oscuro cambia sin duplicar clases. */
+@import "tailwindcss";
+@theme inline {
+  --color-*: initial;
+  --color-papel: var(--papel);
+  --color-superficie: var(--superficie);
+  --color-tinta: var(--tinta);
+  --color-texto: var(--texto);
+  --color-texto-suave: var(--texto-suave);
+  --color-borde: var(--borde);
+  --color-divisor: var(--divisor);
+  --color-azul: var(--azul);
+  --color-naranja: var(--naranja);
+  --color-naranja-texto: var(--naranja-texto);
+  --color-amarillo: var(--amarillo);
+  --color-foco: var(--foco);
+  --color-exito: var(--exito);
+  --color-exito-bg: var(--exito-bg);
+  --color-exito-tx: var(--exito-tx);
+  --color-adv-bg: var(--adv-bg);
+  --color-adv-tx: var(--adv-tx);
+  --color-error: var(--error);
+  --color-error-bg: var(--error-bg);
+  --color-error-tx: var(--error-tx);
+  --color-info-bg: var(--info-bg);
+  --color-info-tx: var(--info-tx);
+  --font-titulo: "Manrope", "Segoe UI", system-ui, Arial, sans-serif;
+  --font-cuerpo: "Source Sans 3", "Segoe UI", system-ui, Arial, sans-serif;
+  --radius-ctl: 6px;
+  --radius-card: 12px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 1px 2px rgb(22 38 92 / .08);
+  --shadow-lg: 0 8px 24px rgb(22 38 92 / .14);
+  --text-14: 14px; --text-16: 16px; --text-18: 18px; --text-22: 22px; --text-28: 28px; --text-36: 36px; --text-48: 48px;
+  --breakpoint-sm: 40rem; --breakpoint-lg: 64rem; --breakpoint-xl: 90rem;
+}

@@ -1,0 +1,55 @@
+/* Tokens del sistema "Hilo de ruta" (manual/16 §4). Los contrastes se calculan en 90_revision.md. */
+@font-face{font-family:"Manrope";src:url("../assets/fonts/manrope-latin-wght-normal.woff2") format("woff2");font-weight:200 800;font-display:swap}
+@font-face{font-family:"Source Sans 3";src:url("../assets/fonts/source-sans-3-latin-wght-normal.woff2") format("woff2");font-weight:200 900;font-display:swap}
+:root{
+  --papel:#F7F4EF; --superficie:#FFFFFF; --tinta:#16265C; --texto:#1B2340; --texto-suave:#4B5575;
+  --borde:#7C84A3; --divisor:#C9CFE3; --azul:#2F4A9E; --naranja:#F47B20; --naranja-texto:#B34700;
+  --amarillo:#FFCC4D; --foco:#2F4A9E;
+  --exito:#1B6B3A; --exito-bg:#E4F5EA; --exito-tx:#14532D;
+  --adv-bg:#FFF4D6; --adv-tx:#6B4200;
+  --error:#A31D1D; --error-bg:#FDE8E8; --error-tx:#8F1515;
+  --info-bg:#E8EDFB; --info-tx:#1F3A8A;
+  --sobre-naranja:#16265C; --sobre-azul:#FFFFFF; --sobre-error:#FFFFFF;
+  --deshab-bg:#E6E8EF; --deshab-tx:#4B5575;
+  --h1:#FDEFE2; --h2:#FDBD45; --h3:#F78F2B; --h4:#C4380F; --h5:#7A2E00;
+  --h1t:#16265C; --h2t:#16265C; --h3t:#16265C; --h4t:#FFFFFF; --h5t:#FFFFFF;
+  --sombra-sm:0 1px 2px rgb(22 38 92 / .08); --sombra-lg:0 8px 24px rgb(22 38 92 / .14);
+  --r-ctl:6px; --r-card:12px; --r-pill:999px;
+  --f-tit:"Manrope","Segoe UI",system-ui,Arial,sans-serif; --f-cuerpo:"Source Sans 3","Segoe UI",system-ui,Arial,sans-serif;
+  --e1:4px; --e2:8px; --e3:12px; --e4:16px; --e5:24px; --e6:32px; --e7:48px; --e8:64px;
+  --t-micro:120ms; --t-panel:220ms; --t-logro:500ms;
+  --curva-in:cubic-bezier(.16,1,.3,1); --curva-out:cubic-bezier(.7,0,.84,0);
+  color-scheme:light;
+}
+:root[data-theme="dark"]{
+  --papel:#0F1733; --superficie:#18224A; --tinta:#F2F4FA; --texto:#F2F4FA; --texto-suave:#A9B2D0;
+  --borde:#6F7BAA; --divisor:#2E3A6B; --azul:#9DB4FF; --naranja:#FF9A4D; --naranja-texto:#FF9A4D;
+  --amarillo:#FFC857; --foco:#FFC857;
+  --exito:#5ED38A; --exito-bg:#123A25; --exito-tx:#9BE9B7;
+  --adv-bg:#3A2D0B; --adv-tx:#FFD98A;
+  --error:#FF8A8A; --error-bg:#40161B; --error-tx:#FFB4B4;
+  --info-bg:#1C2A5C; --info-tx:#C3D2FF;
+  --sobre-naranja:#0F1733; --sobre-azul:#0F1733; --sobre-error:#0F1733;
+  --deshab-bg:#232E5C; --deshab-tx:#A9B2D0;
+  --h1:#1E2A5E; --h2:#6B4B12; --h3:#9A5A12; --h4:#E5673D; --h5:#F4A07A;
+  --h1t:#F2F4FA; --h2t:#FFFFFF; --h3t:#FFFFFF; --h4t:#0F1733; --h5t:#0F1733;
+  --sombra-sm:0 1px 2px rgb(0 0 0 / .4); --sombra-lg:0 8px 24px rgb(0 0 0 / .5);
+  color-scheme:dark;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --papel:#0F1733; --superficie:#18224A; --tinta:#F2F4FA; --texto:#F2F4FA; --texto-suave:#A9B2D0;
+    --borde:#6F7BAA; --divisor:#2E3A6B; --azul:#9DB4FF; --naranja:#FF9A4D; --naranja-texto:#FF9A4D;
+    --amarillo:#FFC857; --foco:#FFC857;
+    --exito:#5ED38A; --exito-bg:#123A25; --exito-tx:#9BE9B7;
+    --adv-bg:#3A2D0B; --adv-tx:#FFD98A;
+    --error:#FF8A8A; --error-bg:#40161B; --error-tx:#FFB4B4;
+    --info-bg:#1C2A5C; --info-tx:#C3D2FF;
+    --sobre-naranja:#0F1733; --sobre-azul:#0F1733; --sobre-error:#0F1733;
+    --deshab-bg:#232E5C; --deshab-tx:#A9B2D0;
+    --h1:#1E2A5E; --h2:#6B4B12; --h3:#9A5A12; --h4:#E5673D; --h5:#F4A07A;
+    --h1t:#F2F4FA; --h2t:#FFFFFF; --h3t:#FFFFFF; --h4t:#0F1733; --h5t:#0F1733;
+    --sombra-sm:0 1px 2px rgb(0 0 0 / .4); --sombra-lg:0 8px 24px rgb(0 0 0 / .5);
+    color-scheme:dark;
+  }
+}

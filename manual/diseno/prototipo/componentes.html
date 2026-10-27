@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biblioteca de componentes · CDE Hilo</title>
+<meta name="description" content="Hoja de estados de los componentes del sistema de diseño">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+</head>
+<body data-estados="">
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+<symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 21-4.34-4.34" />
+  <circle cx="11" cy="11" r="8" /></symbol>
+<symbol id="i-building-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12h4" />
+  <path d="M10 8h4" />
+  <path d="M14 21v-3a2 2 0 0 0-4 0v3" />
+  <path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2" />
+  <path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16" /></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v3" />
+  <path d="M16 2v3" />
+  <rect x="3" y="3" width="18" height="18" rx="2" />
+  <path d="M3 9h18" /></symbol>
+<symbol id="i-calendar-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v3" />
+  <path d="M16 2v3" />
+  <rect x="3" y="3" width="18" height="18" rx="2" />
+  <path d="M3 9h18" />
+  <path d="m9 15 2 2 4-4" /></symbol>
+<symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+  <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+  <circle cx="9" cy="7" r="4" /></symbol>
+<symbol id="i-chart-column" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16" />
+  <path d="M18 17V9" />
+  <path d="M13 17V5" />
+  <path d="M8 17v-3" /></symbol>
+<symbol id="i-upload" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12" />
+  <path d="m17 8-5-5-5 5" />
+  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /></symbol>
+<symbol id="i-shield-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+  <path d="m9 12 2 2 4-4" /></symbol>
+<symbol id="i-circle-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" />
+  <path d="m16 9-5.5 5.5L8 12" /></symbol>
+<symbol id="i-triangle-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" />
+  <path d="M12 9v4" />
+  <path d="M12 17h.01" /></symbol>
+<symbol id="i-circle-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" />
+  <path d="m15 9-6 6" />
+  <path d="m9 9 6 6" /></symbol>
+<symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" />
+  <path d="M12 16v-4" />
+  <path d="M12 8h.01" /></symbol>
+<symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18" />
+  <path d="m6 6 12 12" /></symbol>
+<symbol id="i-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6" /></symbol>
+<symbol id="i-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></symbol>
+<symbol id="i-chevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6" /></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" />
+  <path d="M12 5v14" /></symbol>
+<symbol id="i-git-merge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3" />
+  <circle cx="6" cy="6" r="3" />
+  <path d="M6 21V9a9 9 0 0 0 9 9" /></symbol>
+<symbol id="i-undo-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5" />
+  <path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11" /></symbol>
+<symbol id="i-qr-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="5" height="5" x="3" y="3" rx="1" />
+  <rect width="5" height="5" x="16" y="3" rx="1" />
+  <rect width="5" height="5" x="3" y="16" rx="1" />
+  <path d="M21 16h-3a2 2 0 0 0-2 2v3" />
+  <path d="M21 21v.01" />
+  <path d="M12 7v3a2 2 0 0 1-2 2H7" />
+  <path d="M3 12h.01" />
+  <path d="M12 3h.01" />
+  <path d="M12 16v.01" />
+  <path d="M16 12h1" />
+  <path d="M21 12v.01" />
+  <path d="M12 21v-1" /></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+  <rect x="2" y="4" width="20" height="16" rx="2" /></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.268 21a2 2 0 0 0 3.464 0" />
+  <path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" /></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" /></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" /></symbol>
+<symbol id="i-log-out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 17 5-5-5-5" />
+  <path d="M21 12H9" />
+  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" /></symbol>
+<symbol id="i-settings" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915" />
+  <circle cx="12" cy="12" r="3" /></symbol>
+<symbol id="i-house" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+  <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></symbol>
+<symbol id="i-route" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3" />
+  <path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15" />
+  <circle cx="18" cy="5" r="3" /></symbol>
+<symbol id="i-trophy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14.66V17a1 1 0 0 1-1 1 2 2 0 0 0-2 2v2" />
+  <path d="M14 14.66V17a1 1 0 0 0 1 1 2 2 0 0 1 2 2v2" />
+  <path d="M17.916 10H19.5A2.5 2.5 0 0 0 22 7.5V5a1 1 0 0 0-1-1h-3" />
+  <path d="M4 22h16" />
+  <path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z" />
+  <path d="M6.084 10H4.5A2.5 2.5 0 0 1 2 7.5V5a1 1 0 0 1 1-1h3" /></symbol>
+<symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" />
+  <circle cx="12" cy="8" r="6" /></symbol>
+<symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+  <path d="M7 11V7a5 5 0 0 1 10 0v4" /></symbol>
+<symbol id="i-file-text" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" />
+  <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" /></symbol>
+<symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3" />
+  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+  <path d="m7 10 5 5 5-5" /></symbol>
+<symbol id="i-printer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+  <path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6" />
+  <rect x="6" y="14" width="12" height="8" rx="1" /></symbol>
+<symbol id="i-funnel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z" /></symbol>
+<symbol id="i-clipboard-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+  <path d="M12 11h4" />
+  <path d="M12 16h4" />
+  <path d="M8 11h.01" />
+  <path d="M8 16h.01" /></symbol>
+<symbol id="i-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+  <circle cx="12" cy="10" r="3" /></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" /></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" />
+  <path d="M12 6v6l4 2" /></symbol>
+<symbol id="i-loader-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.219-8.56" /></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />
+  <circle cx="12" cy="12" r="3" /></symbol>
+<symbol id="i-history" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+  <path d="M3 3v5h5" />
+  <path d="M12 7v5l4 2" /></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16" />
+  <path d="M4 12h16" />
+  <path d="M4 19h16" /></symbol>
+<symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" />
+  <path d="m12 5 7 7-7 7" /></symbol>
+<symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></symbol>
+<symbol id="i-list-checks" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5h8" />
+  <path d="M13 12h8" />
+  <path d="M13 19h8" />
+  <path d="m3 17 2 2 4-4" />
+  <path d="m3 7 2 2 4-4" /></symbol>
+<symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" />
+  <circle cx="12" cy="12" r="6" />
+  <circle cx="12" cy="12" r="2" /></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" /></symbol>
+<symbol id="i-database" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3" />
+  <path d="M3 5V19A9 3 0 0 0 21 19V5" />
+  <path d="M3 12A9 3 0 0 0 21 12" /></symbol>
+<symbol id="i-flag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a1 1 0 0 1 .4-.8A6 6 0 0 1 8 2c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0 1 20 4v10a1 1 0 0 1-.4.8A6 6 0 0 1 16 16c-3 0-5-2-8-2a6 6 0 0 0-4 1.528" /></symbol>
+<symbol id="i-diamond" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.7 10.3a2.41 2.41 0 0 0 0 3.41l7.59 7.59a2.41 2.41 0 0 0 3.41 0l7.59-7.59a2.41 2.41 0 0 0 0-3.41l-7.59-7.59a2.41 2.41 0 0 0-3.41 0Z" /></symbol>
+<symbol id="i-square" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" /></symbol>
+<symbol id="i-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /></symbol>
+<symbol id="i-ellipsis" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1" />
+  <circle cx="19" cy="12" r="1" />
+  <circle cx="5" cy="12" r="1" /></symbol>
+<symbol id="i-scan-line" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2" />
+  <path d="M17 3h2a2 2 0 0 1 2 2v2" />
+  <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
+  <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
+  <path d="M7 12h10" /></symbol>
+<symbol id="i-clipboard-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+  <path d="m9 14 2 2 4-4" /></symbol>
+<symbol id="i-hourglass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14" />
+  <path d="M5 2h14" />
+  <path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22" />
+  <path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2" /></symbol>
+<symbol id="i-user-round" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5" />
+  <path d="M20 21a8 8 0 0 0-16 0" /></symbol>
+<symbol id="i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+  <rect width="20" height="14" x="2" y="6" rx="2" /></symbol>
+</svg>
+<a class="saltar" href="#principal">Saltar al contenido principal</a>
+<div class="demo" role="note">Datos sintéticos de demostración. Ninguna persona ni empresa es real.</div>
+<div class="app">
+<aside class="lateral" aria-label="Menú principal"><a class="marca" href="p02-panel.html"><span class="marca-sello" aria-hidden="true">C</span>CDE · Hilo</a><nav class="nav" aria-label="Secciones"><a href="p02-panel.html"><svg class="ic " aria-hidden="true"><use href="#i-house"/></svg><span>Inicio</span></a><a href="p03-busqueda.html"><svg class="ic " aria-hidden="true"><use href="#i-building-2"/></svg><span>Empresas</span></a><a href="p07-importacion.html"><svg class="ic " aria-hidden="true"><use href="#i-upload"/></svg><span>Importar</span></a><a href="p08-citas.html"><svg class="ic " aria-hidden="true"><use href="#i-calendar"/></svg><span>Citas</span></a><a href="p09-eventos.html"><svg class="ic " aria-hidden="true"><use href="#i-calendar-check"/></svg><span>Eventos</span></a><a href="p10-analisis.html"><svg class="ic " aria-hidden="true"><use href="#i-chart-column"/></svg><span>Análisis</span></a><a href="p13-administracion.html"><svg class="ic " aria-hidden="true"><use href="#i-settings"/></svg><span>Administración</span></a></nav><div class="sep"></div><p class="peq suave" style="padding:8px">Rol de la cuenta: Equipo CDE · Administrador</p></aside>
+<div class="principal">
+<header class="cabecera"><button class="buscador" data-abrir-paleta type="button" aria-label="Buscar"><svg class="ic " aria-hidden="true"><use href="#i-search"/></svg><span class="tx">Busca empresas, eventos o personas</span><kbd>Ctrl + K</kbd></button><span class="sep"></span><button class="btn btn-g btn-icono" data-tema-toggle type="button" aria-label="Cambiar entre tema claro y oscuro" aria-pressed="false"><svg class="ic " aria-hidden="true"><use href="#i-moon"/></svg></button><span class="usuario"><span class="avatar" aria-hidden="true">EC</span><span class="tx">Equipo CDE</span></span></header>
+<main class="contenido" id="principal" tabindex="-1">
+
+<div class="titulo-pag"><div><h1>Biblioteca de componentes</h1><p>Hoja de estados del sistema «Hilo de ruta» (manual/16). Cada componente muestra reposo, hover, foco, activo, deshabilitado, cargando, error y vacío cuando aplica.</p></div><span class="sep"></span>
+<a class="btn btn-s" href="index.html"><svg class="ic " aria-hidden="true"><use href="#i-arrow-right"/></svg>Índice del prototipo</a></div>
+
+<section class="cmp" aria-labelledby="c-btn"><h2 id="c-btn">1. Botones</h2><p class="base">Base: shadcn/ui <code>button</code> + <code>cva</code> · 0,2 h · implementabilidad: alta. Naranja solo como relleno con texto tinta (5,25:1).</p>
+<div class="card"><div class="matriz" role="group" aria-label="Matriz de estados de botones">
+<div></div><div class="cab">Reposo</div><div class="cab">Hover</div><div class="cab">Foco</div><div class="cab">Activo</div><div class="cab">Deshabilitado</div><div class="cab">Cargando</div>
+<div class="cab">Primario</div><div><button class="btn btn-p" type="button">Guardar empresa</button></div><div><button class="btn btn-p s-hover" type="button">Guardar empresa</button></div><div><button class="btn btn-p s-foco" type="button">Guardar empresa</button></div><div><button class="btn btn-p s-activo" type="button">Guardar empresa</button></div><div><button class="btn btn-p" type="button" disabled>Guardar empresa</button></div><div><button class="btn btn-p cargando" type="button" aria-busy="true"><svg class="ic ic-giro" aria-hidden="true"><use href="#i-loader-circle"/></svg>Guardando…</button></div><div class="cab">Secundario</div><div><button class="btn btn-s" type="button">Cancelar</button></div><div><button class="btn btn-s s-hover" type="button">Cancelar</button></div><div><button class="btn btn-s s-foco" type="button">Cancelar</button></div><div><button class="btn btn-s s-activo" type="button">Cancelar</button></div><div><button class="btn btn-s" type="button" disabled>Cancelar</button></div><div><button class="btn btn-s cargando" type="button" aria-busy="true"><svg class="ic ic-giro" aria-hidden="true"><use href="#i-loader-circle"/></svg>Guardando…</button></div><div class="cab">Peligro</div><div><button class="btn btn-x" type="button">Archivar</button></div><div><button class="btn btn-x s-hover" type="button">Archivar</button></div><div><button class="btn btn-x s-foco" type="button">Archivar</button></div><div><button class="btn btn-x s-activo" type="button">Archivar</button></div><div><button class="btn btn-x" type="button" disabled>Archivar</button></div><div><button class="btn btn-x cargando" type="button" aria-busy="true"><svg class="ic ic-giro" aria-hidden="true"><use href="#i-loader-circle"/></svg>Guardando…</button></div><div class="cab">Fantasma</div><div><button class="btn btn-g" type="button">Ver más</button></div><div><button class="btn btn-g s-hover" type="button">Ver más</button></div><div><button class="btn btn-g s-foco" type="button">Ver más</button></div><div><button class="btn btn-g s-activo" type="button">Ver más</button></div><div><button class="btn btn-g" type="button" disabled>Ver más</button></div><div><button class="btn btn-g cargando" type="button" aria-busy="true"><svg class="ic ic-giro" aria-hidden="true"><use href="#i-loader-circle"/></svg>Guardando…</button></div>
+</div>
+<p class="peq suave" style="margin-top:16px">Deshabilitado: el motivo va en texto auxiliar junto al botón («Completa el NIT para continuar»), no solo en tooltip. Cargando: el ancho no cambia; el estado se anuncia con <code>aria-busy</code>.</p></div></section>
+
+<section class="cmp" aria-labelledby="c-cam"><h2 id="c-cam">2. Campos y selectores</h2><p class="base">Base: shadcn/ui <code>input</code>, <code>select</code> (Radix) + react-hook-form + zod · 0,6 h · alta. Etiqueta siempre visible; error con icono y <code>aria-describedby</code>.</p>
+<div class="matriz-campos">
+<div class="campo"><label for="f1">Razón social <span class="obl">obligatorio</span></label><input id="f1" value="Panadería Dulce Hogar S.A.S."><span class="ayuda">Reposo</span></div>
+<div class="campo"><label for="f2">Razón social</label><input id="f2" class="s-hover" value="Panadería Dulce Hogar S.A.S."><span class="ayuda">Hover</span></div>
+<div class="campo"><label for="f3">Razón social</label><input id="f3" class="s-foco" value="Panadería Dulce Hogar S.A.S."><span class="ayuda">Foco (anillo de 3 px)</span></div>
+<div class="campo error"><label for="f4">Correo electrónico <span class="obl">obligatorio</span></label><input id="f4" value="marcela@ejemplo" aria-invalid="true" aria-describedby="f4e"><span class="msg-error" id="f4e"><svg class="ic " aria-hidden="true"><use href="#i-circle-x"/></svg>Escribe un correo válido, por ejemplo nombre@ejemplo.com.</span></div>
+<div class="campo adv"><label for="f5">NIT</label><input id="f5" value="999.100.200-1" aria-describedby="f5e"><span class="msg-aviso" id="f5e"><svg class="ic " aria-hidden="true"><use href="#i-triangle-alert"/></svg><span>El dígito de verificación no coincide (esperado 0). Puedes guardar igualmente.</span></span></div>
+<div class="campo valido"><label for="f6">NIT</label><input id="f6" value="999.100.200-0"><span class="ok"><svg class="ic " aria-hidden="true"><use href="#i-circle-check"/></svg>Dígito de verificación correcto</span></div>
+<div class="campo"><label for="f7">Sector</label><select id="f7" disabled><option>Alimentos</option></select><span class="ayuda">Deshabilitado: solo lo edita el equipo CDE.</span></div>
+<div class="campo"><label for="f8">Tamaño</label><select id="f8"><option>Micro</option><option>Pequeña</option><option>Mediana</option><option>Grande</option></select><span class="ayuda">Selector de catálogo</span></div>
+<div class="campo"><label for="f9">Notas y acuerdos</label><textarea id="f9"></textarea><span class="ayuda">Área de texto vacía (reposo)</span></div>
+</div></section>
+
+<section class="cmp" aria-labelledby="c-tab"><h2 id="c-tab">3. Tabla, filtros y paginación</h2><p class="base">Base: TanStack Table 8 + shadcn <code>table</code>; paginación del servidor (50 filas). <code>@tanstack/react-virtual</code> solo en vista previa de importación (509 filas) y líneas de tiempo con más de 200 hitos · 1,5 h · alta (virtualizada: media). Diseño virtualizado: contenedor de altura fija 480 px, filas de 48 px, <code>aria-rowcount</code> total y <code>aria-rowindex</code> por fila.</p>
+<div class="fila" style="margin-bottom:12px" aria-label="Filtros activos"><span class="chip">Sector: Alimentos <button type="button" aria-label="Quitar filtro Sector: Alimentos"><svg class="ic " aria-hidden="true"><use href="#i-x"/></svg></button></span><span class="chip">Ficha incompleta <button type="button" aria-label="Quitar filtro Ficha incompleta"><svg class="ic " aria-hidden="true"><use href="#i-x"/></svg></button></span><button class="btn btn-g" type="button">Limpiar filtros</button></div>
+<div class="card plana"><div class="tabla-cont"><table class="tabla"><caption>Empresas · 497 resultados · página 1 de 10 (muestra de 4 filas)</caption><thead><tr><th scope="col"><span class="sr-only">Seleccionar</span></th><th scope="col" aria-sort="ascending"><button type="button">Empresa <svg class="ic " aria-hidden="true"><use href="#i-chevron-down"/></svg></button></th><th scope="col">Sector</th><th scope="col" class="num">Compromisos vencidos</th><th scope="col">Estado</th></tr></thead><tbody>
+<tr><td><input type="checkbox" aria-label="Seleccionar Panadería Dulce Hogar S.A.S." style="width:24px;height:24px"></td><td><a href="p06-ficha.html">Panadería Dulce Hogar S.A.S.</a></td><td>Alimentos</td><td class="num">2</td><td><span class="est est-venc"><svg class="ic " aria-hidden="true"><use href="#i-triangle-alert"/></svg>Vencido</span></td></tr>
+<tr class="forzar-hover"><td><input type="checkbox" aria-label="Seleccionar Papelería El Estudiante" style="width:24px;height:24px"></td><td><a href="p06-ficha.html">Papelería El Estudiante</a> <span class="peq suave">(hover)</span></td><td>Comercio</td><td class="num">1</td><td><span class="est est-venc"><svg class="ic " aria-hidden="true"><use href="#i-triangle-alert"/></svg>Vencido</span></td></tr>
+<tr class="sel"><td><input type="checkbox" checked aria-label="Seleccionar Asesorías Contables Norte" style="width:24px;height:24px"></td><td><a href="p06-ficha.html">Asesorías Contables Norte</a> <span class="peq suave">(seleccionada)</span></td><td>Servicios</td><td class="num">0</td><td><span class="est est-ok"><svg class="ic " aria-hidden="true"><use href="#i-circle-check"/></svg>Cumplido</span></td></tr>
+<tr><td><input type="checkbox" aria-label="Seleccionar Tejidos Chicamocha" style="width:24px;height:24px"></td><td><a href="p06-ficha.html">Tejidos Chicamocha</a></td><td>Artesanías</td><td class="num">0</td><td><span class="est est-curso"><svg class="ic " aria-hidden="true"><use href="#i-clock"/></svg>En curso</span></td></tr>
+</tbody></table></div><div class="pie-tabla"><span>Mostrando 1–4 de 497</span><span class="sep"></span><nav class="pag" aria-label="Paginación"><a href="#" aria-label="Página anterior"><svg class="ic " aria-hidden="true"><use href="#i-chevron-left"/></svg></a><span aria-current="page">1</span><a href="#">2</a><a href="#">3</a><a href="#" aria-label="Página siguiente"><svg class="ic " aria-hidden="true"><use href="#i-chevron-right"/></svg></a></nav></div></div>
+<div class="tres-col" style="margin-top:16px">
+<div class="card plana"><div class="vacio"><svg class="ic ic-lg" aria-hidden="true"><use href="#i-building-2"/></svg><h3>Aún no hay empresas</h3><p>Aún no hay empresas. Crea la primera o importa tu hoja de cálculo.</p><div class="fila"><a class="btn btn-p" href="p04-nueva-empresa.html">Nueva empresa</a><a class="btn btn-s" href="p07-importacion.html">Importar CSV</a></div></div><p class="rotulo" style="padding:0 16px 12px">Vacío</p></div>
+<div class="card plana" aria-busy="true"><div style="padding:16px;display:grid;gap:12px"><div class="esq" style="height:20px"></div><div class="esq" style="height:20px;width:80%"></div><div class="esq" style="height:20px;width:90%"></div><div class="esq" style="height:20px;width:60%"></div></div><p class="rotulo" style="padding:0 16px 12px">Cargando (esqueleto del mismo alto que las filas)</p></div>
+<div class="card plana"><div style="padding:16px"><div class="banda-error" role="alert"><svg class="ic " aria-hidden="true"><use href="#i-triangle-alert"/></svg><strong>No pudimos cargar las empresas.</strong><button class="btn btn-s" type="button">Reintentar</button></div></div><p class="rotulo" style="padding:0 16px 12px">Error</p></div></div></section>
+
+<section class="cmp" aria-labelledby="c-car"><h2 id="c-car">4. Tarjetas y cifras</h2><p class="base">Base: shadcn <code>card</code> (borde, sin sombra) · 0,3 h · alta. La cifra es un enlace a la lista que la compone.</p>
+<div class="stats">
+<a class="stat" href="#"><span class="stat-v">18 %</span><span class="stat-e">Compromisos vencidos</span><br><span class="stat-d neg"><svg class="ic " aria-hidden="true"><use href="#i-triangle-alert"/></svg>Ver la lista</span></a>
+<a class="stat" href="#"><span class="stat-v">497</span><span class="stat-e">Empresas atendidas</span><br><span class="stat-d pos"><svg class="ic " aria-hidden="true"><use href="#i-circle-check"/></svg>Dato verificado</span></a>
+<div class="stat" style="border:1px solid var(--divisor);border-radius:12px;padding:16px 24px;background:var(--superficie)" aria-busy="true"><div class="esq" style="height:36px;width:50%"></div><div class="esq" style="height:16px;width:80%;margin-top:12px"></div></div>
+<div class="stat" style="border:1px solid var(--divisor);border-radius:12px;padding:16px 24px;background:var(--superficie)"><span class="stat-v">—</span><span class="stat-e">Sin datos para este periodo</span></div>
+<div class="banda-error" role="alert"><strong>No se pudo calcular.</strong><button class="btn btn-s" type="button">Reintentar</button></div>
+</div></section>
+
+<section class="cmp" aria-labelledby="c-sel"><h2 id="c-sel">5. Sello de procedencia y anillo de confianza</h2><p class="base">Propio (RF-34, RF-48) · 0,8 h · alta. Forma + icono + texto: verificado = esquinas inferiores redondeadas y escudo; declarado = píldora con borde punteado; por revisar = rectángulo recto con triángulo de advertencia (icono de RF-48). Peso de confianza: verificado 1,0 · declarado 0,6 · por revisar 0,3.</p>
+<div class="card"><div class="fila" style="margin-bottom:16px"><span class="sello sello-verificado"><svg class="ic " aria-hidden="true"><use href="#i-shield-check"/></svg>Verificado</span><span class="sello sello-declarado"><svg class="ic " aria-hidden="true"><use href="#i-user-round"/></svg>Declarado</span><span class="sello sello-revisar"><svg class="ic " aria-hidden="true"><use href="#i-triangle-alert"/></svg>Por revisar</span></div>
+<div class="fila" style="gap:32px"><div class="anillo" role="img" aria-label="Confianza de la ficha: 90"><svg viewBox="0 0 96 96"><circle class="pista" cx="48" cy="48" r="40" fill="none" stroke-width="10"/><circle class="valor" cx="48" cy="48" r="40" fill="none" stroke-width="10" stroke-dasharray="226.2 251.3"/></svg><b>90</b></div><div class="anillo" role="img" aria-label="Confianza de la ficha: 51"><svg viewBox="0 0 96 96"><circle class="pista" cx="48" cy="48" r="40" fill="none" stroke-width="10"/><circle class="valor" cx="48" cy="48" r="40" fill="none" stroke-width="10" stroke-dasharray="128.2 251.3"/></svg><b>51</b></div><div class="anillo" role="img" aria-label="Confianza de la ficha: 33"><svg viewBox="0 0 96 96"><circle class="pista" cx="48" cy="48" r="40" fill="none" stroke-width="10"/><circle class="valor" cx="48" cy="48" r="40" fill="none" stroke-width="10" stroke-dasharray="82.9 251.3"/></svg><b>33</b></div><span class="fila"><div class="anillo anillo-sm" role="img" aria-label="Confianza de la ficha: 90"><svg viewBox="0 0 96 96"><circle class="pista" cx="48" cy="48" r="40" fill="none" stroke-width="10"/><circle class="valor" cx="48" cy="48" r="40" fill="none" stroke-width="10" stroke-dasharray="226.2 251.3"/></svg><b>90</b></div><span><strong>Confianza de la ficha: 90</strong></span></span></div>
+<p class="peq suave" style="margin-top:12px">Anillo de confianza_ficha (90 · 51 · 33, escala 0–100 de RF-48) y variante de 48 px para el encabezado de la ficha (RF-48 pide 40 px; se sube a 48 px para que el número sea legible, DEC-12). El valor numérico siempre está en el centro y en el texto alternativo.</p></div></section>
+
+<section class="cmp" aria-labelledby="c-dup"><h2 id="c-dup">6. Aviso de duplicado con señales (RF-36)</h2><p class="base">Propio · 1,0 h · alta. Señales: <strong>alta</strong> = relleno sólido; <strong>media</strong> = borde punteado. Nunca solo color.</p>
+<div class="dup" role="alert"><div class="fila"><div><h3>Posible duplicado</h3><p>Posible duplicado: Panadería Dulce Hogar S.A.S. (parecido 95 %).</p></div><span class="sep"></span><div class="puntaje" aria-label="Similitud 0,95">0,95</div></div>
+<ul class="senales" aria-label="Señales de coincidencia"><li class="senal alta"><svg class="ic " aria-hidden="true"><use href="#i-circle-check"/></svg>NIT igual · alta</li><li class="senal alta"><svg class="ic " aria-hidden="true"><use href="#i-circle-check"/></svg>Correo igual · alta</li><li class="senal media"><svg class="ic " aria-hidden="true"><use href="#i-circle"/></svg>Nombre similar · media</li><li class="senal media"><svg class="ic " aria-hidden="true"><use href="#i-circle"/></svg>Municipio igual · media</li></ul>
+<div class="fila"><a class="btn btn-p" href="p05-fusion.html">Comparar lado a lado</a><button class="btn btn-s" type="button">Abrir la existente</button><button class="btn btn-g" type="button">Es una empresa distinta</button></div></div></section>
+
+<section class="cmp" aria-labelledby="c-cmp"><h2 id="c-cmp">7. Comparación lado a lado (RF-35)</h2><p class="base">Propio · 1,5 h · media. Cada campo muestra valor, origen y fecha; elegir con botón de opción (teclado: flechas).</p>
+<div class="comparar" role="group" aria-label="Comparación de A y B">
+<div class="cab">Campo</div><div class="cab">A · se conserva</div><div class="cab">B · se fusiona</div>
+<div class="eti">Razón social</div><div class="elegido"><label><input type="radio" name="x1" checked>Panadería Dulce Hogar S.A.S.</label><span class="origen">Importación · 10 feb 2026</span></div><div><label><input type="radio" name="x1">Panaderia Dulce Hogar SAS</label><span class="origen">Digitado · 29 oct 2026</span></div>
+<div class="eti">Sector</div><div class="elegido"><label><input type="radio" name="x2" checked>Alimentos</label><span class="origen">Declarado · 10 feb 2026</span></div><div><label><input type="radio" name="x2" disabled>(vacío)</label><span class="origen">Sin dato</span></div>
+</div></section>
+
+<section class="cmp" aria-labelledby="c-pal"><h2 id="c-pal">8. Paleta de comandos Ctrl+K</h2><p class="base">Base: cmdk 1.1.1 (+16 KB gzip) · 1,5 h · alta. Presionar Ctrl+K en cualquier página del equipo abre la real; aquí se muestra su contenido estático.</p>
+<div class="muestra"><div class="paleta" style="animation:none;margin:auto"><div class="paleta-in"><svg class="ic " aria-hidden="true"><use href="#i-search"/></svg><input aria-label="Ejemplo de búsqueda" value="pamaderia" readonly><kbd>Esc</kbd></div><ul role="presentation"><li class="grupo" role="presentation">Empresas</li><li role="presentation" aria-selected="true" style="display:flex;align-items:center;gap:12px;min-height:48px;padding:0 12px;border-radius:6px;background:var(--info-bg);box-shadow:inset 3px 0 0 var(--naranja)"><svg class="ic " aria-hidden="true"><use href="#i-building-2"/></svg><span><strong>Panadería Dulce Hogar S.A.S.</strong><br><span class="suave peq">Alimentos · Bucaramanga</span></span><span class="coin" style="margin-left:auto;font-weight:800">0,82</span></li><li role="presentation" style="display:flex;align-items:center;gap:12px;min-height:48px;padding:0 12px"><svg class="ic " aria-hidden="true"><use href="#i-building-2"/></svg><span><strong>Panadería La Espiga</strong><br><span class="suave peq">Alimentos · Floridablanca</span></span><span class="coin" style="margin-left:auto;font-weight:800">0,58</span></li></ul><div class="paleta-pie"><span><kbd>↑</kbd> <kbd>↓</kbd> moverse</span><span><kbd>↵</kbd> abrir historial</span></div></div></div></section>
+
+<section class="cmp" aria-labelledby="c-hil"><h2 id="c-hil">9. Línea de tiempo («el hilo»)</h2><p class="base">Propio con TanStack Virtual para >200 hitos · 2,0 h · media. Forma + icono + texto; relleno naranja = abierto; todos con contorno tinta de 2 px (WCAG 1.4.11).</p>
+<div class="card"><div class="leyenda" style="margin-bottom:12px"><span><span class="nodo circ"></span>Evento o cita</span><span><span class="nodo rombo" style="margin:0 8px 0 4px"></span>Compromiso</span><span><span class="nodo cuad"></span>Diagnóstico</span><span><span class="nodo barra"></span>Proyecto</span></div>
+<ol class="hilo"><li class="hilo-grupo">2026-2</li>
+<li class="hito"><span class="nodo circ"></span><span class="hito-fecha">20 oct</span><span><span class="hito-tipo">Cita</span> · agendada para el 27 oct <span class="est est-adv"><svg class="ic " aria-hidden="true"><use href="#i-hourglass"/></svg>Pendiente</span></span></li>
+<li class="hito"><span class="nodo rombo abierto"></span><span class="hito-fecha">14 oct</span><span><span class="hito-tipo">Compromiso vencido</span> · Crear lista de precios impresa <span class="est est-venc"><svg class="ic " aria-hidden="true"><use href="#i-triangle-alert"/></svg>Vencido</span></span></li>
+<li class="hito nuevo"><span class="nodo cuad"></span><span class="hito-fecha">6 oct</span><span><span class="hito-tipo">Diagnóstico 3</span> · finanzas 71, mercadeo 52 (hito nuevo, resaltado 600 ms)</span></li>
+<li class="hito"><span class="nodo barra abierto"></span><span class="hito-fecha">18 ago</span><span><span class="hito-tipo">Proyecto de aula</span> · Finanzas, 2026-2 <span class="est est-curso"><svg class="ic " aria-hidden="true"><use href="#i-clock"/></svg>En curso</span></span></li></ol>
+<p class="peq suave">Vacío: «Esta empresa todavía no tiene historial. Cada cita, diagnóstico o compromiso aparecerá aquí.»</p></div></section>
+
+<section class="cmp" aria-labelledby="c-rad"><h2 id="c-rad">10. Radar, barras y mapa de calor</h2><p class="base">Radar: Recharts 3.10.1 (+101,8 KB gzip, carga diferida; en los mockups es SVG propio) · 2,0 h · media. Siempre con tabla equivalente. Mapa de calor: propio · 1,5 h · media; número en cada celda y trama en niveles 4 y 5.</p>
+<div class="dos-col"><div class="card"><div class="fila" style="gap:24px;align-items:flex-start"><svg class="radar" viewBox="-70 0 440 300" role="img" aria-label="Radar de madurez por dimensión. Detalle en la tabla equivalente."><polygon class="rej" points="150.0,125.0 175.0,150.0 150.0,175.0 125.0,150.0"/><polygon class="rej" points="150.0,100.0 200.0,150.0 150.0,200.0 100.0,150.0"/><polygon class="rej" points="150.0,75.0 225.0,150.0 150.0,225.0 75.0,150.0"/><polygon class="rej" points="150.0,50.0 250.0,150.0 150.0,250.0 50.0,150.0"/><line class="eje" x1="150" y1="150" x2="150.0" y2="50.0"/><line class="eje" x1="150" y1="150" x2="250.0" y2="150.0"/><line class="eje" x1="150" y1="150" x2="150.0" y2="250.0"/><line class="eje" x1="150" y1="150" x2="50.0" y2="150.0"/><polygon points="150.0,95.0 185.0,150.0 150.0,210.0 80.0,150.0" fill="none" stroke="#7C84A3" stroke-width="3" stroke-dasharray="6 4" stroke-linejoin="round"/><circle cx="150.0" cy="95.0" r="4" fill="#7C84A3" stroke="var(--superficie)" stroke-width="1.5"/><circle cx="185.0" cy="150.0" r="4" fill="#7C84A3" stroke="var(--superficie)" stroke-width="1.5"/><circle cx="150.0" cy="210.0" r="4" fill="#7C84A3" stroke="var(--superficie)" stroke-width="1.5"/><circle cx="80.0" cy="150.0" r="4" fill="#7C84A3" stroke="var(--superficie)" stroke-width="1.5"/><polygon points="150.0,98.0 221.0,150.0 150.0,214.0 78.0,150.0" fill="color-mix(in srgb, var(--azul) 18%, transparent)" stroke="var(--azul)" stroke-width="3" stroke-dasharray="0" stroke-linejoin="round"/><circle cx="150.0" cy="98.0" r="4" fill="var(--azul)" stroke="var(--superficie)" stroke-width="1.5"/><circle cx="221.0" cy="150.0" r="4" fill="var(--azul)" stroke="var(--superficie)" stroke-width="1.5"/><circle cx="150.0" cy="214.0" r="4" fill="var(--azul)" stroke="var(--superficie)" stroke-width="1.5"/><circle cx="78.0" cy="150.0" r="4" fill="var(--azul)" stroke="var(--superficie)" stroke-width="1.5"/><text x="150.0" y="28.0" text-anchor="middle" dominant-baseline="middle">Mercadeo</text><text x="272.0" y="150.0" text-anchor="start" dominant-baseline="middle">Finanzas</text><text x="150.0" y="272.0" text-anchor="middle" dominant-baseline="middle">Operaciones</text><text x="28.0" y="150.0" text-anchor="end" dominant-baseline="middle">Formalización</text></svg>
+<table class="tabla" style="flex:1 1 280px;max-width:360px"><caption>Tabla equivalente</caption><thead><tr><th scope="col">Dimensión</th><th scope="col" class="num">D1</th><th scope="col" class="num">D3</th><th scope="col" class="num">Δ</th></tr></thead><tbody><tr><td>Mercadeo</td><td class="num">55</td><td class="num">52</td><td class="num">−3</td></tr><tr><td>Finanzas</td><td class="num">35</td><td class="num">71</td><td class="num">+36</td></tr><tr><td>Operaciones</td><td class="num">60</td><td class="num">64</td><td class="num">+4</td></tr><tr><td>Formalización</td><td class="num">70</td><td class="num">72</td><td class="num">+2</td></tr></tbody></table></div></div>
+<div class="card"><h3>Barras por dimensión</h3><div class="barras"><div class="barra"><span>Finanzas</span><div class="barra-pista"><i style="width:71%"></i></div><span class="num">71</span></div><div class="barra"><span>Mercadeo</span><div class="barra-pista"><i style="width:52%"></i></div><span class="num">52</span></div></div></div></div>
+<div class="card" style="margin-top:16px"><table class="heat" aria-label="Escala de brecha de ejemplo"><thead><tr><th></th><th scope="col">Finanzas</th><th scope="col">Mercadeo</th><th scope="col">Operaciones</th></tr></thead><tbody><tr><th scope="row" class="fila-h">Alimentos</th><td><button class="n5" type="button" aria-label="Alimentos, Finanzas, nivel 5">5</button></td><td><button class="n4" type="button" aria-label="Alimentos, Mercadeo, nivel 4">4</button></td><td><button class="n2" type="button" aria-label="Alimentos, Operaciones, nivel 2">2</button></td></tr></tbody></table>
+<div class="escala" style="margin-top:12px"><span>1 sin brecha</span><span class="m n1">1</span><span class="m n2">2</span><span class="m n3">3</span><span class="m n4">4</span><span class="m n5">5</span><span>5 brecha máxima</span></div></div></section>
+
+<section class="cmp" aria-labelledby="c-bad"><h2 id="c-bad">11. Estados, insignias y niveles</h2><p class="base">Badge de estado: shadcn <code>badge</code> con icono · 0,3 h · alta. Insignias: SVG propios (3 del alcance R3) · 0,8 h · alta.</p>
+<div class="card"><div class="fila" style="margin-bottom:16px"><span class="est est-ok"><svg class="ic " aria-hidden="true"><use href="#i-circle-check"/></svg>Cumplido</span><span class="est est-venc"><svg class="ic " aria-hidden="true"><use href="#i-triangle-alert"/></svg>Vencido</span><span class="est est-curso"><svg class="ic " aria-hidden="true"><use href="#i-clock"/></svg>En curso</span><span class="est est-adv"><svg class="ic " aria-hidden="true"><use href="#i-hourglass"/></svg>Por vencer</span><span class="est est-neu"><svg class="ic " aria-hidden="true"><use href="#i-circle"/></svg>Sin iniciar</span></div>
+<div class="rejilla"><div class="ins"><svg class="arte" viewBox="0 0 64 64" role="img" aria-label="Insignia Primer paso: dos escalones ascendentes"><circle cx="32" cy="32" r="30" fill="#FFFFFF" stroke="#16265C" stroke-width="3"/><path d="M16 40h10v-8h10v-8h10v-8" fill="none" stroke="#16265C" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><rect x="14" y="40" width="34" height="5" rx="2" fill="#FFCC4D" stroke="#16265C" stroke-width="2"/></svg><div><strong>Primer paso</strong><br><span class="peq suave">Completaste tu ficha básica.</span></div></div><div class="ins"><svg class="arte" viewBox="0 0 64 64" role="img" aria-label="Insignia Aprendiz: libro abierto"><circle cx="32" cy="32" r="30" fill="#FFFFFF" stroke="#16265C" stroke-width="3"/><path d="M12 18c6-3 13-3 20 2 7-5 14-5 20-2v26c-6-3-13-3-20 2-7-5-14-5-20-2z" fill="#FFCC4D" stroke="#16265C" stroke-width="3" stroke-linejoin="round"/><path d="M32 20v26" stroke="#16265C" stroke-width="3"/></svg><div><strong>Aprendiz</strong><br><span class="peq suave">Tres capacitaciones completadas.</span></div></div><div class="ins"><svg class="arte" viewBox="0 0 64 64" role="img" aria-label="Insignia Cumplidor: escudo con marca de verificación"><circle cx="32" cy="32" r="30" fill="#FFFFFF" stroke="#16265C" stroke-width="3"/><path d="M32 10l18 6v14c0 12-8 20-18 24-10-4-18-12-18-24V16z" fill="#FFCC4D" stroke="#16265C" stroke-width="3" stroke-linejoin="round"/><path d="M23 32l7 7 12-14" fill="none" stroke="#16265C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><div><strong>Cumplidor</strong><br><span class="peq suave">Cinco compromisos cumplidos a tiempo.</span></div></div>
+<div class="ins bloq"><div style="width:56px;height:56px;border-radius:50%;border:3px dashed var(--borde);display:grid;place-items:center"><svg class="ic " aria-hidden="true"><use href="#i-lock"/></svg></div><div><strong>Bloqueada</strong><br><span class="peq">Asiste a 3 capacitaciones.</span></div></div></div></div></section>
+
+<section class="cmp" aria-labelledby="c-toa"><h2 id="c-toa">12. Avisos emergentes, diálogos y esqueletos</h2><p class="base">sonner 2.0.8 (+9 KB gzip) · shadcn <code>dialog</code> sobre Radix · 0,6 h · alta. Éxito 4–6 s; error sin cierre automático; «Deshacer» 30 s.</p>
+<div class="fila"><button class="btn btn-s" data-toast="ok" data-msg="Empresa guardada." type="button">Aviso de éxito</button><button class="btn btn-s" data-toast="err" data-msg="No se pudo guardar. Revisa la conexión e inténtalo de nuevo." type="button">Aviso de error</button><button class="btn btn-s" data-toast="info" data-msg="+25 · Cumpliste tu compromiso a tiempo" type="button">Aviso de puntos</button><button class="btn btn-s" data-abrir-dialogo="dlg-demo" type="button">Abrir diálogo</button></div>
+<dialog id="dlg-demo" aria-labelledby="dlg-t"><h2 id="dlg-t">Fusionar empresas</h2><p>Se moverá todo el historial de Panaderia Dulce Hogar SAS a Panadería Dulce Hogar S.A.S.. Panaderia Dulce Hogar SAS quedará archivada.</p><div class="dialogo-acc"><button class="btn btn-s" data-cerrar-dialogo type="button">Cancelar</button><button class="btn btn-p" data-cerrar-dialogo data-toast="ok" data-msg="Empresas fusionadas. El historial quedó en Panadería Dulce Hogar S.A.S." type="button">Fusionar empresas</button></div></dialog></section>
+
+<section class="cmp" aria-labelledby="c-rut"><h2 id="c-rut">13. Mapa de ruta («Mi ruta»)</h2><p class="base">Propio · 1,5 h · media. Hecho = amarillo con contorno tinta; hoy = naranja con doble anillo; futuro = hueco. El camino pasa de continuo a punteado.</p>
+<div class="card"><ol class="ruta"><li class="hecho"><b>Ficha lista</b>10 feb</li><li class="hecho"><b>Plan de acción</b>24 feb</li><li class="hecho"><b>Primer taller</b>27 mar</li><li class="hoy"><b>Hoy</b>Actualizar precios</li><li class="pend"><b>Taller de finanzas</b>12 nov</li><li class="pend"><b>Cita de seguimiento</b></li><li class="pend"><b>Nivel 4</b>Impulsor</li></ol></div></section>
+
+</main>
+</div>
+</div>
+<nav class="nav-inf" aria-label="Secciones"><a href="p02-panel.html"><svg class="ic " aria-hidden="true"><use href="#i-house"/></svg><span>Inicio</span></a><a href="p03-busqueda.html"><svg class="ic " aria-hidden="true"><use href="#i-building-2"/></svg><span>Empresas</span></a><a href="p08-citas.html"><svg class="ic " aria-hidden="true"><use href="#i-calendar"/></svg><span>Citas</span></a><a href="p09-eventos.html"><svg class="ic " aria-hidden="true"><use href="#i-calendar-check"/></svg><span>Eventos</span></a><a href="p10-analisis.html"><svg class="ic " aria-hidden="true"><use href="#i-chart-column"/></svg><span>Análisis</span></a></nav>
+<div class="velo" aria-hidden="false"><div class="paleta" role="dialog" aria-modal="true" aria-label="Búsqueda global"><div class="paleta-in"><svg class="ic " aria-hidden="true"><use href="#i-search"/></svg><input type="text" role="combobox" aria-expanded="true" aria-controls="paleta-lista" aria-autocomplete="list" aria-label="Buscar" placeholder="Busca empresas, eventos o personas" autocomplete="off"><kbd>Esc</kbd></div><ul id="paleta-lista" role="listbox" aria-label="Resultados"></ul><div class="paleta-pie"><span><kbd>↑</kbd> <kbd>↓</kbd> moverse</span><span><kbd>↵</kbd> abrir historial</span><span><kbd>Ctrl + K</kbd> cerrar</span><span id="paleta-estado" role="status" class="sr-only"></span></div></div></div>
+<div id="anuncio" class="sr-only" role="status" aria-live="polite"></div>
+<script src="js/datos.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

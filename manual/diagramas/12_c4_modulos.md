@@ -1,0 +1,110 @@
+# 12 · C4 nivel 3 · Mapa de módulos y dependencias permitidas
+
+**Qué responde este diagrama.** ¿Qué módulo puede depender de cuál y cuáles se comunican solo por eventos?
+
+**A quién sirve.** S, J y quien programe (regla de límites de `05` §2).
+
+![C4 nivel 3 · Mapa de módulos y dependencias permitidas](img/12_c4_modulos.png)
+
+Descargas: [SVG](img/12_c4_modulos.svg) · [PNG](img/12_c4_modulos.png) · [fuente Mermaid](src/12_c4_modulos.mmd)
+
+## Leyenda de notación
+
+Óvalo oscuro = persona · rectángulo azul grueso = sistema o módulo · rectángulo blanco = contenedor · rectángulo gris-azulado = componente · cilindro = almacén de datos · hexágono gris = sistema externo · borde y línea discontinuos naranja = propuesta de la Ronda 4 sin ratificar · borde punteado = decidido en R3 con alcance recortado. Cada flecha se lee «verbo [protocolo o tecnología]» y va en un solo sentido.
+
+## Cómo leerlo y decisiones
+
+1. Todos los módulos usan `Seguridad` para autorizar; solo se dibuja la flecha de `Empresas` para no saturar.
+2. Todos escriben en PostgreSQL por su cuenta; solo se dibuja `Reportes` porque es el único que lee vistas.
+3. `Gamificacion` e `Historial` nunca son llamados: escuchan eventos de dominio.
+4. La flecha discontinua `Eventos` → `Diagnosticos` no está declarada en `05` §2, pero la recomendación lee brechas y `T-25` depende de `T-41`.
+
+## Fuentes en el manual
+
+- `01_trazabilidad.md` §2
+- `05_arquitectura.md` §2
+- `tareas/T-15.md`
+- `tareas/T-25.md`
+
+## Preguntas y contradicciones que lo afectan
+
+Ver `99_preguntas_abiertas_diagramas.md`: Q-D1, Q-D3.
+
+## Resultado de la revisión
+
+Ver la fila 12 de `90_verificacion_calidad.md` (lista de 18 puntos de `00_investigacion_metodologia.md` §6).
+
+<details><summary>Fuente Mermaid (GitHub la dibuja sin instalar nada)</summary>
+
+```mermaid
+---
+title: "C4 nivel 3 · Mapa de módulos y dependencias permitidas · API Laravel"
+config:
+  theme: base
+  look: classic
+  fontFamily: "Inter, Carlito, Arial, sans-serif"
+  themeVariables:
+    fontFamily: "Inter, Carlito, Arial, sans-serif"
+    fontSize: "16px"
+    lineColor: "#1B2340"
+    primaryTextColor: "#1B2340"
+    primaryColor: "#E8EDFB"
+    primaryBorderColor: "#2F4A9E"
+    edgeLabelBackground: "#F7F4EF"
+    background: "#F7F4EF"
+  flowchart:
+    curve: basis
+    htmlLabels: true
+    wrappingWidth: 330
+    nodeSpacing: 45
+    rankSpacing: 80
+---
+flowchart LR
+  classDef persona fill:#16265C,stroke:#16265C,color:#FFFFFF,stroke-width:2px
+  classDef cont fill:#FFFFFF,stroke:#2F4A9E,color:#1B2340,stroke-width:3px
+  classDef mod fill:#E8EDFB,stroke:#2F4A9E,color:#1B2340,stroke-width:3px
+  classDef comp fill:#F3F5FA,stroke:#2F4A9E,color:#1B2340,stroke-width:2px
+  classDef compP fill:#FFF4D6,stroke:#B34700,color:#6B4200,stroke-width:3px,stroke-dasharray:7 4
+  classDef compR fill:#F3F5FA,stroke:#2F4A9E,color:#1B2340,stroke-width:2px,stroke-dasharray:2 3
+  classDef datos fill:#FFFFFF,stroke:#2F4A9E,color:#1B2340,stroke-width:3px
+  classDef ext fill:#EDEFF5,stroke:#4B5575,color:#1B2340,stroke-width:2px
+  classDef extP fill:#FFF4D6,stroke:#B34700,color:#6B4200,stroke-width:3px,stroke-dasharray:7 4
+  classDef sistema fill:#E8EDFB,stroke:#2F4A9E,color:#1B2340,stroke-width:4px
+
+  SEG["<b>Seguridad</b><br/>[Módulo]<br/>Usuarios, roles, tokens,<br/>auditoría y consentimientos"]:::mod
+  EMP["<b>Empresas</b><br/>[Módulo]<br/>Empresas, duplicados, fusión,<br/>búsqueda y completitud"]:::mod
+  DIA["<b>Diagnosticos</b><br/>[Módulo]<br/>Diagnóstico y evolución"]:::mod
+  PRO["<b>Proyectos</b><br/>[Módulo]<br/>Proyectos de aula, planes<br/>y compromisos"]:::mod
+  CIT["<b>Citas</b><br/>[Módulo]<br/>Citas, atenciones<br/>y recordatorios"]:::mod
+  EVE["<b>Eventos</b><br/>[Módulo]<br/>Eventos, inscripciones,<br/>asistencia y recomendación"]:::mod
+  IMP["<b>Importacion</b><br/>[Módulo]<br/>Carga, vista previa<br/>y deduplicación en lote"]:::mod
+  REP["<b>Reportes</b><br/>[Módulo]<br/>Dashboard, brechas,<br/>reportes y exportación"]:::mod
+  BUS{{"<b>Eventos de dominio</b><br/>[Mecanismo de Laravel]<br/>Los módulos publican hechos;<br/>otros módulos los escuchan"}}:::ext
+  GAM["<b>Gamificacion</b><br/>[Módulo]<br/>Retos, puntos, niveles<br/>e insignias"]:::mod
+  HIS["<b>Historial</b><br/>[Módulo]<br/>Proyecta hechos a la tabla<br/>intervenciones"]:::mod
+  DB[("<b>Base de datos PostgreSQL</b><br/>[Almacén de datos · PostgreSQL 18.6]<br/>Vistas SQL de reportes")]:::datos
+  EMP -->|"Registra auditoría [Action pública]"| SEG
+  DIA -->|"Pide la empresa [Action pública]"| EMP
+  PRO -->|"Pide la empresa [Action pública]"| EMP
+  CIT -->|"Pide la empresa [Action pública]"| EMP
+  EVE -->|"Pide la empresa [Action pública]"| EMP
+  IMP -->|"Crea y compara empresas [contrato del módulo]"| EMP
+  EVE -.->|"Lee las mayores brechas [Action pública · por confirmar]"| DIA
+  EMP -->|"Publica EmpresaCreada y EmpresaFusionada"| BUS
+  DIA -->|"Publica DiagnosticoRegistrado"| BUS
+  PRO -->|"Publica CompromisoCumplido y CompromisoVencido"| BUS
+  CIT -->|"Publica CitaAgendada y AtencionRegistrada"| BUS
+  EVE -->|"Publica AsistenciaRegistrada e InscripcionCreada"| BUS
+  BUS -->|"Entrega eventos [listeners de Laravel]"| GAM
+  BUS -->|"Entrega eventos [listeners de Laravel]"| HIS
+  REP -->|"Lee vistas [SQL de solo lectura]"| DB
+  subgraph LEY["Leyenda"]
+    direction LR
+    LG0["Módulo decidido"]:::mod
+    LG1{{"Mecanismo o contenedor"}}:::ext
+    LG2[("Almacén de datos")]:::datos
+    LG3["Línea continua: relación decidida · línea discontinua: propuesta o por confirmar"]:::comp
+  end
+```
+
+</details>

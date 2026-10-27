@@ -101,7 +101,7 @@ Regla del TyC (§11): "Cada equipo debe desarrollar su solución durante la Hack
 
 | ID | Qué | Clase | Resp. | h | Ahorra en la ventana | Fuente de las horas |
 |---|---|---|---|---:|---|---|
-| P-01 | Esqueleto (`03` §5 pasos 1–6), CI verde y "hola" desplegado en el servidor | Verde | J | 2,0 (ya en `INDEX`) | T-02 −0,75 h | Tareas previas de `INDEX` |
+| P-01 | Esqueleto (`03` §5 pasos 1–6), CI verde, "hola" desplegado en el servidor **y cabeceras de seguridad con CSP en el proxy (R3, J1)** | Verde | J | 2,0 (ya en `INDEX`) | T-02 −0,75 h | Tareas previas de `INDEX` |
 | P-02 | Cola `database`, scheduler, `/health` y Mailpit probados con un job vacío de ejemplo | Verde | J | 0,5 (nuevo) | T-03 −0,5 h | Noche del 27 |
 | P-03 | Script de `pg_dump` y restauración de una base **vacía**; etiqueta de ejemplo | Verde | J | 0,25 (nuevo) | T-92/T-94 −0,25 h (día 2) | Noche del 27 |
 | P-04 | Instalación real de paquetes (`12` pasos 1–7) | Verde | S | 0,5 (ya) | Riesgo, no horas | Tareas previas de `INDEX` |
@@ -375,6 +375,8 @@ Percentil 5 con *m* = 1,2: A 31,1 · B 31,2. Probabilidad de completar las opcio
 La conclusión B ≥ A no cambia con ninguna de estas variaciones. Con *m* ≥ 1,3 la ventaja de B es menor que la incertidumbre del modelo (≤ 0,3 puntos) y el criterio de decisión pasa a ser operativo (§9.5).
 
 ### 9.4 Lectura honesta
+
+- **R3 (F22, C-49):** esta simulación trata las 10,75 h de reloj como horas efectivas. `07` §8 exige pausas de 10 min cada 90 (≈ 1,2 h), lo que baja la capacidad efectiva a ≈ 9,6 h, equivalente a un sobrecosto de ≈ 12 % antes de cualquier error. Con un 20 % adicional el sobrecosto compuesto es ≈ 1,34 y la Funcionalidad esperada es ≈ 34 en A y ≈ 34,5 en B (filas 1,3 y 1,4 de §9.2). El equipo decide en T-01 si las pausas salen del colchón (recomendado) o se hacen en V1, cena y receso (PA-37).
 
 - **El plan A cabe sin cortes solo con sobrecosto ≤ ≈ 13 %** (colchón 1,25 h sobre 9,5 h en S). Con *m* = 1,2 hay 39 % de probabilidad de perder al menos una tarea de la ruta dorada si nadie ayuda a nadie y no se usan las palancas de abajo.
 - **Palancas no modeladas** (cada una con su costo): L1, reducir T-91 de 1,0 a 0,5 h (+0,5 h por persona; el ensayo cronometrado pasa a 6:00–7:00 del día 2); L2, usar las 0,5 h de J durante V1; L3, ayuda cruzada del que tiene colchón (S y MP) a J en T-30/T-31; L4, ventana de correcciones del día 2 (§10: S 0,75 h y J 0,5 h libres).

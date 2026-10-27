@@ -54,6 +54,8 @@ Qué **no** es el diferenciador: tecnología de moda (IA). Se declara como evolu
 **Recomendación (PROPUESTA):** arrancar con **D + B** en la UNAB (piloto de un semestre con el CDE) y vender **A + C** a terceros.
 
 ### 3.3 Costos operativos (supuestos para hacer cuentas; validar)
+
+> **R3 (J4, 4.1):** fórmula para presentar el costo sin inventar cifras: `costo anual = (horas de mantenimiento por semana × 52 × valor hora que informe la UNAB) + servidor + soporte + cumplimiento de datos`. Hasta tener los valores (Q-29, PA-24), se presenta la fórmula y su variable dominante (las horas de la persona mantenedora).
 | Concepto | Supuesto | Nota |
 |---|---|---|
 | Servidor (un VPS pequeño con PostgreSQL) | Costo mensual bajo; el equipo hoy usa el servidor de un patrocinador | Cotizar; PA-24 |
@@ -63,6 +65,8 @@ Qué **no** es el diferenciador: tecnología de moda (IA). Se declara como evolu
 | Licencias de software | 0 (stack de código abierto) | Todo el stack elegido es de código abierto; licencias exactas `[NO VERIFICADO]` |
 
 ### 3.4 Comparación de costo con CRM comercial (ilustración con cifras de §1)
+
+> **R3 (J4, 4.2):** las cifras de HubSpot (US$20) y Salesforce (US$25) de esta sección siguen `[NO VERIFICADO]` (`12`). **No se dicen en voz alta.** Solo se puede citar Airtable Team US$20 por usuario al mes, facturación anual, verificado el 27-oct-2026 en airtable.com/pricing.
 Para un equipo de **5** operadores (supuesto): HubSpot Starter ≈ 5 × US$20 × 12 = **US$1 200/año**; Salesforce Starter Suite ≈ 5 × US$25 × 12 = **US$1 500/año**, antes de implementación, de límites de registros/correos y sin los módulos específicos del CDE. El argumento de venta **no** es "más barato", sino **"hecho a la medida del proceso y de los datos del CDE, con la propiedad de los datos en la UNAB"**. Honestidad: si el costo de mantenimiento humano supera la licencia, el producto no se sostiene; por eso la hipótesis de sostenibilidad requiere el semillero (D) o la venta a terceros (A).
 
 ### 3.5 Escalabilidad (3 horizontes)
@@ -116,7 +120,7 @@ Reglas: no explicar el problema; empezar por la solución. 3 voces: **S** (técn
 | 3:15–3:45 | Calidad (ISO 25010) | S | 9 características en una diapositiva con evidencia (§12 de `05`): 25+ pruebas, 403 en intento no autorizado, respaldo restaurado, `docker compose up` | Slide 4 |
 | 3:45–4:30 | Negocio y sostenibilidad | J | Quién paga (UNAB, otras unidades, universidades), piloto 4+4 semanas, costos, 3 horizontes | Slide 5 |
 | 4:30–4:50 | Diferencial y valor UNAB | MP | Qué nos hace distintos frente a CRM, Airtable, software de aceleradoras y LMS; 3 indicadores | Slide 6 |
-| 4:50–5:00 | Cierre | Todos | "Le pedimos al CDE un piloto de un semestre." Gracias | Slide 7 |
+| 4:50–5:00 | Cierre | Todos | "Le pedimos al CDE un piloto de un semestre: cuatro semanas de piloto, cuatro de producción y el resto de expansión." (**R3, C-45**) Gracias | Slide 7 |
 
 Slides (7 + anexo): 1 portada y equipo; 2 solución y pilares; 3 recompensas; 4 calidad ISO; 5 negocio; 6 diferenciador y valor; 7 cierre/piloto. Anexo (no se muestra salvo preguntas): arquitectura, tabla comparativa, plan de implementación, costos, roadmap.
 

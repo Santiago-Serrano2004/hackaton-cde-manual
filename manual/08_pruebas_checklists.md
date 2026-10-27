@@ -130,7 +130,8 @@ Cada una se guarda en `docs/sql_control.sql` y su resultado esperado figura en `
 - [ ] (M) CORS limitado al origen del front.
 - [ ] (M) Subida de archivos: tipo/tamaño; archivo `.php` rechazado.
 - [ ] (M) Errores sin trazas en producción.
-- [ ] (S) Cabeceras de seguridad en el proxy; HTTPS.
+- [ ] (M) **R3 (J1):** cabeceras de seguridad con CSP en el proxy, configuradas en el esqueleto previo (P-01 de `20` §4); HTTPS.
+- [ ] (M) **R3 (RK-1):** la exportación CSV antepone `'` a las celdas que empiezan por `=`, `+`, `-` o `@` (prueba en `ReporteTest`).
 - [ ] (S) `composer audit` y `npm audit` sin críticos `[NO VERIFICADO: disponible sin red]`.
 - [ ] (M) Datos demo 100 % sintéticos; ningún correo real.
 
@@ -139,11 +140,11 @@ Cada una se guarda en `docs/sql_control.sql` y su resultado esperado figura en `
 - [ ] ED: medición p95 con 5 000 empresas anotada.
 - [ ] CO: importación + exportación abiertas en Excel.
 - [ ] CI: SUS + tarea cronometrada + accesibilidad.
-- [ ] FI: prueba de restauración y recordatorio tras reinicio de worker.
+- [ ] FI: prueba de restauración y `RecordatorioTest` (R3: sin matar el worker en vivo).
 - [ ] SE: 403 en intento no autorizado + auditoría visible.
-- [ ] MA: árbol de módulos, CI verde, agregar un reto sin tocar otros módulos.
-- [ ] FL: `docker compose up` en máquina limpia; catálogo cambiado sin código.
-- [ ] PR: fusión reversible (R2: no la importación completa); borrado lógico; confirmaciones.
+- [ ] MA: árbol de módulos, CI verde, agregar un reto insertando una fila (R3, C-43).
+- [ ] FL: `docker compose up` en máquina limpia (tiempo anotado en T-00); catálogo cambiado editando `21_catalogos.csv` (R3, C-43).
+- [ ] PR: borrado lógico y confirmaciones; fusión reversible **solo en la variante B** (R3, C-42; R2: no la importación completa).
 
 ### 5.3 Accesibilidad (RNF-05) - revisión manual de las 8 pantallas del camino dorado
 - [ ] Contraste ≥ 4,5:1 (tokens de `06` §5).
@@ -156,7 +157,7 @@ Cada una se guarda en `docs/sql_control.sql` y su resultado esperado figura en `
 - [ ] Herramienta automática (axe/Lighthouse) sin errores críticos `[NO VERIFICADO: versión]`.
 
 ### 5.4 Rendimiento (RNF-01/02)
-- [ ] 5 000 empresas sintéticas cargadas (script `db:seed --class=CargaSeeder`).
+- [ ] 5 000 empresas sintéticas cargadas (`CargaSeeder`, una línea con las factories de T-30; **R3: dentro de T-96**, S 0,75 h; si no cabe, se mide con las 497 y así se dice).
 - [ ] Lista de empresas p95 ≤ 2 s; búsqueda ≤ 1 s; línea de tiempo ≤ 2 s; dashboard ≤ 2 s.
 - [ ] `EXPLAIN` de búsqueda por NIT y por nombre usa índice.
 - [ ] Ninguna lista sin paginar; N+1 verificado en historial.
@@ -171,7 +172,7 @@ Cada una se guarda en `docs/sql_control.sql` y su resultado esperado figura en `
 - [ ] Plan B local verificado; imágenes Docker guardadas (`docker save`).
 - [ ] URL pública abre desde otro dispositivo y desde la red del laboratorio.
 
-### 5.6 Checklist T-60 minutos (a las 8:00 del 29-oct, antes de V2 y de la entrega a las 9:00)
+### 5.6 Checklist T-60 minutos (**R3, C-48:** de 7:30 a 8:00 del 29-oct, dentro de T-94, antes de V2 y de la entrega a las 9:00)
 - [ ] Último `main` desplegado y etiquetado `v1.0-rc`; `git status` limpio en las 3 máquinas.
 - [ ] `docs/DEMO.md` con cuentas funcionando (login de los 5 roles).
 - [ ] Reiniciar la base de demo (`migrate:fresh --seed`) y ejecutar M-01..M-08 una vez completos.
@@ -185,7 +186,7 @@ Cada una se guarda en `docs/sql_control.sql` y su resultado esperado figura en `
 - [ ] Ensayo del pitch completo ≤ 5:00 dos veces.
 - [ ] Definido quién habla en cada segmento y quién maneja el teclado.
 - [ ] Lista de preguntas del jurado repasada (`09`).
-- [ ] Congelamiento: ningún cambio de código después de las 8:45.
+- [ ] Congelamiento (**R3, C-47**): desde las 8:30 solo cambios de ≤ 15 líneas aprobados por dos personas; ninguno después de las 8:45.
 
 ## 6. Datos y cuentas de demo (`docs/DEMO.md`)
 

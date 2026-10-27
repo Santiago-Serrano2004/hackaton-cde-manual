@@ -178,7 +178,7 @@ Lo que queda **fuera** pase lo que pase: IA conversacional (RF-29), WhatsApp, ap
 ## 8. Reglas de convivencia durante las 25 h
 1. Sincronización de 5 minutos cada 2 horas en punto (10:30, 12:00… en la tabla); pantalla compartida, sin discusiones de diseño > 5 min.
 2. Cada tarea termina con commit; `develop` siempre compila. Nadie hace *force push*.
-3. Pausa de 10 minutos cada 90 minutos; agua y comida; al menos 4 h de sueño continuo.
+3. Pausa de 10 minutos cada 90 minutos; agua y comida; al menos 4 h de sueño continuo. **R3 (C-49, PA-37):** las ventanas de `20` cuentan reloj, no horas efectivas; estas pausas (≈ 1,2 h) deben salir del colchón o hacerse en V1, cena y receso.
 4. Si algo falla dos veces, pedir ayuda al compañero antes de la tercera.
 5. Todo error nuevo después de FF va al backlog con etiqueta `P0/P1/P2`; solo `P0` se corrige antes de la entrega.
 

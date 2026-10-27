@@ -305,3 +305,19 @@ Decisiones 11–18 añadidas a `INDEX.md`. Hallazgos de la auditoría: 8 contrad
 | PA-34 | ¿Cuántas sesiones tiene la Ruta de Acompañamiento? | El TyC no lo dice; la lección L5 no afirma un número | CDE (Q-xx a añadir en `10`) |
 | PA-35 | ¿Los 12 sectores no listados en el TyC coinciden con la clasificación del CDE? | `21_catalogos.csv` los marca `PROPUESTA` (ya PA-07) | CDE |
 
+## K.11 Contradicciones, riesgos y preguntas de F22 (`22_auditoria_adversarial.md`)
+
+| # | Contradicción / riesgo / pregunta | Resolución | Decide |
+|---|---|---|---|
+| C-42 | Evidencia ISO «fusión reversible» frente a A (sin deshacer) | `05` §12 y `08` §5.2 reescritos | Equipo |
+| C-43 | «Catálogo/reto sin tocar código» frente a la ausencia de RF-23 y E14 | Se demuestra con `21_catalogos.csv` y `RetosSeeder` | Equipo |
+| C-44 | «Simular paso del tiempo», indicador de latencia, QR rotativo, `CargaSeeder` sin tarea | Retirados o absorbidos por T-96 | Equipo |
+| C-45 | «Piloto de un semestre» frente a 4 + 4 semanas | Frase única en `18` y `09` | María Paula |
+| C-46 | Escena «36 % se mejora solo» frente a calidad de datos aplazada | Retirada | María Paula |
+| C-47 | Congelamiento 8:45 frente a «≤ 15 líneas» | Regla única en `08` §5.6 | Equipo |
+| C-48 | Lista T-60 a las 8:00 chocaba con V2 | 7:30–8:00 | Julián |
+| C-49 | Pausas de `07` §8 no descontadas en las 10,75 h de `20` | `20` §9.4, PA-37 | Equipo (T-01) |
+| RK-1..RK-8 | Ver `22` §7.4 (inyección CSV, límite de login en escena, punto único de falla, red, autocompletado, IP del código, proyector, fusión a las 2:00) | Mitigaciones en `22` | Varios |
+| PA-36 | ¿Quién es dueño del código y se puede declarar el uso de agentes de IA? El TyC no lo dice. Recomendación: preguntar el 28 a las 8:30 y declararlo | Bloquea la respuesta a Q35 y el cierre de negocio | CDE |
+| PA-37 | ¿Las pausas de 10 min cada 90 salen del colchón? Recomendación: sí, y hacerlas en V1, cena y receso cuando se pueda | Define la capacidad efectiva | Los tres, en T-01 |
+

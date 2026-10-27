@@ -95,7 +95,7 @@ El archivo `docs/API.md` del repo de desarrollo se genera a partir de esta tabla
 | `gamificacion:rachas` | semanal | Recalcula rachas | RF-18 |
 | `respaldo:db` | cada hora (script en infraestructura) | `pg_dump` | RNF-06 |
 
-Correo: plantillas con el nombre del emprendedor, dato accionable y enlace al portal. En desarrollo/demo: Mailpit; en producción: SMTP (PA-03). Para la demo se acelera: botón admin "Simular paso del tiempo" que adelanta el reloj lógico de recordatorios `PROPUESTA` (no modifica el reloj del servidor). **Importante:** los correos de la demo nunca van a direcciones reales.
+Correo: plantillas con el nombre del emprendedor, dato accionable y enlace al portal. En desarrollo/demo: Mailpit; en producción: SMTP (PA-03). **R3 (C-44):** el botón «Simular paso del tiempo» **se retira**: ninguna tarea lo construye y sería una puerta trasera. Los recordatorios se demuestran con la prueba `RecordatorioTest` (reloj simulado) y con el recordatorio ya creado al agendar, visible en Mailpit. **Importante:** los correos de la demo nunca van a direcciones reales.
 
 ## 6. Reportes, analítica y exportación
 
@@ -150,14 +150,14 @@ Importar/exportar CSV (UTF-8 con BOM para Excel) y, solo si sobra tiempo, XLSX (
 | Característica | Decisión concreta | Demostración (60 s en la demo / pregunta del jurado) |
 |---|---|---|
 | **Adecuación funcional** | 22 requisitos Must mapeados 1:1 a los 10 resultados y 10 criterios del CDE (`01`); camino dorado (`02`) | Diapositiva "Reto → pantalla": cada criterio CRI-01..10 con captura/demostración y cifra |
-| **Eficiencia de desempeño** | Índices, paginación, vistas para KPIs, caché, `EXPLAIN` | Búsqueda con 5 000 empresas < 1 s; tiempo mostrado en pantalla (indicador de latencia en modo demo) |
+| **Eficiencia de desempeño** | Índices, paginación, vistas para KPIs, caché, `EXPLAIN` | Búsqueda con 5 000 empresas < 1 s, medida una vez con `CargaSeeder` dentro de T-96 y mostrada en la diapositiva 4 (**R3, C-44:** no hay indicador de latencia en pantalla; si T-96 no cabe, se dice «medido con las 497 empresas») |
 | **Compatibilidad** | CSV/JSON (XLSX opcional, R2), plantilla, API, `.ics` | Importar la hoja y exportar el reporte abriéndolo en Excel |
 | **Capacidad de interacción** | Portal por rol, mensajes accionables, confirmaciones, accesibilidad AA, gamificación, español | Prueba con usuarios (≥ 3) y resultado (`08`), tour de 20 s |
-| **Fiabilidad** | Transacciones, reintentos, respaldo/restauración, idempotencia, `/health`, plan B | "Matar" el contenedor del worker y mostrar que el recordatorio se envía al reiniciar; restaurar un respaldo |
+| **Fiabilidad** | Transacciones, reintentos, respaldo/restauración, idempotencia, `/health`, plan B | **R3:** `RecordatorioTest` (reintentos con reloj simulado) y restauración de un respaldo en base de prueba (T-94); no se «mata» el worker en vivo |
 | **Seguridad** | Roles/policies, hash, throttle, auditoría, Ley 1581 | Intentar entrar como emprendedor a `/api/v1/auditoria` → 403; mostrar la auditoría del cambio recién hecho |
-| **Mantenibilidad** | Monolito modular con límites, eventos, Pint, CI, pruebas, Actions | Mostrar árbol de módulos y agregar un reto nuevo editando solo `Gamificacion` |
-| **Flexibilidad** | Docker Compose, variables de entorno, catálogos administrables, sin dependencias de nube propietarias | `docker compose up` en máquina limpia; cambiar un catálogo sin tocar código |
-| **Protección (safety)** | Soft delete, confirmaciones, reversión de fusión (R2: no de la importación completa), minimización de datos, sin datos sensibles, mensajes sin fugas | Fusionar y luego deshacer; intentar borrar con confirmación |
+| **Mantenibilidad** | Monolito modular con límites, eventos, Pint, CI, pruebas, Actions | Mostrar árbol de módulos y agregar un reto nuevo insertando una fila en `retos` vía `RetosSeeder` (**R3, C-43:** no existe pantalla E14 en A ni B) |
+| **Flexibilidad** | Docker Compose, variables de entorno, catálogos administrables, sin dependencias de nube propietarias | `docker compose up` en máquina limpia con el tiempo medido en T-00; cambiar un catálogo editando `21_catalogos.csv` y ejecutando el seeder, sin tocar código (**R3, C-43:** no hay administración de catálogos en pantalla, RF-23 queda como hoja de ruta) |
+| **Protección (safety)** | Soft delete, confirmaciones, reversión de fusión (R2: no de la importación completa), minimización de datos, sin datos sensibles, mensajes sin fugas | Variante B: fusionar y luego deshacer. Variante A: fusión con modal de confirmación, borrado lógico y registro en auditoría; **no** se afirma reversibilidad (**R3, C-42**) |
 
 ## 13. Decisiones registradas
 | # | Decisión |

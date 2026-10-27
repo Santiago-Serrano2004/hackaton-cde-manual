@@ -134,6 +134,7 @@ La única fila «ver nota» es el relleno amarillo de la insignia ganada frente 
 |---|---:|---:|
 | Estado final | Impulsor · 455 puntos · tarjeta «Nivel 4: Impulsor» | Impulsor · 455 puntos · tarjeta «Nivel 4: Impulsor» |
 | Anuncio de accesibilidad | «Cumpliste «Actualizar precios»: +25 puntos, nivel 4 e insignia Cumplidor.» | Igual |
+| **Duración de la escena** (3 corridas, CPU sin estrangular) | Tarjeta de hito a ≈ 1,01 s; última animación a ≈ 1,91–1,93 s | Tarjeta inmediata; sin animaciones |
 | Tarea total del hilo principal | 830 ms | 259 ms |
 | Tiempo de `script` | 104 ms | 32 ms |
 | Tiempo de `layout` | 74 ms | 16 ms |

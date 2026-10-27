@@ -147,7 +147,7 @@ Cada estado se ve en el mockup con `?estado=vacio|cargando|error|exito`; tema co
 ## 8. Criterio de aceptación
 
 1. Con Marcela: 430 puntos, nivel 3 Constructor, «Te faltan 20 puntos para el nivel 4.»
-2. «Simular la escena» deja 455 puntos, nivel 4 Impulsor, insignia Cumplidor, la estación «Actualizar precios» hecha y «Taller de finanzas básicas» como «Estás aquí», **en una sola escena** de ≈ 2,2 s.
+2. «Simular la escena» deja 455 puntos, nivel 4 Impulsor, insignia Cumplidor, la estación «Actualizar precios» hecha y «Taller de finanzas básicas» como «Estás aquí», **en una sola escena** de ≈ 1,9 s.
 3. En Discreto, Oculto y con movimiento reducido el estado final es el mismo (en Oculto, sin cifras) y no queda ninguna animación en curso.
 4. A 390 px la ruta es vertical, sin desplazamiento horizontal.
 5. axe-core 0 violaciones; Lighthouse accesibilidad 100.

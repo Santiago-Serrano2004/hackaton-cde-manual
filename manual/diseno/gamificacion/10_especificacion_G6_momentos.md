@@ -25,7 +25,7 @@ Esta pantalla **no existe en la aplicación**: es una herramienta de revisión d
 ## 3. Reglas de interacción
 
 1. Reglas comunes: **nunca bloquea**; **una celebración mayor por acción**; toasts con cola de 1 visible y paso a línea de estado desde el tercero de la sesión; **un solo anuncio** por escena.
-2. G-03, G-04 y G-05 se ejecutan juntas con el botón «Simular la escena» (≈ 2,2 s).
+2. G-03, G-04 y G-05 se ejecutan juntas con el botón «Simular la escena» (≈ 1,9 s).
 3. El orden de prioridad si dos momentos coinciden: G-05 dentro de G-04 dentro de G-03 → una sola tarjeta; G-02 no se muestra si coincide con G-03.
 4. Un hecho repetido (G-09) nunca anima.
 5. G-10 (vencido) no tiene botón porque **no celebra ni anima**: es un estado.

@@ -104,7 +104,7 @@ Cada pantalla tiene estados normal (éxito), vacío, cargando y error, en claro 
 | 5 | **Tabla de posiciones (vista previa)** | Opt-in, alias, solo las cinco primeras y la persona; nunca la última | `10_especificacion_G5_posiciones.md` | `prototipo/posiciones.html` |
 | 6 | **Momentos de celebración** | Catálogo de diez momentos con su versión estática | `10_especificacion_G6_momentos.md` | `prototipo/momentos.html` |
 
-**Escena para el guion de 120 s.** En Mi ruta y en Logros, el botón «Simular la escena» ejecuta lo de `21_casos_demo.md` §3: Marcela (430 puntos, nivel 3) avisa, el equipo marca «Actualizar precios» y llegan **455 puntos, nivel 4 e insignia Cumplidor en un solo gesto** (C-38). Tiempo medido de la escena completa: 2,2 s; corte entre «cumplido» y «tarjeta de hito» ≈ 1,0 s. Ver `prototipo/index.html` («Ver la escena de 120 s»).
+**Escena para el guion de 120 s.** En Mi ruta y en Logros, el botón «Simular la escena» ejecuta lo de `21_casos_demo.md` §3: Marcela (430 puntos, nivel 3) avisa, el equipo marca «Actualizar precios» y llegan **455 puntos, nivel 4 e insignia Cumplidor en un solo gesto** (C-38). Tiempo medido (3 corridas, sin estrangular la CPU): la tarjeta de hito aparece a ≈ 1,01 s y la última animación termina a ≈ 1,91–1,93 s. Ver `prototipo/index.html` («Ver la escena de 120 s»).
 
 ## 6. Momentos de celebración (catálogo)
 
@@ -123,7 +123,7 @@ Reglas comunes: **nunca bloquea** (ningún `<dialog>` modal; la tarjeta de hito 
 | G-09 | Sin puntos (repetido o tope del mes) | Reintento del mismo hecho (idempotencia) o tope mensual del reto | Aviso neutral que explica por qué no sumó | Igual que G-02 | Línea de estado | 5 s | Este logro ya estaba registrado. No se suman puntos dos veces. | No |
 | G-10 | Compromiso vencido | La fecha límite pasa sin cumplir (estado automático) | Etiqueta «Vencido» con icono y texto de ayuda; **ninguna animación, ningún aviso emergente, ningún punto menos** | Ninguno | Igual | — | Venció el {fecha}. Habla con el equipo para reprogramarlo. | No |
 
-**Combinación sin saturar (escena de 120 s).** t = 0: la estación pasa a «hecha» y el tramo de hilo se dibuja (420 ms) · t = 120 ms: la baldosa nace (520 ms) y el contador sube de 430 a 455 (500 ms) · t ≈ 1,0 s: el nivel cambia (la barra se reinicia sin animación para no «vaciarse») y entra la tarjeta de hito (320 ms) · t ≈ 1,4 s: la insignia se estampa (520 ms). Total ≈ 2,2 s. Un único anuncio: «Cumpliste «Actualizar precios»: +25 puntos, nivel 4 e insignia Cumplidor.» (`GAM.cierre_demo`).
+**Combinación sin saturar (escena de 120 s).** t = 0: la estación pasa a «hecha» y el tramo de hilo se dibuja (420 ms) · t = 120 ms: la baldosa nace (520 ms) y el contador sube de 430 a 455 (500 ms) · t ≈ 1,0 s: el nivel cambia (la barra se reinicia sin animación para no «vaciarse») y entra la tarjeta de hito (320 ms) · t ≈ 1,4 s: la insignia se estampa (520 ms, hasta ≈ 1,9 s). Total medido ≈ 1,9 s. Un único anuncio: «Cumpliste «Actualizar precios»: +25 puntos, nivel 4 e insignia Cumplidor.» (`GAM.cierre_demo`).
 
 ## 7. Microinteracciones
 
@@ -221,7 +221,7 @@ Criterios de evaluación: **F** = Funcionalidad 60 · **D** = Diferenciador 15 �
 
 ## Criterio de aceptación
 
-1. Una persona que no leyó este archivo abre `prototipo/index.html`, ejecuta «Ver la escena de 120 s» y observa 455 puntos, nivel 4 e insignia Cumplidor en una sola escena de ≈ 2,2 s.
+1. Una persona que no leyó este archivo abre `prototipo/index.html`, ejecuta «Ver la escena de 120 s» y observa 455 puntos, nivel 4 e insignia Cumplidor en una sola escena de ≈ 1,9 s.
 2. Con la intensidad en Discreto u Oculto o con movimiento reducido, la misma escena termina con el mismo estado y sin animaciones en curso.
 3. Cada fila de §10 tiene tarea, requisito, horas, implementabilidad y simplificación.
 4. Los puntos, niveles y textos coinciden con `21_contenido_formacion.md` y `21_casos_demo.md` (`90_revision.md` §7).

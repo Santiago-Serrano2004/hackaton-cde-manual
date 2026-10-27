@@ -279,3 +279,17 @@ Cada requisito Must de `01` §11 debe aparecer en la columna Req. de al menos un
 2. Toda dependencia citada existe como ID en el CSV (comprobado el 27-oct-2026: 0 dependencias rotas).
 3. La suma por persona de §6 coincide con `07` §5.2.
 4. Las 25 historias de `02` tienen tarea, salvo las listadas como "sin tarea" (debe haber 0).
+
+## 10. R3: variantes A y B (propuesta pendiente de ratificar; detalle en `20_plan_que_cabe.md`)
+
+`backlog.csv` incorpora cinco columnas al final: `horas_A`, `horas_B`, `variante_R3` (A+B, B, diferido, futuro), `compuerta_R3` y `nota_R3`. Las columnas originales (`horas` incluida) no se modifican; `horas` conserva el alcance completo sin los incrementos de la Ronda 2 de T-12, T-13, T-14 y T-16 (C-26).
+
+| Persona | Núcleo R2 (`07` §5.2) | Variante A | Variante B | Colchón A | Colchón B |
+|---|---:|---:|---:|---:|---:|
+| Santiago | 13,25 | 9,5 | 10,5 | 1,25 | 0,25 |
+| Julián | 13,75 | 10,25 | 10,25 | 0,5 | 0,5 |
+| María Paula | 13,25 | 9,25 | 10,75 | 1,5 | 0,0 |
+
+Comprobación (script sobre `backlog.csv`, 27-oct-2026): la suma de `horas_A` y `horas_B` por persona coincide con la tabla. Cambios de reparto: T-25 queda con Julián (no pasa a María Paula como proponía PA-30, opción 2); T-10, T-11 y T-43 se parten en a/b. Aplazadas: T-18, T-26, T-27, T-28, T-48, T-49 y T-50..T-54. Solo en B: T-17, T-19, T-47 (T-47a) y los incrementos T-12x y T-13x.
+
+La §5 (colas y puertas por nivel) queda sustituida, si se ratifica, por las compuertas G-01..G-10 de `20` §6.3. Las puertas de nivel de `13` §4 se mantienen como criterio para la lista de espera.

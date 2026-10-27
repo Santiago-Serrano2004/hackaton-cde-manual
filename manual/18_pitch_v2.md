@@ -214,3 +214,7 @@ Reglas: cronómetro físico a la vista de quien habla; tarjeta de tiempos (0:40,
 4. El banco tiene 55 preguntas (25 de `09` + 30 de §11) con dueño.
 5. Ninguna cifra monetaria nueva sin fuente; el ahorro de horas se calcula solo con datos del CDE (Q-29).
 6. C-23 y Q-29 están registrados en `99` §K.7 y `10`.
+
+## R3 · Efectos del plan que cabe (`20_plan_que_cabe.md` §12)
+
+Contradicciones R3 con este archivo: (1) con el plan A la versión de demo vigente es la **C** de §3 y con el plan B la **B** más las escenas D1 (Ctrl+K), D2 (deshacer) y D5 (mapa mínimo) que pasen sus compuertas G-03, G-06 y G-05; (2) en §5, t = 65–85 s, «cola de validación → aprobar» se sustituye por «el equipo marca el compromiso como cumplido» (T-43 sin cola); (3) la escena D7 (§5, t = 108–114 s, «Calidad de los datos 72 %») no se muestra: se muestra el indicador «% de fichas con sector y tamaño» del dashboard, con la línea base del TyC (36 %/37 %); (4) la escena «mapa de calor» (t = 85–100 s) pasa a «filtro de sector con lista de empresas afectadas»; (5) no se debe decir «reversible» sin T-12x. El cronometraje de §12 se rehace cuando se decida la variante (F22).

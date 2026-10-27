@@ -186,3 +186,16 @@ Lo que queda **fuera** pase lo que pase: IA conversacional (RF-29), WhatsApp, ap
 - Cada requisito Must de `01` tiene tarea (ver trazabilidad en `08` §1).
 - Las horas disponibles (10,75 h en el día 1 más 1 h de ensayo) están por debajo de la carga nominal (12,5–13,25 h): el déficit está cuantificado y tiene mitigación en §5 y §7.
 - Sueño de 4 h por persona y 25 h totales respetadas.
+
+## 9. R3: plan que cabe (propuesta pendiente de ratificar; detalle en `20_plan_que_cabe.md`)
+
+**R3.** El balance de §5.2 se mantiene como diagnóstico: el Núcleo de la Ronda 2 no cabe (déficit de 2,5 / 3,0 / 2,5 h frente a 10,75 h de construcción). La Ronda 3 propone dos variantes que sí caben y **no modifica** las horas de §5 hasta que el equipo las ratifique en T-01 (PA-30, PA-31):
+
+| Variante | Santiago | Julián | María Paula | Colchón (S / J / MP) |
+|---|---:|---:|---:|---|
+| A «mínimo defendible» | 9,5 h | 10,25 h | 9,25 h | 1,25 / 0,5 / 1,5 h |
+| B «ambiciosa con compuertas» | 10,5 h | 10,25 h | 10,75 h | 0,25 / 0,5 / 0,0 h |
+
+Recomendación: B con compuertas y A como piso (`20` §9.5). Las cifras de §4 (tabla hora a hora) y §7 (contingencias) se sustituyen por `20` §5.2, §6.2 y §6.3 si se ratifica.
+
+**Contradicciones R3 con este archivo:** (1) T-02 dura 0,25 h, no 1,0 h, porque el «hola» desplegado es tarea previa (C-28); (2) T-41, T-42 y T-20 no pueden empezar antes de que exista el esquema de empresas: T-11a (0,25 h) es lo primero (C-29); (3) la hora de T-91 (00:30–01:30) está dentro de las 11,75 h y no es un desborde adicional (C-35); (4) T-25 se queda con Julián (C-37); (5) T-95 baja a 0,75 h (C-30). La contingencia «T-15 con UNION» de §7 deja de ser contingencia y pasa a ser el alcance de A y B.

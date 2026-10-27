@@ -258,6 +258,8 @@ Resultados completos en `12_verificacion.md`. Ya corregidos en cascada en `03_st
 
 (Si adoptan 1 + 2 + 3, los cambios de responsable y horas se reflejan en `backlog.csv` y `07` antes de las 10:30.)
 
+**R3 · Recomendación actualizada (NO APLICADA; requiere ratificación en T-01).** `20_plan_que_cabe.md` sustituye la recomendación 1 + 2 + 3 por una **opción 5**: variante B con compuertas y variante A como piso (`20` §9.5). Difiere de la recomendación anterior en dos puntos: (a) T-25 **se queda en Julián** (no se mueve a María Paula; C-37), porque B necesita las horas de María Paula para T-17 y T-47a; (b) el déficit real contra 10,75 h de construcción es de 8,0 h de equipo (no 5,0 h; C-35). Conserva de las opciones anteriores las dos pasadas de T-12/T-13 (T-12x, T-13x solo en B) y T-15 por consulta directa. Opciones descartadas: 4 (dormir 3 h).
+
 ## K.7 Contradicciones de F18 (`18_pitch_v2.md`)
 
 | # | Contradicción con v1 | Motivo | Decide |
@@ -269,3 +271,23 @@ Resultados completos en `12_verificacion.md`. Ya corregidos en cascada en `03_st
 
 ## K.8 Decisiones y riesgos nuevos de F19 (`19_kit_local.md` §2.6–§2.7)
 Decisiones 11–18 añadidas a `INDEX.md`. Hallazgos de la auditoría: 8 contradicciones de redacción corregidas con marca «R2» (`19` §2.3); el déficit de horas se mantiene y se decide en PA-30. Base de horas: 10,75 h (`07`) o 11,75 h con la hora de ensayo (`99` §K.6).
+
+## K.9 Contradicciones y preguntas de F20 (`20_plan_que_cabe.md` §13–§14)
+
+| # | Contradicción / pregunta | Motivo | Decide |
+|---|---|---|---|
+| C-26 | `backlog.csv`, `14` §4 y `tareas/_INDEX.md` usan las horas de v1 de T-12, T-13, T-14, T-16 y T-40; `07` §5 y `14` §6 las de R2 | Dos fuentes para la misma cifra | Equipo (T-01) |
+| C-27 | `02` §3.4 «nunca se corta RF-17/18» frente al aplazamiento de rachas y cola de validación en A y B | Ahorro de 0,75 h en T-43 | Equipo |
+| C-28 | `07` T-02 (1,0 h el 28) frente a `03` §5 e `INDEX` (esqueleto y «hola» desplegados antes) | Duplicidad | Julián |
+| C-29 | `tareas/_INDEX.md` empieza T-41, T-42 y T-20 antes de que exista T-11 | Dependencia violada | Santiago |
+| C-30 | `tareas/_INDEX.md` asigna 1,0 h de T-95 a una ventana de 0,5 h; T-96 sin horas de accesibilidad para MP | Aritmética | María Paula |
+| C-31 | HU-24 (auditoría filtrable) sin tarea Must con pantalla | Hueco de trazabilidad | Santiago |
+| C-32 | `18` §5 usa cola de validación y mapa de ruta (T-47) en la versión A | Alcance R3 | María Paula |
+| C-33 | `13` §4 comprometía 5 + 1 diferenciadores | Quedan 3 parciales + transversal | Equipo |
+| C-34 | PA-23 (mover T-16 a J) | T-16 dura 0,75 h; se descarta | Equipo |
+| C-35 | `tareas/_INDEX.md` §1 cuenta la hora de T-91 dos veces | Aritmética | Equipo |
+| C-36 | T-10, T-11 y T-43 como tareas únicas | Se parten en a/b | Equipo |
+| C-37 | PA-30 opción 2 (T-25 a MP) | MP necesita sus horas en B | Equipo |
+| PA-31 | ¿Variante A o B? Recomendación: B con compuertas (`20` §9.5). Por qué bloquea: define el calendario de las 10:30. Opciones: A, B, B sin compuertas (no recomendada) | Decisión de plan | Los tres, en T-01 |
+| PA-32 | ¿Son las actividades «Verde» de `20` §4 compatibles con el TyC §11? Recomendación: sí, declarándolas a las 8:30. Bloquea: P-02, P-03, P-07 se hacen la noche del 27 | Reglas del concurso | CDE |
+| PA-33 | ¿De dónde salen las 3 personas para T-97 (6:30 del 29)? Recomendación: pedirlas a otros equipos o al laboratorio durante la cena del 28 | Sin personas no hay SUS | María Paula |

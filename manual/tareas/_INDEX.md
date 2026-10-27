@@ -103,3 +103,17 @@ Tareas de las tres personas (no están en ninguna cola): T-00, T-01, T-90, T-91,
 
 - 43 archivos `T-XX.md`, uno por tarea Must o Should de `backlog.csv`, con el mismo formato que `_PLANTILLA.md`.
 - Horas, dependencias y criterios coinciden con `backlog.csv` (se generan de la misma fuente).
+
+## 6. R3 · Calendario que cabe (PROPUESTA pendiente de ratificar: PA-30, PA-31)
+
+La §2 y la «Lectura del calendario nominal» de arriba muestran el plan de la Ronda 2: **no cabe** (termina entre 03:00 y 03:30 con FF a las 01:30). `20_plan_que_cabe.md` lo sustituye, si el equipo lo ratifica en T-01, por dos calendarios que terminan antes de las 00:30:
+
+| Persona | Cola variante A (horas) | Termina | Cola variante B (horas) | Termina |
+|---|---|---|---|---|
+| Santiago | T-11a 0,25 → T-10a 1,25 → T-10b 0,25 → T-11b 2,25 → T-12 1,75 → T-13 1,25 → T-16 0,75 → T-15 0,75 → T-14 1,0 (**9,5**) | 23:15 | A + T-13x 0,25 (tras T-13) y T-12x 0,75 (al final) (**10,5**) | 00:15 |
+| Julián | T-02 0,25 → T-20 1,25 → T-21 0,75 → T-22 1,0 → T-23 2,0 → T-25 0,5 → T-24 1,5 → T-30 2,5 → T-31 0,5 (**10,25**) | 00:00 | Igual que A | 00:00 |
+| María Paula | T-40 1,0 → T-41 1,25 → T-42 1,5 → T-43a 1,5 → T-43b 0,25 → T-46 0,5 → T-44 2,0 → T-45 1,25 (**9,25**) | 23:00 | A con T-17 0,5 antes de T-45, y al final T-47a 0,75 y T-19 0,25 (**10,75**) | 00:30 |
+
+Cambios de dependencia respecto a la §2: T-11a (esquema raíz) pasa a ser la primera tarea del día (corrige que T-41 y T-42 empezaran antes de T-11); T-25 pasa de la cola de María Paula (sugerida en PA-30) a la de Julián; T-95 baja a 0,75 h y su tramo del día 2 es 06:00–08:00 más 08:30–09:00 (la fila 43 de la §2 asignaba 1,0 h a 0,5 h de reloj). Las tareas T-17, T-18, T-19, T-26, T-27, T-28, T-47, T-48, T-49 se cambian así: T-17, T-19 y T-47 (solo T-47a) se construyen únicamente en B; T-18, T-26, T-27, T-28, T-48 y T-49 quedan aplazadas. Las horas y las compuertas por tarea están en `backlog.csv` (`horas_A`, `horas_B`, `compuerta_R3`) y en la §13 de cada `T-XX.md`.
+
+Los niveles de dependencia de la §3 no cambian salvo por las tareas partidas (T-10a/b, T-11a/b, T-43a/b), que agregan una dependencia: T-43b espera a T-23 (holgura 0,0 h; `20` §8.3).

@@ -1,0 +1,64 @@
+---
+title: "C4 nivel 3 · Componentes de Diagnosticos y Proyectos · API Laravel"
+config:
+  theme: base
+  look: classic
+  fontFamily: "Inter, Carlito, Arial, sans-serif"
+  themeVariables:
+    fontFamily: "Inter, Carlito, Arial, sans-serif"
+    fontSize: "16px"
+    lineColor: "#1B2340"
+    primaryTextColor: "#1B2340"
+    primaryColor: "#E8EDFB"
+    primaryBorderColor: "#2F4A9E"
+    edgeLabelBackground: "#F7F4EF"
+    background: "#F7F4EF"
+  flowchart:
+    curve: basis
+    htmlLabels: true
+    wrappingWidth: 330
+    nodeSpacing: 45
+    rankSpacing: 80
+---
+flowchart TB
+  classDef persona fill:#16265C,stroke:#16265C,color:#FFFFFF,stroke-width:2px
+  classDef cont fill:#FFFFFF,stroke:#2F4A9E,color:#1B2340,stroke-width:3px
+  classDef mod fill:#E8EDFB,stroke:#2F4A9E,color:#1B2340,stroke-width:3px
+  classDef comp fill:#F3F5FA,stroke:#2F4A9E,color:#1B2340,stroke-width:2px
+  classDef compP fill:#FFF4D6,stroke:#B34700,color:#6B4200,stroke-width:3px,stroke-dasharray:7 4
+  classDef compR fill:#F3F5FA,stroke:#2F4A9E,color:#1B2340,stroke-width:2px,stroke-dasharray:2 3
+  classDef datos fill:#FFFFFF,stroke:#2F4A9E,color:#1B2340,stroke-width:3px
+  classDef ext fill:#EDEFF5,stroke:#4B5575,color:#1B2340,stroke-width:2px
+  classDef extP fill:#FFF4D6,stroke:#B34700,color:#6B4200,stroke-width:3px,stroke-dasharray:7 4
+  classDef sistema fill:#E8EDFB,stroke:#2F4A9E,color:#1B2340,stroke-width:4px
+
+  ADI["<b>API de diagnósticos</b><br/>[Componente · Rutas /api/v1/empresas/{id}/diagnosticos]<br/>Registrar y consultar diagnósticos<br/>y su evolución"]:::comp
+  PUN["<b>Puntaje y brecha</b><br/>[Componente · Action PHP]<br/>Promedia puntajes y calcula<br/>brecha = 100 − puntaje"]:::comp
+  APR["<b>API de proyectos</b><br/>[Componente · Rutas /api/v1/proyectos*]<br/>Proyectos de aula y consultores"]:::comp
+  PLC["<b>Planes y compromisos</b><br/>[Componente · Rutas /api/v1/planes y /compromisos]<br/>Planes de acción y sus compromisos"]:::comp
+  MCO["<b>Compromisos del emprendedor</b><br/>[Componente · GET y PUT /mi/compromisos]<br/>Ver y actualizar el avance propio"]:::comp
+  VEN["<b>Vencimiento de compromisos</b><br/>[Componente · compromisos:marcar-vencidos]<br/>Recalcula vencidos cada día<br/>a las 06:00"]:::comp
+  EMP["<b>Empresas</b><br/>[Módulo]<br/>Aporta empresa_id"]:::mod
+  PLA["<b>Planificador</b><br/>[Contenedor · schedule:work]<br/>Ejecuta el comando a diario"]:::cont
+  BUS{{"<b>Eventos de dominio</b><br/>[Mecanismo de Laravel]<br/>Lleva los hechos a Gamificacion e Historial"}}:::ext
+  DB[("<b>Base de datos PostgreSQL</b><br/>[Almacén de datos · PostgreSQL 18.6]<br/>Guarda datos, cola y auditoría")]:::datos
+  ADI -->|"Calcula [Action PHP]"| PUN
+  ADI -->|"Inserta diagnosticos [SQL]"| DB
+  ADI -->|"Publica DiagnosticoRegistrado"| BUS
+  ADI -->|"Exige empresa_id [Action pública]"| EMP
+  APR -->|"Exige empresa_id [Action pública]"| EMP
+  APR -->|"Crea el plan [POST /planes]"| PLC
+  PLC -->|"Inserta compromisos [SQL]"| DB
+  PLC -->|"Publica CompromisoCumplido"| BUS
+  MCO -->|"Actualiza avance [PUT /mi/compromisos/{id}]"| PLC
+  PLA -->|"Ejecuta a las 06:00 [comando artisan]"| VEN
+  VEN -->|"Publica CompromisoVencido"| BUS
+  subgraph LEY["Leyenda"]
+    direction LR
+    LG0["Componente decidido"]:::comp
+    LG1["Otro módulo"]:::mod
+    LG2["Otro contenedor"]:::cont
+    LG3{{"Mecanismo de Laravel"}}:::ext
+    LG4[("Almacén de datos")]:::datos
+    LG5["Línea continua: relación decidida · línea discontinua: propuesta o por confirmar"]:::comp
+  end

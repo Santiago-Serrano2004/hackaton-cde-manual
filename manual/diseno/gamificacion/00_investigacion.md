@@ -75,7 +75,7 @@ Contexto fijo: la marca provisional es «CDE · Hilo» (DEC-01), la dirección v
 | Poco riesgo de parecer juego de tablero o infantil (5 = poco riesgo) | 3 | 5 | 2 |
 | **Suma (máximo 35)** | 4+3+4+3+4+2+3 = **23** | 5+4+5+5+5+5+5 = **34** | 1+3+2+4+3+2+2 = **17** |
 
-**Recomendación: B, «El hilo».** Razones: (1) es la única que ya está en el nombre del producto; (2) cada hecho verificable deja **una puntada** visible y permanente, lo que da la sensación de colección sin cifras ni competencia; (3) un hilo no se deshace, así que no hay lenguaje de pérdida; (4) se ilustra con trazos y recuadros a una tinta (barato de implementar); (5) la historia mínima es una «ficción» en el sentido de IG-03 e IG-07, sin personajes. La metáfora A (camino) no se descarta: **la pantalla sigue llamándose «Mi ruta»** y el hilo recorre la ruta; la C se descarta porque «Constructor», «Impulsor» y «Líder» no son plantas y porque un huerto con mascotas es lo que más se acerca a lo infantil.
+**Recomendación: B, «El hilo».** Razones: (1) es la única que ya está en el nombre del producto; (2) cada hecho verificable deja **una puntada** visible y permanente (una baldosa en «Tu hilo»), lo que da la sensación de colección sin cifras ni competencia; (3) un hilo no se deshace, así que no hay lenguaje de pérdida; (4) se ilustra con trazos y recuadros a una tinta (barato de implementar); (5) la historia mínima es una «ficción» en el sentido de IG-03 e IG-07, sin personajes. La metáfora A (camino) no se descarta: **la pantalla sigue llamándose «Mi ruta»** y el hilo recorre la ruta; la C se descarta porque «Constructor», «Impulsor» y «Líder» no son plantas y porque un huerto con mascotas es lo que más se acerca a lo infantil.
 
 ## 4. Animación con propósito
 
@@ -113,7 +113,7 @@ Fuentes (`Manrope`, `Source Sans 3`) e iconos (`lucide` 1.61.0) siguen siendo lo
 | ID | Regla | Origen |
 |---|---|---|
 | RG-01 | Todo punto, nivel o sello nace de un **hecho verificable del sistema**; nada se concede por clics ni por declaración propia | `06` §7.4, IG-05, IG-09 |
-| RG-02 | Una sola metáfora: **el hilo** (puntadas, tramos, sellos); sin mascotas, personajes ni emojis | §3, IG-03, IG-07 |
+| RG-02 | Una sola metáfora: **el hilo** (cada hecho verificado deja una puntada). Los textos conservan los términos de `21_microcopy.md` (nivel, insignia, puntos, misión); sin mascotas, personajes ni emojis | §3, IG-03, IG-07 |
 | RG-03 | La celebración **describe el hecho** («Cumpliste “Actualizar precios”») antes que la cifra (+25) | IG-05 (retroalimentación informativa), IG-09 |
 | RG-04 | La persona controla la intensidad: **Completo, Discreto u Oculto**; la elección se pregunta una vez y se puede cambiar siempre | IG-06, IG-07, AN-04 |
 | RG-05 | **Nunca bloquea**: ninguna celebración impide seguir; toda ventana se cierra con Esc y con un botón | Encargo; WCAG 2.2.2 |

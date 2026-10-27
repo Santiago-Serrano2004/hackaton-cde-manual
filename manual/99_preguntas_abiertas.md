@@ -206,3 +206,13 @@ Resultados completos en `12_verificacion.md`. Ya corregidos en cascada en `03_st
 | C-10 | `cmdk` sin publicar desde mar-2025 | npm; evaluar alternativa en F13/F15 | Julián |
 
 **Sigue `[NO VERIFICADO]` tras F12:** NV-05 (iso.org 403), NV-08 (Ley 1581, sin respuesta), NV-14, NV-18, NV-20, NV-21, NV-23, NV-24, NV-25, las cifras g de NV-16, el OWASP Top 10 2025 de NV-06 y la **instalación real** de los paquetes (descargas de GitHub bloqueadas en la sesión). Plan: §J sin cambios. Estrellas, licencias y últimos commits de GitHub no se pueden leer desde esta sesión (api.github.com devuelve 403): afecta a F15.
+
+### K.2 Contradicciones con v1 introducidas por F13 (`13_diferenciadores.md` §5)
+
+| # | Contradicción | Motivo | Decide |
+|---|---|---|---|
+| C-11 | Reporte: CSV (UTF-8 con BOM) + vista imprimible a PDF en el camino crítico; XLSX y dompdf solo si sobra tiempo (v1: PDF/CSV/XLSX) | Ahorra 0,5 h; CRI-08 solo exige "un clic" | Santiago |
+| C-12 | RF-04 (completitud) sube de Should a Must dentro de D-03 (Nivel 2) | 36 %/37 % de sector/tamaño es el dato fuerte del reto | Equipo |
+| C-13 | RF-27 se queda Should y pasa a Nivel 3 | Costo/valor | Equipo |
+| C-14 | Decisión D-05 de `02` pasa de 3 a 5 diferenciadores + 1 transversal, con niveles y puertas | `13` §4 | Equipo |
+| PA-27 | Pregunta abierta: ¿el CDE usa hoy una paleta/atajos o prefiere menús? ¿Qué indicador quiere ver primero (duplicados, calidad, brechas, recompensas)? | Ordena el Nivel 2 | MP y S preguntan el 28-oct 8:30 |

@@ -1,0 +1,104 @@
+# 11 · C4 nivel 2 · Contenedores
+
+**Qué responde este diagrama.** ¿Qué piezas ejecutables y almacenes forman el sistema y cómo se hablan?
+
+**A quién sirve.** S y J (arquitectura, operación).
+
+![C4 nivel 2 · Contenedores](img/11_c4_contenedores.png)
+
+Descargas: [SVG](img/11_c4_contenedores.svg) · [PNG](img/11_c4_contenedores.png) · [fuente Mermaid](src/11_c4_contenedores.mmd)
+
+## Leyenda de notación
+
+Óvalo oscuro = persona · rectángulo azul grueso = sistema o módulo · rectángulo blanco = contenedor · rectángulo gris-azulado = componente · cilindro = almacén de datos · hexágono gris = sistema externo · borde y línea discontinuos naranja = propuesta de la Ronda 4 sin ratificar · borde punteado = decidido en R3 con alcance recortado. Cada flecha se lee «verbo [protocolo o tecnología]» y va en un solo sentido.
+
+## Cómo leerlo y decisiones
+
+1. La SPA se sirve como archivos estáticos y corre en el navegador; llama a `/api/v1` con token Bearer.
+2. La cola vive en PostgreSQL (`QUEUE_CONNECTION=database`, decisión D-20).
+3. El caché no se dibuja como contenedor: el manual no define ninguno (Q-D2, Q-D17).
+4. El Planificador envía los recordatorios por SMTP; el Worker procesa la cola de la base. Si el comando encola en vez de enviar, cambia la flecha (Q-D13).
+
+## Fuentes en el manual
+
+- `01_trazabilidad.md` §1
+- `03_stack.md` §3 y §5
+- `05_arquitectura.md` §1 y §5
+
+## Preguntas y contradicciones que lo afectan
+
+Ver `99_preguntas_abiertas_diagramas.md`: Q-D2, Q-D12, Q-D13, Q-D15, Q-D17.
+
+## Resultado de la revisión
+
+Ver la fila 11 de `90_verificacion_calidad.md` (lista de 18 puntos de `00_investigacion_metodologia.md` §6).
+
+<details><summary>Fuente Mermaid (GitHub la dibuja sin instalar nada)</summary>
+
+```mermaid
+---
+title: "C4 nivel 2 · Contenedores · Sistema de información del CDE"
+config:
+  theme: base
+  look: classic
+  fontFamily: "Inter, Carlito, Arial, sans-serif"
+  themeVariables:
+    fontFamily: "Inter, Carlito, Arial, sans-serif"
+    fontSize: "16px"
+    lineColor: "#1B2340"
+    primaryTextColor: "#1B2340"
+    primaryColor: "#E8EDFB"
+    primaryBorderColor: "#2F4A9E"
+    edgeLabelBackground: "#F7F4EF"
+    background: "#F7F4EF"
+  flowchart:
+    curve: basis
+    htmlLabels: true
+    wrappingWidth: 330
+    nodeSpacing: 45
+    rankSpacing: 80
+---
+flowchart TB
+  classDef persona fill:#16265C,stroke:#16265C,color:#FFFFFF,stroke-width:2px
+  classDef cont fill:#FFFFFF,stroke:#2F4A9E,color:#1B2340,stroke-width:3px
+  classDef datos fill:#FFFFFF,stroke:#2F4A9E,color:#1B2340,stroke-width:3px
+  classDef externo fill:#EDEFF5,stroke:#4B5575,color:#1B2340,stroke-width:2px
+  classDef propuesto fill:#FFF4D6,stroke:#B34700,color:#6B4200,stroke-width:3px,stroke-dasharray:7 4
+
+  USR(["<b>Usuarios del CDE</b><br/>[Personas · 5 roles]<br/>Administrador, Equipo CDE, Docente,<br/>Estudiante consultor y Emprendedor"]):::persona
+
+  subgraph SIS["Sistema de información del CDE"]
+    PRX["<b>Proxy inverso</b><br/>[Contenedor · Coolify/Traefik/nginx]<br/>Termina HTTPS y reparte<br/>rutas a la SPA y a la API"]:::cont
+    SPA["<b>Aplicación web SPA</b><br/>[Contenedor · React 19.3.1 · Vite 8.3.5 · TypeScript]<br/>Pantallas por rol"]:::cont
+    API["<b>API Laravel</b><br/>[Contenedor · Laravel 13 · PHP 8.4 · php-fpm]<br/>Monolito modular con las<br/>reglas del CDE"]:::cont
+    WRK["<b>Worker de cola</b><br/>[Contenedor · php artisan queue:work]<br/>Procesa los trabajos<br/>en cola"]:::cont
+    PLA["<b>Planificador</b><br/>[Contenedor · php artisan schedule:work]<br/>Dispara las tareas<br/>programadas"]:::cont
+    DB[("<b>Base de datos PostgreSQL</b><br/>[Almacén de datos · PostgreSQL 18.6 · pg_trgm]<br/>Datos, cola y auditoría")]:::datos
+    ALM[("<b>Almacenamiento local</b><br/>[Almacén de datos · Sistema de archivos]<br/>Archivos de importación<br/>y exportación")]:::datos
+  end
+
+  REG{{"<b>Registro mercantil abierto (datos.gov.co)</b><br/>[Sistema externo · propuesta Ronda 4]<br/>Publica la matrícula mercantil<br/>de Confecámaras"}}:::propuesto
+  COR{{"<b>Servicio de correo SMTP</b><br/>[Sistema externo]<br/>Entrega los correos de recordatorio"}}:::externo
+
+  USR -->|"Abre la aplicación [HTTPS]"| PRX
+  PRX -->|"Sirve los archivos estáticos [HTTPS]"| SPA
+  SPA -->|"Llama a /api/v1 [HTTPS · JSON · token Bearer]"| PRX
+  PRX -->|"Reenvía /api/v1/* [proxy → php-fpm]"| API
+  API -->|"Lee y escribe [SQL · pgsql]"| DB
+  API -->|"Guarda archivos [sistema de archivos]"| ALM
+  API -.->|"Consulta por NIT [HTTPS · JSON]"| REG
+  WRK -->|"Toma trabajos [SQL · cola database]"| DB
+  PLA -->|"Programa y lee recordatorios [SQL]"| DB
+  PLA -->|"Envía recordatorios [SMTP]"| COR
+
+  subgraph LEY["Leyenda"]
+    direction LR
+    L1(["Persona"]):::persona
+    L2["Contenedor (aplicación)"]:::cont
+    L3[("Almacén de datos")]:::datos
+    L4{{"Sistema externo"}}:::externo
+    L5{{"Propuesta Ronda 4,<br/>línea discontinua"}}:::propuesto
+  end
+```
+
+</details>

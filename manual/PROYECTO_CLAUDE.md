@@ -51,3 +51,13 @@ Proyecto: sistema de gestión de la información del CDE UNAB con módulo de for
 - Un agente no declara una tarea terminada sin ejecutar los comandos de §9 de su spec y mostrar la salida.
 - Si algo falla dos veces, el agente se detiene y deja el diagnóstico; el humano decide.
 - Versiones instaladas se anotan en `docs/VERSIONES.md`; no se actualizan dependencias durante las 25 h.
+
+## Reglas de la Ronda 3 (plan que cabe; ver `manual/20_plan_que_cabe.md`)
+- **Alcance por variante.** La sección 13 de cada `manual/tareas/T-xx.md` dice qué se construye en la variante A y B, las horas de cada una, la versión recortada («rojo») y la compuerta. Si la sección 13 dice «No se construye», **no se construye** aunque las secciones 1 a 12 la describan. Hasta que el equipo ratifique la variante en T-01 (`docs/DECISIONES.md`), se trabaja en A y se pasa a B solo cuando pasa la compuerta.
+- **Tareas partidas.** T-11a (esquema raíz de `empresas`, catálogos y usuarios con rol) es lo **primero** del día y va a `develop` antes de las 10:45; T-10a/T-10b y T-43a/T-43b se entregan por separado.
+- **Textos.** Todas las cadenas, estados vacíos y errores se copian de `manual/21_microcopy.md` por su clave a un único archivo de textos del frontend; no se escriben mensajes nuevos sin añadirlos allí. Lenguaje inclusivo sin símbolos (`21_microcopy.md` §1).
+- **Catálogos y retos.** Los catálogos se cargan de `manual/21_catalogos.csv` y los casos de demostración de `manual/21_casos_demo.md` (Marcela Rojas empieza con **430** puntos; la empresa protagonista tiene 2 planes). Los retos se agregan con `RetosSeeder`, no con una pantalla.
+- **Seguridad añadida.** CSP en el proxy desde el esqueleto; la exportación CSV antepone `'` a celdas que empiezan por `=`, `+`, `-` o `@`; el botón «Simular paso del tiempo» **no existe**; el QR de asistencia usa un token por evento (sin rotación).
+- **No se agregan funciones.** Quedan aplazadas: calidad de datos (T-18/T-26/T-28), preguntas guiadas y mapa de calor (T-48/T-49), panel ISO y Nivel 3 (T-50..T-54), rachas, cola de validación, importación con mapeo, XLSX, tableros D1–D2, administración de catálogos y de retos en pantalla. T-17, T-19 y T-47 solo en la variante B.
+- **Compuertas.** El tablero de seguimiento y las compuertas G-01..G-10 (`20` §6.3, §11) mandan: si a la hora indicada no está lo pedido, se corta lo indicado sin discusión.
+- **Pausas.** Se cuentan dentro del colchón (`22` §7.3; PA-37).

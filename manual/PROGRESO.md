@@ -42,10 +42,11 @@ Todas las fases F12–F19 completas. Pendiente humano: las 18 decisiones de `IND
 
 ## Ronda 3 (ejecutar con PROMPT_3.md)
 - [x] F20 Plan que cabe (`20_plan_que_cabe.md`)
-- [ ] F21 Contenido de formación y microcopy (`21_contenido_formacion.md`, `21_microcopy.md`)
+- [x] F21 Contenido de formación y microcopy (`21_contenido_formacion.md`, `21_microcopy.md`, `21_catalogos.csv`, `21_casos_demo.md`)
 - [ ] F22 Auditoría adversarial con cinco jurados simulados (`22_auditoria_adversarial.md`)
 - [ ] F23 Contingencias y simulacro (`23_contingencias_y_simulacro.md`)
 - [ ] F24 Cierre e INDEX
 
 ### Notas Ronda 3
 - 2026-10-27 F20: dos variantes que caben. A: 9,5 / 10,25 / 9,25 h (S / J / MP), colchón 3,25 h de equipo; B: 10,5 / 10,25 / 10,75 h con 10 compuertas (G-01..G-10) que la degradan a A. Simulación pareada de 20 000 corridas por sobrecosto medio (supuestos en `20` §9.1): con 20 % de sobrecosto, plan R2 ≈ 27,8, A ≈ 37,0, B ≈ 37,6 de 60; B ≥ A en promedio de 0 % a 40 % de sobrecosto. **Hallazgo:** el sobrecosto domina (≈ −2 a −2,5 pts por +10 %), no la variante; A solo cabe sin cortes con sobrecosto ≤ ≈ 13 %. PA-30 con recomendación R3 lista, **no aplicada** (ratifica T-01); `07`, `14`, `tareas/_INDEX.md` y las 43 specs ampliadas sin tocar las horas v2; `backlog.csv` con columnas `horas_A`, `horas_B`, `variante_R3`, `compuerta_R3`, `nota_R3`. Contradicciones R3: C-26..C-37 y PA-31..PA-33 en `99` §K.9. Trabajo previo al 28 con clasificación Verde/Amarillo/Rojo (`20` §4): +2,5 h de trabajo previo (J 1,0 · MP 1,25 · S 0,25) mueven 1,75 h fuera de la ventana. La simulación se hizo con un script del scratchpad (no está en el repo).
+- 2026-10-27 F21: 7 microlecciones (L1–L7) con texto, misión, desbloqueo y 3–4 preguntas con retroalimentación; microcopy de ≈ 280 cadenas con clave por pantalla, reglas de tono e inclusión; `21_catalogos.csv` (78 filas, 14 catálogos); 7 empresas sintéticas con historial. **Límite declarado:** ninguna tarea construye cuestionarios, así que las preguntas son guion de taller y no suman puntos (se prohibió agregar funciones). Datos factuales (matrícula mercantil, RUT) con fuente secundaria y fecha; los sitios oficiales respondieron 503/404 → NV-27, NV-28. Contradicciones C-38..C-41, PA-34, PA-35 en `99` §K.10. Marcela arranca con 430 puntos para que el cruce al nivel 4 y la insignia *Cumplidor* coincidan.

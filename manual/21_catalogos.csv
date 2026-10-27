@@ -1,0 +1,79 @@
+catalogo,codigo,nombre,orden,origen,nota
+sectores,S01,Alimentos,1,S01-S05 TyC (cifras 28/20/14/11/7 %); S06-S17 PROPUESTA,PA-07: confirmar con el CDE; el TyC dice 17 sectores sin listarlos
+sectores,S02,Comercio,2,S01-S05 TyC (cifras 28/20/14/11/7 %); S06-S17 PROPUESTA,PA-07: confirmar con el CDE; el TyC dice 17 sectores sin listarlos
+sectores,S03,Servicios,3,S01-S05 TyC (cifras 28/20/14/11/7 %); S06-S17 PROPUESTA,PA-07: confirmar con el CDE; el TyC dice 17 sectores sin listarlos
+sectores,S04,Manufactura e Industrial,4,S01-S05 TyC (cifras 28/20/14/11/7 %); S06-S17 PROPUESTA,PA-07: confirmar con el CDE; el TyC dice 17 sectores sin listarlos
+sectores,S05,Turismo,5,S01-S05 TyC (cifras 28/20/14/11/7 %); S06-S17 PROPUESTA,PA-07: confirmar con el CDE; el TyC dice 17 sectores sin listarlos
+sectores,S06,Agroindustria y Agropecuario,6,S01-S05 TyC (cifras 28/20/14/11/7 %); S06-S17 PROPUESTA,PA-07: confirmar con el CDE; el TyC dice 17 sectores sin listarlos
+sectores,S07,Construcción,7,S01-S05 TyC (cifras 28/20/14/11/7 %); S06-S17 PROPUESTA,PA-07: confirmar con el CDE; el TyC dice 17 sectores sin listarlos
+sectores,S08,Educación,8,S01-S05 TyC (cifras 28/20/14/11/7 %); S06-S17 PROPUESTA,PA-07: confirmar con el CDE; el TyC dice 17 sectores sin listarlos
+sectores,S09,Salud y bienestar,9,S01-S05 TyC (cifras 28/20/14/11/7 %); S06-S17 PROPUESTA,PA-07: confirmar con el CDE; el TyC dice 17 sectores sin listarlos
+sectores,S10,Tecnología y TIC,10,S01-S05 TyC (cifras 28/20/14/11/7 %); S06-S17 PROPUESTA,PA-07: confirmar con el CDE; el TyC dice 17 sectores sin listarlos
+sectores,S11,Moda y textil,11,S01-S05 TyC (cifras 28/20/14/11/7 %); S06-S17 PROPUESTA,PA-07: confirmar con el CDE; el TyC dice 17 sectores sin listarlos
+sectores,S12,Transporte y logística,12,S01-S05 TyC (cifras 28/20/14/11/7 %); S06-S17 PROPUESTA,PA-07: confirmar con el CDE; el TyC dice 17 sectores sin listarlos
+sectores,S13,Cultura y entretenimiento,13,S01-S05 TyC (cifras 28/20/14/11/7 %); S06-S17 PROPUESTA,PA-07: confirmar con el CDE; el TyC dice 17 sectores sin listarlos
+sectores,S14,Financiero,14,S01-S05 TyC (cifras 28/20/14/11/7 %); S06-S17 PROPUESTA,PA-07: confirmar con el CDE; el TyC dice 17 sectores sin listarlos
+sectores,S15,Medio ambiente y energía,15,S01-S05 TyC (cifras 28/20/14/11/7 %); S06-S17 PROPUESTA,PA-07: confirmar con el CDE; el TyC dice 17 sectores sin listarlos
+sectores,S16,Artesanías,16,S01-S05 TyC (cifras 28/20/14/11/7 %); S06-S17 PROPUESTA,PA-07: confirmar con el CDE; el TyC dice 17 sectores sin listarlos
+sectores,S17,Otros,17,S01-S05 TyC (cifras 28/20/14/11/7 %); S06-S17 PROPUESTA,PA-07: confirmar con el CDE; el TyC dice 17 sectores sin listarlos
+tamanos,MIC,Micro,1,PROPUESTA,PA-06: criterio de clasificación por confirmar
+tamanos,PEQ,Pequeña,2,PROPUESTA,PA-06: criterio de clasificación por confirmar
+tamanos,MED,Mediana,3,PROPUESTA,PA-06: criterio de clasificación por confirmar
+tamanos,GRA,Grande,4,PROPUESTA,PA-06: criterio de clasificación por confirmar
+ingresos_rangos,I1,Menos de 10 millones COP al año,1,PROPUESTA,El TyC menciona volumen de ingresos sin rangos
+ingresos_rangos,I2,10 a 50 millones,2,PROPUESTA,El TyC menciona volumen de ingresos sin rangos
+ingresos_rangos,I3,50 a 200 millones,3,PROPUESTA,El TyC menciona volumen de ingresos sin rangos
+ingresos_rangos,I4,200 a 1.000 millones,4,PROPUESTA,El TyC menciona volumen de ingresos sin rangos
+ingresos_rangos,I5,Más de 1.000 millones,5,PROPUESTA,El TyC menciona volumen de ingresos sin rangos
+formalizacion,F1,Informal,1,PROPUESTA,Alineado con 04 §3
+formalizacion,F2,Formalización parcial (RUT sin matrícula mercantil),2,PROPUESTA,Alineado con 04 §3
+formalizacion,F3,Matrícula mercantil vigente,3,PROPUESTA,Alineado con 04 §3
+formalizacion,F4,Matrícula mercantil vencida,4,PROPUESTA,Alineado con 04 §3
+relaciones_unab,R1,Estudiante,1,TyC (91/77/17); Externo derivado (312),
+relaciones_unab,R2,Graduado,2,TyC (91/77/17); Externo derivado (312),
+relaciones_unab,R3,Colaborador,3,TyC (91/77/17); Externo derivado (312),
+relaciones_unab,R4,Externo,4,TyC (91/77/17); Externo derivado (312),
+etapas_acompanamiento,A1,Conociéndonos,1,PROPUESTA,La Ruta culmina con el pitch (TyC §5); las etapas intermedias no vienen del TyC
+etapas_acompanamiento,A2,Diagnóstico,2,PROPUESTA,La Ruta culmina con el pitch (TyC §5); las etapas intermedias no vienen del TyC
+etapas_acompanamiento,A3,Plan de acción,3,PROPUESTA,La Ruta culmina con el pitch (TyC §5); las etapas intermedias no vienen del TyC
+etapas_acompanamiento,A4,Ejecución y seguimiento,4,PROPUESTA,La Ruta culmina con el pitch (TyC §5); las etapas intermedias no vienen del TyC
+etapas_acompanamiento,A5,Pitch y cierre,5,PROPUESTA,La Ruta culmina con el pitch (TyC §5); las etapas intermedias no vienen del TyC
+tipos_atencion,T1,Asesoría,1,04 §2.4 (PROPUESTA),Una atención puede existir sin cita
+tipos_atencion,T2,Seguimiento,2,04 §2.4 (PROPUESTA),Una atención puede existir sin cita
+tipos_atencion,T3,Otra,3,04 §2.4 (PROPUESTA),Una atención puede existir sin cita
+tipos_evento,V1,Capacitación,1,"TyC §5 (capacitaciones, eventos, conversatorios, networking)",
+tipos_evento,V2,Evento,2,"TyC §5 (capacitaciones, eventos, conversatorios, networking)",
+tipos_evento,V3,Conversatorio,3,"TyC §5 (capacitaciones, eventos, conversatorios, networking)",
+tipos_evento,V4,Networking,4,"TyC §5 (capacitaciones, eventos, conversatorios, networking)",
+areas_intervencion,D1,Mercadeo,1,D1-D4 TyC; D5-D7 PROPUESTA,
+areas_intervencion,D2,Finanzas,2,D1-D4 TyC; D5-D7 PROPUESTA,
+areas_intervencion,D3,Operaciones,3,D1-D4 TyC; D5-D7 PROPUESTA,
+areas_intervencion,D4,Formalización,4,D1-D4 TyC; D5-D7 PROPUESTA,
+areas_intervencion,D5,Talento humano,5,D1-D4 TyC; D5-D7 PROPUESTA,
+areas_intervencion,D6,Innovación,6,D1-D4 TyC; D5-D7 PROPUESTA,
+areas_intervencion,D7,Gestión comercial,7,D1-D4 TyC; D5-D7 PROPUESTA,
+estados_proyecto,P1,Propuesto,1,PROPUESTA,
+estados_proyecto,P2,En curso,2,PROPUESTA,
+estados_proyecto,P3,Finalizado,3,PROPUESTA,
+estados_proyecto,P4,Cancelado,4,PROPUESTA,
+estados_cita,C1,Solicitada,1,04 §2.4,
+estados_cita,C2,Agendada,2,04 §2.4,
+estados_cita,C3,Realizada,3,04 §2.4,
+estados_cita,C4,Cancelada,4,04 §2.4,
+estados_cita,C5,No asistió,5,04 §2.4,
+estados_compromiso,K1,Pendiente,1,04 §2.3,Vencido se calcula
+estados_compromiso,K2,En curso,2,04 §2.3,Vencido se calcula
+estados_compromiso,K3,Cumplido,3,04 §2.3,Vencido se calcula
+estados_compromiso,K4,Vencido,4,04 §2.3,Vencido se calcula
+estados_compromiso,K5,Cancelado,5,04 §2.3,Vencido se calcula
+modalidades,M1,Presencial,1,04,
+modalidades,M2,Virtual,2,04,
+niveles,N1,Semilla,1,06 §7.2,"Puntos mínimos: 0, 100, 250, 450, 700, 1000"
+niveles,N2,Brote,2,06 §7.2,"Puntos mínimos: 0, 100, 250, 450, 700, 1000"
+niveles,N3,Constructor,3,06 §7.2,"Puntos mínimos: 0, 100, 250, 450, 700, 1000"
+niveles,N4,Impulsor,4,06 §7.2,"Puntos mínimos: 0, 100, 250, 450, 700, 1000"
+niveles,N5,Líder,5,06 §7.2,"Puntos mínimos: 0, 100, 250, 450, 700, 1000"
+niveles,N6,Referente,6,06 §7.2,"Puntos mínimos: 0, 100, 250, 450, 700, 1000"
+insignias,PRIMER_PASO,Primer paso,1,06 §7.2; las 3 de A y B,"Aplazadas: CUENTAS_CLARAS, CONSTANTE, MEJORA_VISIBLE, CONECTOR"
+insignias,CUMPLIDOR,Cumplidor,2,06 §7.2; las 3 de A y B,"Aplazadas: CUENTAS_CLARAS, CONSTANTE, MEJORA_VISIBLE, CONECTOR"
+insignias,APRENDIZ,Aprendiz,3,06 §7.2; las 3 de A y B,"Aplazadas: CUENTAS_CLARAS, CONSTANTE, MEJORA_VISIBLE, CONECTOR"

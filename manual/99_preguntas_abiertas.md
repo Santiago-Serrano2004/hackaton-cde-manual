@@ -291,3 +291,17 @@ Decisiones 11–18 añadidas a `INDEX.md`. Hallazgos de la auditoría: 8 contrad
 | PA-31 | ¿Variante A o B? Recomendación: B con compuertas (`20` §9.5). Por qué bloquea: define el calendario de las 10:30. Opciones: A, B, B sin compuertas (no recomendada) | Decisión de plan | Los tres, en T-01 |
 | PA-32 | ¿Son las actividades «Verde» de `20` §4 compatibles con el TyC §11? Recomendación: sí, declarándolas a las 8:30. Bloquea: P-02, P-03, P-07 se hacen la noche del 27 | Reglas del concurso | CDE |
 | PA-33 | ¿De dónde salen las 3 personas para T-97 (6:30 del 29)? Recomendación: pedirlas a otros equipos o al laboratorio durante la cena del 28 | Sin personas no hay SUS | María Paula |
+
+## K.10 Contradicciones y verificaciones de F21 (`21_*`)
+
+| # | Contradicción / verificación | Motivo | Decide |
+|---|---|---|---|
+| C-38 | Marcela Rojas arranca con **430** puntos, no 435 (`99` C-25, `18` §5, `04` §7.2) | Con 435 el 5.º compromiso a tiempo (insignia *Cumplidor*) no puede coincidir con el cruce al nivel 4 | Julián (T-30) |
+| C-39 | La empresa protagonista tiene 2 planes (6 + 2 compromisos) frente a «1 plan con 6 compromisos» de `04` §7.2 | Necesita 4 compromisos a tiempo antes de la demo y 1 pendiente en vivo | Julián (T-30) |
+| C-40 | La misión «Pitch listo» (`06` §7.3) con insignia queda fuera de A y B | Reto `PITCH_REGISTRADO` no tiene tarea | María Paula |
+| C-41 | `06` §7.4 regla 5 (cola de validación) frente al microcopy `M3.avisar`: la persona emprendedora avisa y el equipo marca | T-43 sin cola en A y B (C-27) | María Paula |
+| NV-27 | Plazo de renovación de la matrícula mercantil (1 ene–31 mar; art. 33 Código de Comercio) | Verificado solo en fuentes secundarias (SIC/INCP/Ámbito Jurídico, 27-oct-2026); secretariasenado.gov.co dio HTTP 503 | CDE (asesor) |
+| NV-28 | RUT: inscripción electrónica y sin costo; base del NIT | Fuente: Bogotá.gov.co y medios (27-oct-2026); dian.gov.co dio HTTP 404 | CDE (asesor) |
+| PA-34 | ¿Cuántas sesiones tiene la Ruta de Acompañamiento? | El TyC no lo dice; la lección L5 no afirma un número | CDE (Q-xx a añadir en `10`) |
+| PA-35 | ¿Los 12 sectores no listados en el TyC coinciden con la clasificación del CDE? | `21_catalogos.csv` los marca `PROPUESTA` (ya PA-07) | CDE |
+

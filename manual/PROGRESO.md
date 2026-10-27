@@ -22,7 +22,7 @@ Marca cada fase al terminarla. Si la sesión se corta, la siguiente retoma desde
 - [x] F13 Factores diferenciadores (`13_diferenciadores.md`)
 - [x] F14 Backlog de funcionalidades (`14_backlog.md`, `backlog.csv`)
 - [x] F15 Frontend: skills, librerías y recursos (`15_frontend_skills_y_ui.md`)
-- [ ] F16 Sistema de diseño y dirección de arte (`16_sistema_de_diseno.md`)
+- [x] F16 Sistema de diseño y dirección de arte (`16_sistema_de_diseno.md`)
 - [ ] F17 Specs autocontenidas por tarea (`tareas/`)
 - [ ] F18 Pitch y demo v2 (`18_pitch_v2.md`)
 - [ ] F19 Kit local y auditoría v2 (`19_kit_local.md`)
@@ -32,3 +32,4 @@ Marca cada fase al terminarla. Si la sesión se corta, la siguiente retoma desde
 - 2026-10-27 F13: 15 candidatos, portafolio 5+1 en niveles con puertas. Costo bruto +6,5 h; ahorros −1,5 h; el balance por persona no cierra si se hace todo (María Paula +3,0 h), por eso Nivel 2 y 3 son condicionales. Contradicciones C-11..C-14 y PA-27 en `99` §K.2. Pendiente de F14: reflejar horas en `07`.
 - 2026-10-27 F14: 48 tareas (33 de v1 + 15 nuevas) y 4 filas futuras en `backlog.csv`; 9 rebanadas; 25/25 historias con tarea; 0 dependencias rotas. Horas reconciliadas en `07` §5.1–5.3. Déficit real con el Núcleo: S 2,5 h, J 3,0 h, MP 2,5 h (C-18 en `99` §K.3). Generado con un script del scratchpad (no está en el repo).
 - 2026-10-27 F15: 11 repos investigados (★ por deps.dev, último commit por clon superficial); 3 skills auditadas e instalables con commit y hash (frontend-design, composition-patterns, ui-ux-pro-max parcial); `web-design-guidelines` rechazada (descarga instrucciones de `main` en cada uso) y su contenido queda como copia fija. 14 entradas de UI compiladas y montadas (pesos gzip medidos). `npx shadcn` no se ejecutó (rechazado por el clasificador de seguridad como código externo no revisado): queda como tarea previa humana de 1,25 h (`15` §7). C-19..C-21, PA-28, NV-26 en `99` §K.4.
+- 2026-10-27 F16: paleta extraída de los XML de los originales (marino/naranja/amarillo/crema; fuentes Arial/Calibri). Dirección recomendada "Hilo de ruta". Contrastes calculados; hallazgo clave: blanco sobre #F47B20 = 2,73:1 (prohibido) y #F47B20 como texto tampoco; se define `--naranja-texto` #B34700. Fuentes Manrope + Source Sans 3 (53,7 KB). C-22 y PA-29 en `99` §K.5; `06` §5 marcado como superado.

@@ -110,7 +110,7 @@ Fila 41 · "Pamaderia Dulce Hogar" ≈ "Panadería Dulce Hogar" (0,82)  [Omitir]
 ```
 (En el CSV de demo los 12 amarillos son los duplicados sembrados; para mostrar errores rojos se puede añadir una variante del archivo con filas inválidas, `PROPUESTA`.)
 
-## 5. Sistema de diseño mínimo (PROPUESTA)
+## 5. Sistema de diseño mínimo (PROPUESTA) — SUPERADO por `16_sistema_de_diseno.md` (Ronda 2, C-22): la paleta de abajo se reemplaza por la derivada de los documentos del CDE
 
 Marca institucional de la UNAB y del CDE: **no se conocen colores/tipografías oficiales** (pregunta PA-20); se propone una paleta neutra sobria. Contrastes calculados con la fórmula de luminancia relativa de WCAG (cálculo propio, 26-oct-2026).
 

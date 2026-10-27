@@ -235,3 +235,10 @@ Resultados completos en `12_verificacion.md`. Ya corregidos en cascada en `03_st
 | C-21 | El ahorro A3 (T-40 de 1,5 a 1,0 h por shadcn/ui) queda condicionado a la prueba previa de `15` §7 | La CLI de shadcn no se pudo ejecutar en esta sesión | María Paula |
 | PA-28 | Pregunta abierta: ¿Python 3 está instalado en los tres portátiles? (la skill `ui-ux-pro-max` lo exige) | Si no, se omite esa skill (Could) | Equipo |
 | NV-26 | `[NO VERIFICADO]` rendimiento (LCP/INP) en el portátil y proyector del laboratorio; hay presupuesto y método, no medición | Sin acceso al hardware | María Paula |
+
+### K.5 Contradicciones y preguntas introducidas por F16 (`16_sistema_de_diseno.md` §15)
+
+| # | Contradicción / pregunta | Motivo | Decide |
+|---|---|---|---|
+| C-22 | La paleta azul genérica de `06` §5 se reemplaza por la derivada de los originales del CDE (marino #16265C, naranja #F47B20, amarillo #FFCC4D, crema #FDEFE2); fuente de documentos: Arial/Calibri, la app usa Manrope y Source Sans 3 | Los XML de los originales traen la paleta; v1 decía que no se conocía | María Paula |
+| PA-29 | ¿El CDE permite usar su paleta (sin logotipo) y entrega manual de marca? Opciones: (a) paleta como inspiración sin logos, (b) pedir manual, (c) paleta neutra. Recomendación: (a) y preguntar el 28-oct. Por qué bloquea: coherencia y permiso | `PROMPT_2` prohíbe logos sin permiso | CDE |

@@ -1,0 +1,39 @@
+---
+title: "Estados · Recordatorio de cita, compromiso o evento · [*] inicio o fin · cada flecha es una transición con su disparador"
+config:
+  theme: base
+  look: classic
+  fontFamily: "Inter, Carlito, Arial, sans-serif"
+  themeVariables:
+    fontFamily: "Inter, Carlito, Arial, sans-serif"
+    fontSize: "16px"
+    lineColor: "#1B2340"
+    primaryTextColor: "#1B2340"
+    primaryColor: "#E8EDFB"
+    primaryBorderColor: "#2F4A9E"
+    edgeLabelBackground: "#F7F4EF"
+    background: "#F7F4EF"
+    stateBkg: "#E8EDFB"
+    stateLabelColor: "#1B2340"
+    transitionColor: "#1B2340"
+    transitionLabelColor: "#1B2340"
+    labelBackgroundColor: "#F7F4EF"
+    noteBkgColor: "#FFF4D6"
+    noteTextColor: "#6B4200"
+    noteBorderColor: "#B34700"
+  state:
+    padding: 12
+---
+stateDiagram-v2
+  direction LR
+  [*] --> pendiente: al agendar (24 h y 1 h antes)
+  pendiente --> enviado: recordatorios:enviar entrega el correo
+  pendiente --> pendiente: falla y reintento a 1, 5 y 15 min
+  pendiente --> fallido: tercer intento fallido
+  enviado --> [*]
+  fallido --> [*]
+  note right of pendiente
+    Si la cita se cancela o se reprograma,
+    los pendientes se cancelan y se recrean
+    (estado de cancelación por definir, Q-D6)
+  end note

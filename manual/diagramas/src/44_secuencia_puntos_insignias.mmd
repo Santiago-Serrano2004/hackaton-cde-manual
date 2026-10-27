@@ -1,0 +1,83 @@
+---
+title: "Secuencia · Puntos e insignias por un hecho real (asistencia a un evento; el compromiso cumplido sigue el mismo camino)"
+config:
+  theme: base
+  look: classic
+  fontFamily: "Inter, Carlito, Arial, sans-serif"
+  themeVariables:
+    fontFamily: "Inter, Carlito, Arial, sans-serif"
+    fontSize: "16px"
+    lineColor: "#1B2340"
+    primaryTextColor: "#1B2340"
+    primaryColor: "#E8EDFB"
+    primaryBorderColor: "#2F4A9E"
+    edgeLabelBackground: "#F7F4EF"
+    background: "#F7F4EF"
+    actorBkg: "#E8EDFB"
+    actorBorder: "#2F4A9E"
+    actorTextColor: "#1B2340"
+    actorLineColor: "#4B5575"
+    signalColor: "#1B2340"
+    signalTextColor: "#1B2340"
+    noteBkgColor: "#FFF4D6"
+    noteTextColor: "#6B4200"
+    noteBorderColor: "#B34700"
+    labelBoxBkgColor: "#E8EDFB"
+    labelBoxBorderColor: "#2F4A9E"
+    labelTextColor: "#1B2340"
+    loopTextColor: "#1B2340"
+    activationBkgColor: "#E8EDFB"
+    activationBorderColor: "#2F4A9E"
+    sequenceNumberColor: "#FFFFFF"
+  sequence:
+    mirrorActors: false
+    wrap: true
+    width: 190
+    actorMargin: 40
+    messageMargin: 36
+    noteMargin: 12
+    useMaxWidth: true
+---
+sequenceDiagram
+  autonumber
+  actor EMP as Emprendedor
+  participant SPA as Aplicación web SPA
+  participant API as API Laravel
+  participant BUS as Eventos de dominio
+  participant ESC as Escuchas de eventos
+  participant PTS as Registro de puntos
+  participant NIV as Niveles e insignias
+  participant DB as Base de datos PostgreSQL
+  EMP->>SPA: Escanea el QR del evento
+  SPA->>API: POST /asistencia/qr con token (HTTPS · JSON · Bearer)
+  alt Código vencido
+    API-->>SPA: 422 Código vencido
+  else Asistencia ya registrada
+    API-->>SPA: 409
+  else Asistencia válida
+    API->>DB: INSERT en asistencias, única por evento y persona (SQL)
+    API->>BUS: Publica AsistenciaRegistrada
+    API-->>SPA: 201
+    BUS->>ESC: Entrega el hecho (listener de Laravel)
+    ESC->>PTS: Evalúa el reto ASISTIR_EVENTO: 30 puntos, máximo 4 al mes
+    alt Reto inactivo o tope mensual alcanzado
+      PTS-->>ESC: No otorga puntos
+    else Otorga puntos
+      PTS->>DB: INSERT en puntos_movimientos, único por persona, reto y referencia (SQL)
+      alt Reintento del mismo hecho
+        DB-->>PTS: Rechaza el duplicado
+        Note over PTS,DB: Sin doble cobro
+      else Primera vez
+        PTS->>NIV: Recalcula el nivel
+        alt Cruza un umbral de nivel
+          NIV->>DB: INSERT en persona_insignias si cumple el criterio (SQL)
+          NIV->>BUS: Publica NivelAlcanzado
+        end
+      end
+    end
+  end
+  EMP->>SPA: Abre Mi camino
+  SPA->>API: GET /mi/progreso (HTTPS · JSON · Bearer)
+  API-->>SPA: 200 con puntos, nivel, insignias y movimientos
+  Note over EMP,SPA: Muestra el aviso +30 con el motivo
+  Note over EMP,DB: Leyenda: flecha continua = petición o paso · flecha discontinua = respuesta · actor = persona · caja amarilla = nota · alt, opt y loop = alternativa, opcional y repetición

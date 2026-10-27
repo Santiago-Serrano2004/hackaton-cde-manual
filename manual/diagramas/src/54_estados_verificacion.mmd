@@ -1,0 +1,38 @@
+---
+title: "Estados · Verificación de un dato o de un resultado: declarado → verificado (propuesta de la Ronda 4) · [*] inicio o fin · cada flecha es una transición con su disparador"
+config:
+  theme: base
+  look: classic
+  fontFamily: "Inter, Carlito, Arial, sans-serif"
+  themeVariables:
+    fontFamily: "Inter, Carlito, Arial, sans-serif"
+    fontSize: "16px"
+    lineColor: "#1B2340"
+    primaryTextColor: "#1B2340"
+    primaryColor: "#E8EDFB"
+    primaryBorderColor: "#2F4A9E"
+    edgeLabelBackground: "#F7F4EF"
+    background: "#F7F4EF"
+    stateBkg: "#E8EDFB"
+    stateLabelColor: "#1B2340"
+    transitionColor: "#1B2340"
+    transitionLabelColor: "#1B2340"
+    labelBackgroundColor: "#F7F4EF"
+    noteBkgColor: "#FFF4D6"
+    noteTextColor: "#6B4200"
+    noteBorderColor: "#B34700"
+  state:
+    padding: 12
+---
+stateDiagram-v2
+  direction LR
+  [*] --> declarado: lo digita, importa o declara una persona
+  [*] --> por_revisar: conflicto, dato incompleto o formato dudoso
+  declarado --> verificado: una persona acepta la propuesta del registro o adjunta soporte
+  verificado --> [*]
+  note right of por_revisar
+    Salidas de por_revisar sin definir (Q-D7)
+  end note
+  note left of verificado
+    Nunca lo asigna el sistema solo
+  end note

@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ficha de empresa · CDE Hilo</title>
+<meta name="description" content="E3 · Ficha 360 con línea de tiempo, diagnóstico y sellos de procedencia">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+</head>
+<body data-estados="vacio,cargando,error,exito">
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+<symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 21-4.34-4.34" />
+  <circle cx="11" cy="11" r="8" /></symbol>
+<symbol id="i-building-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12h4" />
+  <path d="M10 8h4" />
+  <path d="M14 21v-3a2 2 0 0 0-4 0v3" />
+  <path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2" />
+  <path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16" /></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v3" />
+  <path d="M16 2v3" />
+  <rect x="3" y="3" width="18" height="18" rx="2" />
+  <path d="M3 9h18" /></symbol>
+<symbol id="i-calendar-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v3" />
+  <path d="M16 2v3" />
+  <rect x="3" y="3" width="18" height="18" rx="2" />
+  <path d="M3 9h18" />
+  <path d="m9 15 2 2 4-4" /></symbol>
+<symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+  <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+  <circle cx="9" cy="7" r="4" /></symbol>
+<symbol id="i-chart-column" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16" />
+  <path d="M18 17V9" />
+  <path d="M13 17V5" />
+  <path d="M8 17v-3" /></symbol>
+<symbol id="i-upload" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12" />
+  <path d="m17 8-5-5-5 5" />
+  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /></symbol>
+<symbol id="i-shield-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+  <path d="m9 12 2 2 4-4" /></symbol>
+<symbol id="i-circle-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" />
+  <path d="m16 9-5.5 5.5L8 12" /></symbol>
+<symbol id="i-triangle-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" />
+  <path d="M12 9v4" />
+  <path d="M12 17h.01" /></symbol>
+<symbol id="i-circle-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" />
+  <path d="m15 9-6 6" />
+  <path d="m9 9 6 6" /></symbol>
+<symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" />
+  <path d="M12 16v-4" />
+  <path d="M12 8h.01" /></symbol>
+<symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18" />
+  <path d="m6 6 12 12" /></symbol>
+<symbol id="i-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6" /></symbol>
+<symbol id="i-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></symbol>
+<symbol id="i-chevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6" /></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" />
+  <path d="M12 5v14" /></symbol>
+<symbol id="i-git-merge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3" />
+  <circle cx="6" cy="6" r="3" />
+  <path d="M6 21V9a9 9 0 0 0 9 9" /></symbol>
+<symbol id="i-undo-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5" />
+  <path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11" /></symbol>
+<symbol id="i-qr-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="5" height="5" x="3" y="3" rx="1" />
+  <rect width="5" height="5" x="16" y="3" rx="1" />
+  <rect width="5" height="5" x="3" y="16" rx="1" />
+  <path d="M21 16h-3a2 2 0 0 0-2 2v3" />
+  <path d="M21 21v.01" />
+  <path d="M12 7v3a2 2 0 0 1-2 2H7" />
+  <path d="M3 12h.01" />
+  <path d="M12 3h.01" />
+  <path d="M12 16v.01" />
+  <path d="M16 12h1" />
+  <path d="M21 12v.01" />
+  <path d="M12 21v-1" /></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+  <rect x="2" y="4" width="20" height="16" rx="2" /></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.268 21a2 2 0 0 0 3.464 0" />
+  <path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" /></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" /></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" /></symbol>
+<symbol id="i-log-out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 17 5-5-5-5" />
+  <path d="M21 12H9" />
+  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" /></symbol>
+<symbol id="i-settings" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915" />
+  <circle cx="12" cy="12" r="3" /></symbol>
+<symbol id="i-house" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+  <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></symbol>
+<symbol id="i-route" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3" />
+  <path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15" />
+  <circle cx="18" cy="5" r="3" /></symbol>
+<symbol id="i-trophy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14.66V17a1 1 0 0 1-1 1 2 2 0 0 0-2 2v2" />
+  <path d="M14 14.66V17a1 1 0 0 0 1 1 2 2 0 0 1 2 2v2" />
+  <path d="M17.916 10H19.5A2.5 2.5 0 0 0 22 7.5V5a1 1 0 0 0-1-1h-3" />
+  <path d="M4 22h16" />
+  <path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z" />
+  <path d="M6.084 10H4.5A2.5 2.5 0 0 1 2 7.5V5a1 1 0 0 1 1-1h3" /></symbol>
+<symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" />
+  <circle cx="12" cy="8" r="6" /></symbol>
+<symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+  <path d="M7 11V7a5 5 0 0 1 10 0v4" /></symbol>
+<symbol id="i-file-text" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" />
+  <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" /></symbol>
+<symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3" />
+  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+  <path d="m7 10 5 5 5-5" /></symbol>
+<symbol id="i-printer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+  <path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6" />
+  <rect x="6" y="14" width="12" height="8" rx="1" /></symbol>
+<symbol id="i-funnel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z" /></symbol>
+<symbol id="i-clipboard-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+  <path d="M12 11h4" />
+  <path d="M12 16h4" />
+  <path d="M8 11h.01" />
+  <path d="M8 16h.01" /></symbol>
+<symbol id="i-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+  <circle cx="12" cy="10" r="3" /></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" /></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" />
+  <path d="M12 6v6l4 2" /></symbol>
+<symbol id="i-loader-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.219-8.56" /></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />
+  <circle cx="12" cy="12" r="3" /></symbol>
+<symbol id="i-history" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+  <path d="M3 3v5h5" />
+  <path d="M12 7v5l4 2" /></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16" />
+  <path d="M4 12h16" />
+  <path d="M4 19h16" /></symbol>
+<symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" />
+  <path d="m12 5 7 7-7 7" /></symbol>
+<symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></symbol>
+<symbol id="i-list-checks" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5h8" />
+  <path d="M13 12h8" />
+  <path d="M13 19h8" />
+  <path d="m3 17 2 2 4-4" />
+  <path d="m3 7 2 2 4-4" /></symbol>
+<symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" />
+  <circle cx="12" cy="12" r="6" />
+  <circle cx="12" cy="12" r="2" /></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" /></symbol>
+<symbol id="i-database" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3" />
+  <path d="M3 5V19A9 3 0 0 0 21 19V5" />
+  <path d="M3 12A9 3 0 0 0 21 12" /></symbol>
+<symbol id="i-flag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a1 1 0 0 1 .4-.8A6 6 0 0 1 8 2c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0 1 20 4v10a1 1 0 0 1-.4.8A6 6 0 0 1 16 16c-3 0-5-2-8-2a6 6 0 0 0-4 1.528" /></symbol>
+<symbol id="i-diamond" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.7 10.3a2.41 2.41 0 0 0 0 3.41l7.59 7.59a2.41 2.41 0 0 0 3.41 0l7.59-7.59a2.41 2.41 0 0 0 0-3.41l-7.59-7.59a2.41 2.41 0 0 0-3.41 0Z" /></symbol>
+<symbol id="i-square" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" /></symbol>
+<symbol id="i-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /></symbol>
+<symbol id="i-ellipsis" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1" />
+  <circle cx="19" cy="12" r="1" />
+  <circle cx="5" cy="12" r="1" /></symbol>
+<symbol id="i-scan-line" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2" />
+  <path d="M17 3h2a2 2 0 0 1 2 2v2" />
+  <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
+  <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
+  <path d="M7 12h10" /></symbol>
+<symbol id="i-clipboard-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+  <path d="m9 14 2 2 4-4" /></symbol>
+<symbol id="i-hourglass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14" />
+  <path d="M5 2h14" />
+  <path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22" />
+  <path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2" /></symbol>
+<symbol id="i-user-round" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5" />
+  <path d="M20 21a8 8 0 0 0-16 0" /></symbol>
+<symbol id="i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+  <rect width="20" height="14" x="2" y="6" rx="2" /></symbol>
+</svg>
+<a class="saltar" href="#principal">Saltar al contenido principal</a>
+<div class="demo" role="note">Datos sintéticos de demostración. Ninguna persona ni empresa es real.</div>
+<div class="app">
+<aside class="lateral" aria-label="Menú principal"><a class="marca" href="p02-panel.html"><span class="marca-sello" aria-hidden="true">C</span>CDE · Hilo</a><nav class="nav" aria-label="Secciones"><a href="p02-panel.html"><svg class="ic " aria-hidden="true"><use href="#i-house"/></svg><span>Inicio</span></a><a href="p03-busqueda.html" aria-current="page"><svg class="ic " aria-hidden="true"><use href="#i-building-2"/></svg><span>Empresas</span></a><a href="p07-importacion.html"><svg class="ic " aria-hidden="true"><use href="#i-upload"/></svg><span>Importar</span></a><a href="p08-citas.html"><svg class="ic " aria-hidden="true"><use href="#i-calendar"/></svg><span>Citas</span></a><a href="p09-eventos.html"><svg class="ic " aria-hidden="true"><use href="#i-calendar-check"/></svg><span>Eventos</span></a><a href="p10-analisis.html"><svg class="ic " aria-hidden="true"><use href="#i-chart-column"/></svg><span>Análisis</span></a><a href="p13-administracion.html"><svg class="ic " aria-hidden="true"><use href="#i-settings"/></svg><span>Administración</span></a></nav><div class="sep"></div><p class="peq suave" style="padding:8px">Rol de la cuenta: Equipo CDE · Administrador</p></aside>
+<div class="principal">
+<header class="cabecera"><button class="buscador" data-abrir-paleta type="button" aria-label="Buscar"><svg class="ic " aria-hidden="true"><use href="#i-search"/></svg><span class="tx">Busca empresas, eventos o personas</span><kbd>Ctrl + K</kbd></button><span class="sep"></span><button class="btn btn-g btn-icono" data-tema-toggle type="button" aria-label="Cambiar entre tema claro y oscuro" aria-pressed="false"><svg class="ic " aria-hidden="true"><use href="#i-moon"/></svg></button><span class="usuario"><span class="avatar" aria-hidden="true">EC</span><span class="tx">Equipo CDE</span></span></header>
+<main class="contenido" id="principal" tabindex="-1">
+
+<nav aria-label="Ruta de navegación" class="peq" style="margin-bottom:8px"><a href="p03-busqueda.html">← Empresas</a></nav>
+<div class="card" style="margin-bottom:24px"><div class="cab-ficha">
+ <div style="flex:1;min-width:260px"><h1>Panadería Dulce Hogar S.A.S.</h1>
+ <div class="meta"><span>Alimentos</span><span>Micro</span><span>Graduado UNAB</span><span>NIT 999.100.200-0</span><span>Bucaramanga</span></div></div>
+ <div class="fila" style="gap:16px"><span id="anillo-slot"><div class="anillo anillo-sm" role="img" aria-label="Confianza de la ficha: 57"><svg viewBox="0 0 96 96"><circle class="pista" cx="48" cy="48" r="40" fill="none" stroke-width="10"/><circle class="valor" cx="48" cy="48" r="40" fill="none" stroke-width="10" stroke-dasharray="143.3 251.3"/></svg><b>57</b></div></span><div><strong>Confianza de la ficha: <span id="conf-n">57</span></strong><br><span class="peq suave">Ficha completa al 100 %</span></div></div>
+ <div class="fila"><button class="btn btn-s" type="button" data-abrir-dialogo="dlg-reg"><svg class="ic " aria-hidden="true"><use href="#i-database"/></svg>Consultar registro mercantil</button><a class="btn btn-s" href="p05-fusion.html"><svg class="ic " aria-hidden="true"><use href="#i-git-merge"/></svg>Fusionar</a><button class="btn btn-s" type="button"><svg class="ic " aria-hidden="true"><use href="#i-eye"/></svg>Editar</button></div></div>
+ <div class="campos-crit" style="margin-top:16px" role="group" aria-label="Datos críticos con su procedencia"><div class="card" style="padding:12px 16px" id="c-nit"><span class="peq suave">NIT</span><br><strong>999.100.200-0</strong><div style="margin-top:6px" data-slot><button type="button" class="sello sello-declarado" data-sello aria-expanded="false" aria-label="NIT: declarado, origen importación, 10 feb 2026" data-info="Origen: importación · 10 feb 2026 · registrado por Equipo CDE · confirmado por —"><svg class="ic " aria-hidden="true"><use href="#i-user-round"/></svg>Declarado</button></div></div><div class="card" style="padding:12px 16px" id="c-razon"><span class="peq suave">Razón social</span><br><strong>Panadería Dulce Hogar S.A.S.</strong><div style="margin-top:6px" data-slot><button type="button" class="sello sello-declarado" data-sello aria-expanded="false" aria-label="Razón social: declarado, origen importación, 10 feb 2026" data-info="Origen: importación · 10 feb 2026 · registrado por Equipo CDE · confirmado por —"><svg class="ic " aria-hidden="true"><use href="#i-user-round"/></svg>Declarado</button></div></div><div class="card" style="padding:12px 16px" id="c-sector"><span class="peq suave">Sector</span><br><strong>Alimentos</strong><div style="margin-top:6px" data-slot><button type="button" class="sello sello-declarado" data-sello aria-expanded="false" aria-label="Sector: declarado, origen importación, 10 feb 2026" data-info="Origen: importación · 10 feb 2026 · registrado por Equipo CDE · confirmado por —"><svg class="ic " aria-hidden="true"><use href="#i-user-round"/></svg>Declarado</button></div></div><div class="card" style="padding:12px 16px" id="c-tam"><span class="peq suave">Tamaño</span><br><strong>Micro</strong><div style="margin-top:6px" data-slot><button type="button" class="sello sello-declarado" data-sello aria-expanded="false" aria-label="Tamaño: declarado, origen importación, 10 feb 2026" data-info="Origen: importación · 10 feb 2026 · registrado por Equipo CDE · confirmado por —"><svg class="ic " aria-hidden="true"><use href="#i-user-round"/></svg>Declarado</button></div></div><div class="card" style="padding:12px 16px" id="c-form"><span class="peq suave">Formalización</span><br><strong>Matrícula vigente</strong><div style="margin-top:6px" data-slot><button type="button" class="sello sello-declarado" data-sello aria-expanded="false" aria-label="Formalización: declarado, origen digitado, 14 oct 2026" data-info="Origen: digitado · 14 oct 2026 · registrado por Equipo CDE · confirmado por —"><svg class="ic " aria-hidden="true"><use href="#i-user-round"/></svg>Declarado</button></div></div><div class="card" style="padding:12px 16px" id="c-correo"><span class="peq suave">Correo</span><br><strong>marcela.rojas@ejemplo.test</strong><div style="margin-top:6px" data-slot><button type="button" class="sello sello-revisar" data-sello aria-expanded="false" aria-label="Correo: por revisar, origen emprendedor (portal), 20 oct 2026" data-info="Origen: emprendedor (portal) · 20 oct 2026 · registrado por Equipo CDE · confirmado por —"><svg class="ic " aria-hidden="true"><use href="#i-triangle-alert"/></svg>Por revisar</button></div></div></div>
+ <p class="peq suave" style="margin-top:12px">Sellos de muestra del prototipo (DEC-15). Pulsa un sello para ver origen, fecha y quién lo registró. Con la consulta al registro mercantil puedes pasar un dato a «Verificado».</p></div>
+<div class="tabs" role="tablist" aria-label="Secciones de la ficha" data-tabs>
+ <button role="tab" id="t1" aria-controls="p1" aria-selected="true">Línea de tiempo</button><button role="tab" id="t2" aria-controls="p2" aria-selected="false">Diagnósticos</button><button role="tab" id="t3" aria-controls="p3" aria-selected="false">Proyectos</button><button role="tab" id="t4" aria-controls="p4" aria-selected="false">Planes</button><button role="tab" id="t5" aria-controls="p5" aria-selected="false">Citas</button><button role="tab" id="t6" aria-controls="p6" aria-selected="false">Eventos</button><button role="tab" id="t7" aria-controls="p7" aria-selected="false">Contactos</button></div>
+<section role="tabpanel" id="p1" aria-labelledby="t1" tabindex="0" style="padding-top:16px">
+ <div class="dos-col"><div class="card">
+ <div class="fila" style="margin-bottom:12px"><div class="campo" style="min-width:200px"><label for="ftipo">Tipo de hito</label><select id="ftipo"><option value="">Todo</option><option value="cita">Cita</option><option value="comp">Compromiso</option><option value="diag">Diagnóstico</option><option value="proy">Proyecto</option><option value="asis">Asistencia</option></select></div><div class="campo" style="min-width:140px"><label for="fano">Año</label><select id="fano"><option>2026</option></select></div></div>
+ <div class="leyenda" style="margin-bottom:12px"><span><span class="nodo circ"></span>Cita, evento, asistencia</span><span><span class="nodo rombo" style="margin:0 8px 0 4px"></span>Compromiso y plan</span><span><span class="nodo cuad"></span>Diagnóstico</span><span><span class="nodo barra"></span>Proyecto</span><span>Relleno naranja = abierto</span></div>
+ <div class="estado-vista e-error"><div class="banda-error" role="alert"><svg class="ic " aria-hidden="true"><use href="#i-triangle-alert"/></svg><strong>No pudimos cargar el historial. Algo salió mal de nuestro lado. Ya quedó registrado; inténtalo de nuevo en unos minutos.</strong><button class="btn btn-s" type="button" onclick="location.search=location.search.replace(/[?&]estado=[a-z]+/,'')">Reintentar</button></div></div>
+ <div class="estado-vista e-cargando"><div aria-busy="true" role="status"><span class="sr-only">Cargando…</span><div style="display:grid;gap:18px"><div class="esq" style="height:28px"></div><div class="esq" style="height:28px"></div><div class="esq" style="height:28px"></div><div class="esq" style="height:28px"></div><div class="esq" style="height:28px"></div></div></div></div>
+ <div class="estado-vista e-vacio"><div class="vacio"><svg class="ic ic-lg" aria-hidden="true"><use href="#i-history"/></svg><h2 style="font-size:18px">Sin historial</h2><p>Esta empresa todavía no tiene historial. Cada cita, diagnóstico o compromiso aparecerá aquí.</p></div></div>
+ <div class="e-contenido"><ol class="hilo" id="hilo"><li class="hilo-grupo" data-grupo="2026-2" role="presentation">2026-2</li><li class="hito" data-tipo="cita"><span class="nodo circ abierto"></span><span class="hito-fecha">20 oct</span><span><span class="hito-tipo">Cita</span> · Cita agendada para el 27 oct (no realizada) <span class="est est-adv"><svg class="ic " aria-hidden="true"><use href="#i-hourglass"/></svg>Pendiente</span></span></li><li class="hito" data-tipo="comp"><span class="nodo rombo abierto"></span><span class="hito-fecha">14 oct</span><span><span class="hito-tipo">Compromiso vencido</span> · Dos compromisos del plan 1: «Abrir cuenta de WhatsApp Business», «Crear lista de precios impresa» <span class="est est-venc"><svg class="ic " aria-hidden="true"><use href="#i-triangle-alert"/></svg>Vencido</span></span></li><li class="hito" data-tipo="diag"><span class="nodo cuad"></span><span class="hito-fecha">6 oct</span><span><span class="hito-tipo">Diagnóstico</span> · Diagnóstico 3: finanzas 71, mercadeo 52 · +50 </span></li><li class="hito" data-tipo="asis"><span class="nodo circ"></span><span class="hito-fecha">29 sep</span><span><span class="hito-tipo">Asistencia</span> · Sesión de la Ruta de Acompañamiento · +30 </span></li><li class="hito" data-tipo="comp"><span class="nodo rombo"></span><span class="hito-fecha">22 sep</span><span><span class="hito-tipo">Compromiso</span> · «Registrar ventas diarias» cumplido a tiempo · +25 <span class="est est-ok"><svg class="ic " aria-hidden="true"><use href="#i-circle-check"/></svg>Cumplido</span></span></li><li class="hito" data-tipo="asis"><span class="nodo circ"></span><span class="hito-fecha">8 sep</span><span><span class="hito-tipo">Asistencia</span> · Taller de finanzas · +30 </span></li><li class="hito" data-tipo="proy"><span class="nodo barra abierto"></span><span class="hito-fecha">18 ago</span><span><span class="hito-tipo">Proyecto</span> · Proyecto de aula «Finanzas», 2026-2 · plan 2 con 2 compromisos <span class="est est-curso"><svg class="ic " aria-hidden="true"><use href="#i-clock"/></svg>En curso</span></span></li><li class="hilo-grupo" data-grupo="2026-1" role="presentation">2026-1</li><li class="hito" data-tipo="proy"><span class="nodo barra"></span><span class="hito-fecha">10 jun</span><span><span class="hito-tipo">Proyecto</span> · Proyecto de mercadeo finalizado <span class="est est-ok"><svg class="ic " aria-hidden="true"><use href="#i-circle-check"/></svg>Finalizado</span></span></li><li class="hito" data-tipo="diag" hidden><span class="nodo cuad"></span><span class="hito-fecha">28 may</span><span><span class="hito-tipo">Diagnóstico</span> · Diagnóstico 2: finanzas 58, mercadeo 50 (cae) · +50 </span></li><li class="hito" data-tipo="asis" hidden><span class="nodo circ"></span><span class="hito-fecha">14 may</span><span><span class="hito-tipo">Asistencia</span> · Sesión de la Ruta de Acompañamiento · +30 </span></li><li class="hito" data-tipo="comp" hidden><span class="nodo rombo"></span><span class="hito-fecha">5 may</span><span><span class="hito-tipo">Compromiso</span> · «Reunir recibos del mes» cumplido a tiempo · +25 <span class="est est-ok"><svg class="ic " aria-hidden="true"><use href="#i-circle-check"/></svg>Cumplido</span></span></li><li class="hito" data-tipo="comp" hidden><span class="nodo rombo"></span><span class="hito-fecha">15 abr</span><span><span class="hito-tipo">Compromiso</span> · «Definir cliente ideal» cumplido a tiempo · +25 <span class="est est-ok"><svg class="ic " aria-hidden="true"><use href="#i-circle-check"/></svg>Cumplido</span></span></li><li class="hito" data-tipo="comp" hidden><span class="nodo rombo"></span><span class="hito-fecha">2 abr</span><span><span class="hito-tipo">Compromiso</span> · «Publicar en 2 canales» cumplido a tiempo · +25 <span class="est est-ok"><svg class="ic " aria-hidden="true"><use href="#i-circle-check"/></svg>Cumplido</span></span></li><li class="hito" data-tipo="asis" hidden><span class="nodo circ"></span><span class="hito-fecha">27 mar</span><span><span class="hito-tipo">Asistencia</span> · Asistió al taller de marketing digital · +30 </span></li><li class="hito" data-tipo="even" hidden><span class="nodo circ"></span><span class="hito-fecha">20 mar</span><span><span class="hito-tipo">Evento</span> · Inscripción al taller de marketing digital </span></li><li class="hito" data-tipo="cita" hidden><span class="nodo circ"></span><span class="hito-fecha">12 mar</span><span><span class="hito-tipo">Cita</span> · Cita de finanzas realizada · +20 <span class="est est-ok"><svg class="ic " aria-hidden="true"><use href="#i-circle-check"/></svg>Realizada</span></span></li><li class="hito" data-tipo="proy" hidden><span class="nodo barra"></span><span class="hito-fecha">3 mar</span><span><span class="hito-tipo">Proyecto</span> · Proyecto de aula «Mercadeo II», 2026-1, 3 estudiantes consultores </span></li><li class="hito" data-tipo="plan" hidden><span class="nodo rombo"></span><span class="hito-fecha">24 feb</span><span><span class="hito-tipo">Plan</span> · Plan 1 con 6 compromisos </span></li><li class="hito" data-tipo="diag" hidden><span class="nodo cuad"></span><span class="hito-fecha">17 feb</span><span><span class="hito-tipo">Diagnóstico</span> · Diagnóstico 1: total 48 (mercadeo 55, finanzas 35, operaciones 60, formalización 70) · +50 </span></li><li class="hito" data-tipo="punt" hidden><span class="nodo circ"></span><span class="hito-fecha">10 feb</span><span><span class="hito-tipo">Puntos</span> · Ficha básica completa: +40 · insignia Primer paso </span></li><li class="hito" data-tipo="aten" hidden><span class="nodo circ"></span><span class="hito-fecha">10 feb</span><span><span class="hito-tipo">Atención</span> · Primera asesoría (T1) </span></li></ol><button class="btn btn-g" type="button" id="vermas">Ver 13 más</button></div></div>
+ <aside class="pila"><div class="card"><h2 style="font-size:18px">Resumen</h2><ul style="list-style:none;padding:0;margin:0;display:grid;gap:8px"><li><span class="est est-ok"><svg class="ic " aria-hidden="true"><use href="#i-circle-check"/></svg>4 cumplidos a tiempo</span></li><li><span class="est est-venc"><svg class="ic " aria-hidden="true"><use href="#i-triangle-alert"/></svg>2 vencidos</span></li><li><span class="est est-curso"><svg class="ic " aria-hidden="true"><use href="#i-clock"/></svg>2 en curso</span></li></ul><p class="peq suave" style="margin-top:12px">21 hitos · 9 tipos · demo de 29 oct 2026</p></div>
+ <div class="card"><h2 style="font-size:18px">Siguiente en la agenda</h2><p>Cita agendada para el 27 oct <span class="suave">(no realizada antes de la demo)</span></p><a class="btn btn-s" href="p08-citas.html" style="margin-top:8px">Ir a Citas</a></div></aside></div>
+</section>
+<section role="tabpanel" id="p2" aria-labelledby="t2" tabindex="0" hidden style="padding-top:16px"><div class="dos-col"><div class="card"><h2 style="font-size:18px">Evolución por dimensión</h2><div class="fila" style="gap:24px;align-items:flex-start"><svg class="radar" viewBox="-70 0 440 300" role="img" aria-label="Radar de madurez por dimensión. Detalle en la tabla equivalente."><polygon class="rej" points="150.0,125.0 175.0,150.0 150.0,175.0 125.0,150.0"/><polygon class="rej" points="150.0,100.0 200.0,150.0 150.0,200.0 100.0,150.0"/><polygon class="rej" points="150.0,75.0 225.0,150.0 150.0,225.0 75.0,150.0"/><polygon class="rej" points="150.0,50.0 250.0,150.0 150.0,250.0 50.0,150.0"/><line class="eje" x1="150" y1="150" x2="150.0" y2="50.0"/><line class="eje" x1="150" y1="150" x2="250.0" y2="150.0"/><line class="eje" x1="150" y1="150" x2="150.0" y2="250.0"/><line class="eje" x1="150" y1="150" x2="50.0" y2="150.0"/><polygon points="150.0,95.0 185.0,150.0 150.0,210.0 80.0,150.0" fill="none" stroke="#7C84A3" stroke-width="3" stroke-dasharray="6 4" stroke-linejoin="round"/><circle cx="150.0" cy="95.0" r="4" fill="#7C84A3" stroke="var(--superficie)" stroke-width="1.5"/><circle cx="185.0" cy="150.0" r="4" fill="#7C84A3" stroke="var(--superficie)" stroke-width="1.5"/><circle cx="150.0" cy="210.0" r="4" fill="#7C84A3" stroke="var(--superficie)" stroke-width="1.5"/><circle cx="80.0" cy="150.0" r="4" fill="#7C84A3" stroke="var(--superficie)" stroke-width="1.5"/><polygon points="150.0,98.0 221.0,150.0 150.0,214.0 78.0,150.0" fill="color-mix(in srgb, var(--azul) 18%, transparent)" stroke="var(--azul)" stroke-width="3" stroke-dasharray="0" stroke-linejoin="round"/><circle cx="150.0" cy="98.0" r="4" fill="var(--azul)" stroke="var(--superficie)" stroke-width="1.5"/><circle cx="221.0" cy="150.0" r="4" fill="var(--azul)" stroke="var(--superficie)" stroke-width="1.5"/><circle cx="150.0" cy="214.0" r="4" fill="var(--azul)" stroke="var(--superficie)" stroke-width="1.5"/><circle cx="78.0" cy="150.0" r="4" fill="var(--azul)" stroke="var(--superficie)" stroke-width="1.5"/><text x="150.0" y="28.0" text-anchor="middle" dominant-baseline="middle">Mercadeo</text><text x="272.0" y="150.0" text-anchor="start" dominant-baseline="middle">Finanzas</text><text x="150.0" y="272.0" text-anchor="middle" dominant-baseline="middle">Operaciones</text><text x="28.0" y="150.0" text-anchor="end" dominant-baseline="middle">Formalización</text></svg>
+<div style="flex:1 1 280px"><p class="peq suave" style="margin-bottom:8px">Finanzas subió de 35 a 71; mercadeo bajó de 55 a 52 (D1 frente a D3).</p><table class="tabla"><caption class="sr-only">Tabla equivalente del radar</caption><thead><tr><th scope="col">Dimensión</th><th scope="col" class="num">D1</th><th scope="col" class="num">D2</th><th scope="col" class="num">D3</th><th scope="col" class="num">Δ D1→D3</th></tr></thead><tbody><tr><td>Mercadeo</td><td class="num">55</td><td class="num">50</td><td class="num">52</td><td class="num">−3</td></tr><tr><td>Finanzas</td><td class="num">35</td><td class="num">58</td><td class="num">71</td><td class="num">+36</td></tr><tr><td>Operaciones</td><td class="num">60</td><td class="num">62</td><td class="num">64</td><td class="num">+4</td></tr><tr><td>Formalización</td><td class="num">70</td><td class="num">70</td><td class="num">72</td><td class="num">+2</td></tr></tbody></table><p class="peq suave" style="margin-top:8px">D1 17 feb · D2 28 may · D3 6 oct 2026</p></div></div></div>
+<div class="card"><h2 style="font-size:18px">Brechas actuales</h2><div class="barras"><div class="barra"><span>Mercadeo</span><div class="barra-pista"><i style="width:52%"></i></div><span class="num">52</span></div><div class="barra"><span>Operaciones</span><div class="barra-pista"><i style="width:64%"></i></div><span class="num">64</span></div><div class="barra"><span>Finanzas</span><div class="barra-pista"><i style="width:71%"></i></div><span class="num">71</span></div><div class="barra"><span>Formalización</span><div class="barra-pista"><i style="width:72%"></i></div><span class="num">72</span></div></div><p class="peq suave" style="margin-top:12px">Brecha mayor: mercadeo (52). <a href="p10-analisis.html">Ver cómo se compara el sector</a></p></div></div></section>
+<section role="tabpanel" id="p3" aria-labelledby="t3" tabindex="0" hidden style="padding-top:16px"><div class="card plana"><div class="tabla-cont"><table class="tabla tabla-tarjetas"><caption class="sr-only">Proyectos de aula</caption><thead><tr><th scope="col">Proyecto</th><th scope="col">Periodo</th><th scope="col">Área</th><th scope="col">Estado</th></tr></thead><tbody><tr><td data-et="Proyecto">Mercadeo II</td><td data-et="Periodo">2026-1</td><td data-et="Área">Mercadeo</td><td data-et="Estado"><span class="est est-ok"><svg class="ic " aria-hidden="true"><use href="#i-circle-check"/></svg>Finalizado</span></td></tr><tr><td data-et="Proyecto">Finanzas</td><td data-et="Periodo">2026-2</td><td data-et="Área">Finanzas</td><td data-et="Estado"><span class="est est-curso"><svg class="ic " aria-hidden="true"><use href="#i-clock"/></svg>En curso</span></td></tr></tbody></table></div></div></section>
+<section role="tabpanel" id="p4" aria-labelledby="t4" tabindex="0" hidden style="padding-top:16px"><div class="card plana"><div class="tabla-cont"><table class="tabla tabla-tarjetas"><caption class="sr-only">Compromisos de los planes</caption><thead><tr><th scope="col">Compromiso</th><th scope="col">Plan</th><th scope="col">Fecha límite</th><th scope="col">Estado</th></tr></thead><tbody>
+<tr><td data-et="Compromiso">Actualizar precios</td><td data-et="Plan">1</td><td data-et="Fecha límite">31 oct 2026</td><td data-et="Estado"><span class="est est-curso"><svg class="ic " aria-hidden="true"><use href="#i-clock"/></svg>En curso</span></td></tr>
+<tr><td data-et="Compromiso">Abrir cuenta de WhatsApp Business</td><td data-et="Plan">1</td><td data-et="Fecha límite">Vencida</td><td data-et="Estado"><span class="est est-venc"><svg class="ic " aria-hidden="true"><use href="#i-triangle-alert"/></svg>Vencido</span></td></tr>
+<tr><td data-et="Compromiso">Crear lista de precios impresa</td><td data-et="Plan">1</td><td data-et="Fecha límite">Vencida</td><td data-et="Estado"><span class="est est-venc"><svg class="ic " aria-hidden="true"><use href="#i-triangle-alert"/></svg>Vencido</span></td></tr>
+<tr><td data-et="Compromiso">Registrar ventas diarias</td><td data-et="Plan">2</td><td data-et="Fecha límite">22 sep 2026</td><td data-et="Estado"><span class="est est-ok"><svg class="ic " aria-hidden="true"><use href="#i-circle-check"/></svg>Cumplido</span></td></tr>
+<tr><td data-et="Compromiso">Calcular margen por producto</td><td data-et="Plan">2</td><td data-et="Fecha límite">—</td><td data-et="Estado"><span class="est est-curso"><svg class="ic " aria-hidden="true"><use href="#i-clock"/></svg>En curso</span></td></tr></tbody></table></div></div><p class="peq suave" style="margin-top:8px">Las fechas límite de los vencidos y «Calcular margen» no están definidas en 21_casos_demo; el seeder las fija (DEC-16).</p></section>
+<section role="tabpanel" id="p5" aria-labelledby="t5" tabindex="0" hidden style="padding-top:16px"><div class="card plana"><div class="tabla-cont"><table class="tabla tabla-tarjetas"><caption class="sr-only">Citas</caption><thead><tr><th scope="col">Fecha</th><th scope="col">Tema</th><th scope="col">Estado</th></tr></thead><tbody><tr><td data-et="Fecha">27 oct 2026</td><td data-et="Tema">Finanzas</td><td data-et="Estado"><span class="est est-adv"><svg class="ic " aria-hidden="true"><use href="#i-hourglass"/></svg>Agendada</span></td></tr><tr><td data-et="Fecha">12 mar 2026</td><td data-et="Tema">Finanzas</td><td data-et="Estado"><span class="est est-ok"><svg class="ic " aria-hidden="true"><use href="#i-circle-check"/></svg>Realizada</span></td></tr></tbody></table></div></div></section>
+<section role="tabpanel" id="p6" aria-labelledby="t6" tabindex="0" hidden style="padding-top:16px"><div class="card plana"><div class="tabla-cont"><table class="tabla tabla-tarjetas"><caption class="sr-only">Eventos</caption><thead><tr><th scope="col">Evento</th><th scope="col">Fecha</th><th scope="col">Resultado</th></tr></thead><tbody><tr><td data-et="Evento">Sesión de la Ruta de Acompañamiento</td><td data-et="Fecha">29 sep 2026</td><td data-et="Resultado"><span class="est est-ok"><svg class="ic " aria-hidden="true"><use href="#i-circle-check"/></svg>Asistió</span></td></tr><tr><td data-et="Evento">Taller de finanzas</td><td data-et="Fecha">8 sep 2026</td><td data-et="Resultado"><span class="est est-ok"><svg class="ic " aria-hidden="true"><use href="#i-circle-check"/></svg>Asistió</span></td></tr><tr><td data-et="Evento">Sesión de la Ruta de Acompañamiento</td><td data-et="Fecha">14 may 2026</td><td data-et="Resultado"><span class="est est-ok"><svg class="ic " aria-hidden="true"><use href="#i-circle-check"/></svg>Asistió</span></td></tr><tr><td data-et="Evento">Taller de marketing digital</td><td data-et="Fecha">27 mar 2026</td><td data-et="Resultado"><span class="est est-ok"><svg class="ic " aria-hidden="true"><use href="#i-circle-check"/></svg>Asistió</span></td></tr></tbody></table></div></div></section>
+<section role="tabpanel" id="p7" aria-labelledby="t7" tabindex="0" hidden style="padding-top:16px"><div class="card plana"><div class="tabla-cont"><table class="tabla tabla-tarjetas"><caption class="sr-only">Contactos</caption><thead><tr><th scope="col">Persona</th><th scope="col">Rol</th><th scope="col">Acceso</th></tr></thead><tbody><tr><td data-et="Persona">Marcela Rojas</td><td data-et="Rol">Propietaria</td><td data-et="Acceso"><span class="est est-ok"><svg class="ic " aria-hidden="true"><use href="#i-circle-check"/></svg>Con acceso</span></td></tr><tr><td data-et="Persona">Julio Prada</td><td data-et="Rol">Panadero (contacto)</td><td data-et="Acceso"><span class="est est-neu"><svg class="ic " aria-hidden="true"><use href="#i-circle"/></svg>Sin acceso</span></td></tr></tbody></table></div></div></section>
+<dialog id="dlg-reg" aria-labelledby="dr-t" style="width:min(680px,calc(100vw - 32px))"><h2 id="dr-t">Consultar registro mercantil</h2>
+<p class="peq suave" style="margin-bottom:12px">Opción O-1 (<code>PROPUESTA</code>, RF-32). Ejemplo con una consulta guardada de antemano (RNF-07). Si el registro no responde, el resto de la ficha sigue funcionando (RNF-19).</p>
+<div class="tabla-cont"><table class="tabla"><caption class="sr-only">Lo que tenemos y lo que dice el registro</caption><thead><tr><th scope="col">Dato</th><th scope="col">Lo que tenemos</th><th scope="col">Lo que dice el registro</th><th scope="col">Acción</th></tr></thead><tbody>
+<tr id="fila-reg"><td>Formalización</td><td>Matrícula vigente (declarada)</td><td>Matrícula activa, renovada en 2026 → vigente</td><td><button class="btn btn-p" type="button" id="aceptar-reg">Aceptar</button> <button class="btn btn-s" type="button" data-cerrar-dialogo>Rechazar</button></td></tr></tbody></table></div>
+<p class="peq suave" style="margin-top:12px">Fuente: Confecámaras, vía datos.gov.co (CC BY-SA 4.0) · consultado el 29 oct 2026.</p>
+<div class="dialogo-acc"><button class="btn btn-s" type="button" data-cerrar-dialogo>Cerrar</button></div></dialog>
+
+</main>
+</div>
+</div>
+<nav class="nav-inf" aria-label="Secciones"><a href="p02-panel.html"><svg class="ic " aria-hidden="true"><use href="#i-house"/></svg><span>Inicio</span></a><a href="p03-busqueda.html" aria-current="page"><svg class="ic " aria-hidden="true"><use href="#i-building-2"/></svg><span>Empresas</span></a><a href="p08-citas.html"><svg class="ic " aria-hidden="true"><use href="#i-calendar"/></svg><span>Citas</span></a><a href="p09-eventos.html"><svg class="ic " aria-hidden="true"><use href="#i-calendar-check"/></svg><span>Eventos</span></a><a href="p10-analisis.html"><svg class="ic " aria-hidden="true"><use href="#i-chart-column"/></svg><span>Análisis</span></a></nav>
+<div class="velo" aria-hidden="false"><div class="paleta" role="dialog" aria-modal="true" aria-label="Búsqueda global"><div class="paleta-in"><svg class="ic " aria-hidden="true"><use href="#i-search"/></svg><input type="text" role="combobox" aria-expanded="true" aria-controls="paleta-lista" aria-autocomplete="list" aria-label="Buscar" placeholder="Busca empresas, eventos o personas" autocomplete="off"><kbd>Esc</kbd></div><ul id="paleta-lista" role="listbox" aria-label="Resultados"></ul><div class="paleta-pie"><span><kbd>↑</kbd> <kbd>↓</kbd> moverse</span><span><kbd>↵</kbd> abrir historial</span><span><kbd>Ctrl + K</kbd> cerrar</span><span id="paleta-estado" role="status" class="sr-only"></span></div></div></div>
+<div id="anuncio" class="sr-only" role="status" aria-live="polite"></div>
+<script src="js/datos.js"></script>
+<script src="js/app.js"></script>
+<script>
+const lis=[...document.querySelectorAll("#hilo .hito")]; let todo=false;
+function filtrar(){const t=document.getElementById("ftipo").value;lis.forEach((li,i)=>{const okt=!t||li.dataset.tipo===t;li.hidden=!okt||(!todo&&!t&&i>=8);});
+ document.querySelectorAll("#hilo .hilo-grupo").forEach(g=>{let n=g.nextElementSibling,vis=false;while(n&&n.classList.contains("hito")){if(!n.hidden)vis=true;n=n.nextElementSibling;}g.hidden=!vis;});
+ document.getElementById("vermas").hidden=!!t||todo;}
+document.getElementById("ftipo").addEventListener("change",filtrar);
+document.getElementById("vermas").addEventListener("click",()=>{todo=true;filtrar();document.getElementById("anuncio").textContent="Se muestran los 21 hitos.";});
+filtrar();
+document.getElementById("aceptar-reg").addEventListener("click",()=>{
+  const c=document.querySelector("#c-form [data-slot]");
+  c.innerHTML='<button type="button" class="sello sello-verificado" data-sello aria-expanded="false" aria-label="Formalización: verificado, origen registro mercantil, 29 oct 2026" data-info="Origen: registro mercantil · 29 oct 2026 · registrado por Equipo CDE · confirmado por Equipo CDE"><svg class="ic" aria-hidden="true"><use href="#i-shield-check"/></svg>Verificado</button>';
+  const n=57+6; document.getElementById("conf-n").textContent=n; document.querySelector("#anillo-slot .anillo").setAttribute("aria-label","Confianza de la ficha: "+n);
+  document.querySelector("#anillo-slot b").textContent=n; document.querySelector("#anillo-slot .valor").setAttribute("stroke-dasharray",(2*3.14159*40*n/100).toFixed(1)+" "+(2*3.14159*40).toFixed(1));
+  document.getElementById("dlg-reg").close(); toast("Aceptado: formalización verificada con origen registro mercantil. Confianza de la ficha: "+n+".","ok");
+});
+</script>
+</body>
+</html>

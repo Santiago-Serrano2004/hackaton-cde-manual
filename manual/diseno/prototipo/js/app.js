@@ -21,8 +21,8 @@ window.ICONOS=window.ICONOS||"";
   const estados=(document.body.dataset.estados||"").split(",").filter(Boolean);
   const est=estados.includes(q.get("estado"))?q.get("estado"):"exito";
   document.body.setAttribute("data-estado",est);
-  if(estados.length){
-    const nom={vacio:"Vacío",cargando:"Cargando",error:"Error",exito:"Éxito"};
+  if(estados.length&&q.get("barra")!=="0"){
+    const nom={vacio:"Vacío",cargando:"Cargando",error:"Error",exito:"Éxito",bloqueo:"Bloqueo"};
     const nav=document.createElement("nav"); nav.className="estados"; nav.setAttribute("aria-label","Estados de la pantalla (solo prototipo)");
     nav.innerHTML="<span>Estado</span>"+estados.map(s=>{const u=new URLSearchParams(location.search);u.set("estado",s);return `<a href="?${u}" ${s===est?'aria-current="true"':""}>${nom[s]}</a>`}).join("");
     document.body.appendChild(nav);
@@ -133,4 +133,15 @@ window.ICONOS=window.ICONOS||"";
     document.body.appendChild(pop); b.setAttribute("aria-expanded","true"); abierto={btn:b,pop};
   });
   document.addEventListener("keydown",e=>{if(e.key==="Escape"&&abierto)cerrar();});
+})();
+
+/* Estados simulados de la paleta: ?paleta_estado=cargando|error */
+(function(){
+  const q=new URLSearchParams(location.search), e=q.get("paleta_estado"); if(!e) return;
+  addEventListener("load",()=>{
+    const v=document.querySelector(".velo"); if(!v) return; v.classList.add("abierto");
+    const ul=v.querySelector("ul");
+    if(e==="cargando") ul.innerHTML='<li role="presentation" style="padding:16px"><div class="esq" style="height:6px;margin-bottom:12px" aria-hidden="true"></div><span role="status">Buscando…</span></li>';
+    if(e==="error") ul.innerHTML='<li role="presentation" style="padding:16px"><div class="banda-error" role="alert"><strong>No pudimos buscar.</strong><button class="btn btn-s" type="button">Reintentar</button></div></li>';
+  });
 })();

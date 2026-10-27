@@ -12,7 +12,7 @@ window.DATOS = {
     {id:"c7", nombre:"Datos al Día S.A.S.", nit:"999.780.844-1", sector:"Tecnología y TIC", tam:"Mediana", rel:"Graduado UNAB", mun:"Bucaramanga", form:"Matrícula vigente", compl:100, venc:0, ult:"21 oct 2026"}
   ],
   /* Estados de procedencia de ejemplo (PROPUESTA de muestra; V=verificado, D=declarado, R=por revisar, 0=sin dato). Orden: nit, sector, razón social, tamaño, formalización, correo. */
-  prov: {c1:"VVVDVD",c2:"DVDDDD",c3:"VVVDVD",c4:"DDVDRR",c5:"0DD0DR",c6:"DDD0DD",c7:"VVVVVD"},
+  prov: {c1:"DDDDDR",c2:"DDDD0D",c3:"DDDDDD",c4:"DDRDRD",c5:"0DD0DR",c6:"DDD0DD",c7:"DDDDDD"},
   personas: [
     {id:"p1", nombre:"Marcela Rojas", rol:"Propietaria · Dulce Hogar", emp:"c1"},
     {id:"p2", nombre:"Julio Prada", rol:"Contacto · Dulce Hogar", emp:"c1"},
@@ -69,4 +69,4 @@ window.dvNit = base => {
 };
 
 /* confianza_ficha (RF-48): pesos nit .25, sector .20, razón social .15, tamaño .15, formalización .15, correo .10; V 1,0 · D 0,6 · R 0,3. */
-window.confianza = id => { const w=[.25,.20,.15,.15,.15,.10], v={V:1,D:.6,R:.3,"0":0}; const p=DATOS.prov[id]; if(!p) return 0; return Math.round(100*p.split("").reduce((a,c,i)=>a+w[i]*v[c],0)); };
+window.confianza = id => { const w=[25,20,15,15,15,10], v={V:10,D:6,R:3,"0":0}; const p=DATOS.prov[id]; if(!p) return 0; const t=p.split("").reduce((a,c,i)=>a+w[i]*v[c],0); return Math.floor((t+5)/10); };

@@ -257,3 +257,12 @@ Resultados completos en `12_verificacion.md`. Ya corregidos en cascada en `03_st
 - **Recomendación:** opciones 1 + 2 + 3. **Decide:** Santiago, Julián y María Paula en T-01 (se registra en `docs/DECISIONES.md`).
 
 (Si adoptan 1 + 2 + 3, los cambios de responsable y horas se reflejan en `backlog.csv` y `07` antes de las 10:30.)
+
+## K.7 Contradicciones de F18 (`18_pitch_v2.md`)
+
+| # | Contradicción con v1 | Motivo | Decide |
+|---|---|---|---|
+| C-23 | El bloque «Gamificación» del pitch (`09` §5, 2:45–3:15) desaparece; se demuestra dentro de la demo y su tiempo pasa a «Calidad y honestidad» (30 + 15 s) | El TyC pide demostrar el módulo de recompensas dentro de «funcionamiento» | María Paula |
+| C-24 | La demo de 2 min pasa de 5 pasos (`09` §6) a 7 microescenas con tres versiones A/B/C | Portafolio de `13` | Equipo |
+| C-25 | Marcela Rojas arranca con 435 puntos (no 280 como en el wireframe de `06`/`16`) para que el cierre de un compromiso (+25) cruce el Nivel 4 (450) durante la demo | Coherencia de la demo con `06` §7.2 | Julián (T-30) |
+| Q-26..Q-29 | Preguntas nuevas al CDE añadidas en `10` | Ronda 2 | — |

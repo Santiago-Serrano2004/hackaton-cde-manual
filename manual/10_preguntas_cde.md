@@ -61,6 +61,14 @@ Prioridad: **P0** cambia arquitectura o alcance; **P1** cambia pantallas o datos
 | Q-24 | P1 | ¿Qué jurados evalúan qué parte (técnico: ¿el código/arquitectura se revisa?)? ¿Se revisa el repositorio? | Qué mostrar, calidad de commits | Código limpio y CI visible | TyC §7 |
 | Q-25 | P2 | En la sustentación, ¿pueden pedirnos "mostrar" la herramienta con datos reales? ¿Hay restricciones con datos reales? | Datos sintéticos | Todo sintético | RNF-14 |
 
+### Preguntas añadidas en la Ronda 2 (F13–F18)
+| # | Pri. | Pregunta | Decisión que cambia | Defecto | Ref. |
+|---|---|---|---|---|---|
+| Q-26 | P1 | ¿Qué indicador quieren ver primero: duplicados, calidad de los datos (completitud), brechas por sector o recompensas? | Orden del Nivel 2 de `13` §4 (T-18, T-47, T-48/T-49) | Brechas y calidad de datos | PA-27 |
+| Q-27 | P2 | ¿El equipo prefiere atajos de teclado y búsqueda tipo «paleta» (Ctrl+K) o menús tradicionales? | Prioridad de T-17 | Paleta más barra visible | PA-27 |
+| Q-28 | P2 | ¿Podemos usar los colores y tipografías de sus documentos (azul marino, naranja, amarillo) como inspiración, sin logotipo? ¿Hay manual de marca? | `16` §1 y T-40 | Paleta de sus documentos, sin logos | PA-29, PA-20 |
+| Q-29 | P1 | ¿Cuántas horas por semana invierte el equipo en recordatorios, consolidación de datos y reportes? ¿Cuántos reportes y recordatorios hacen al mes? | Cálculo de ahorro del pitch (`18` §10) | «Lo mediremos en el piloto» | RN-06 |
+
 ## 3. Orden sugerido de uso en 90 minutos
 1. Lo que el CDE ya vaya contestando en su presentación: tachar.
 2. Primeras preguntas del equipo (tres, una por persona): **Q-06** (datos reales/hojas), **Q-14** (herramientas existentes), **Q-18** (qué es divertido y para quién).
@@ -69,7 +77,7 @@ Prioridad: **P0** cambia arquitectura o alcance; **P1** cambia pantallas o datos
 5. Resto: llevarlas por escrito al CDE o preguntarlas en V1/V2.
 
 ## 4. Preguntas para las validaciones
-- **V1 (28 a las 17:00):** Q-22 (¿qué debe verse?), Q-18 (¿divertido?), Q-23 (¿criterio prioritario?), "¿Qué falta para que lo usarían el lunes?".
+- **V1 (28 a las 17:00):** Q-26 (¿qué indicador primero?), Q-22 (¿qué debe verse?), Q-18 (¿divertido?), Q-23 (¿criterio prioritario?), "¿Qué falta para que lo usarían el lunes?".
 - **V2 (29 a las 8:00):** "¿Qué le quitarían o agregarían?"; "¿Qué indicador del tablero les sirve más?"; "¿Pilotearían un semestre?" (insumo del cierre del pitch).
 
 ## 5. Qué decisiones se cierran con cada respuesta (resumen)

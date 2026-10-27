@@ -24,7 +24,7 @@ Marca cada fase al terminarla. Si la sesión se corta, la siguiente retoma desde
 - [x] F15 Frontend: skills, librerías y recursos (`15_frontend_skills_y_ui.md`)
 - [x] F16 Sistema de diseño y dirección de arte (`16_sistema_de_diseno.md`)
 - [x] F17 Specs autocontenidas por tarea (`tareas/`)
-- [ ] F18 Pitch y demo v2 (`18_pitch_v2.md`)
+- [x] F18 Pitch y demo v2 (`18_pitch_v2.md`)
 - [ ] F19 Kit local y auditoría v2 (`19_kit_local.md`)
 
 ### Notas Ronda 2
@@ -34,3 +34,4 @@ Marca cada fase al terminarla. Si la sesión se corta, la siguiente retoma desde
 - 2026-10-27 F15: 11 repos investigados (★ por deps.dev, último commit por clon superficial); 3 skills auditadas e instalables con commit y hash (frontend-design, composition-patterns, ui-ux-pro-max parcial); `web-design-guidelines` rechazada (descarga instrucciones de `main` en cada uso) y su contenido queda como copia fija. 14 entradas de UI compiladas y montadas (pesos gzip medidos). `npx shadcn` no se ejecutó (rechazado por el clasificador de seguridad como código externo no revisado): queda como tarea previa humana de 1,25 h (`15` §7). C-19..C-21, PA-28, NV-26 en `99` §K.4.
 - 2026-10-27 F16: paleta extraída de los XML de los originales (marino/naranja/amarillo/crema; fuentes Arial/Calibri). Dirección recomendada "Hilo de ruta". Contrastes calculados; hallazgo clave: blanco sobre #F47B20 = 2,73:1 (prohibido) y #F47B20 como texto tampoco; se define `--naranja-texto` #B34700. Fuentes Manrope + Source Sans 3 (53,7 KB). C-22 y PA-29 en `99` §K.5; `06` §5 marcado como superado.
 - 2026-10-27 F17: 43 specs (todas las Must y Should de `backlog.csv`) + `_PLANTILLA.md` + `_INDEX.md` (orden de ejecución, niveles de dependencia, calendario nominal). Medición real de `pg_trgm` en PostgreSQL 16.15 local (umbrales de duplicados y de búsqueda; `12` §2.5). Hallazgo: el calendario nominal del Núcleo termina ≈ 1,5–2 h después del FF (PA-30 en `99` §K.6, con 4 opciones y recomendación). Specs generadas con un script del scratchpad (no está en el repo). No se escribió código de la aplicación.
+- 2026-10-27 F18: guion de 300 s (suma verificada), demo de 120 s segundo a segundo con plan B por paso, tres versiones A/B/C con regla de decisión a las 7:30, banco de 55 preguntas, argumentos para los 2 jurados de negocio, ensayos R0–R3. Ajuste de coherencia: Marcela Rojas con 435 puntos en el seeder (T-30) y +25 por compromiso (corregido en `16`, T-47). C-23..C-25 y Q-26..Q-29 en `99` §K.7 y `10`.

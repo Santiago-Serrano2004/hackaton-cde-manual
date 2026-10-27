@@ -300,13 +300,13 @@ Todas se muestran en tamaño de proyector (1920×1080 o 1366×768): cuerpo 18 px
  │        asistido acción       finanzas seguimiento           │
  └───────────────────────────────────────────────────────────┘
  Tu siguiente paso            vence en 2 días
- [ Actualizar precios ]  ← cerrar este compromiso da +30 pts
+ [ Actualizar precios ]  ← cerrar este compromiso da +25 pts
  Para ti · Taller de finanzas — "Porque tu mayor brecha es finanzas"
  [ Inscribirme ]
 ```
 - Nodo lleno = hecho (con fecha); nodo con anillo = hoy; nodo vacío = futuro. Todos con contorno `--tinta` de 2 px (misma razón que §9.2). El camino pasa de línea continua (hecho) a punteada (pendiente).
 - Los nodos son **hechos reales** del acompañamiento (asistencia, cumplimiento, ficha), nunca videos vistos.
-- La única coreografía de la app: al cerrar un compromiso, el avance recorre el hilo hasta el siguiente nodo, suben los puntos y se muestra la insignia (≤ 800 ms). Con movimiento reducido: el nodo cambia de estado y un texto anuncia "Compromiso cumplido. +30 puntos".
+- La única coreografía de la app: al cerrar un compromiso, el avance recorre el hilo hasta el siguiente nodo, suben los puntos y se muestra la insignia (≤ 800 ms). Con movimiento reducido: el nodo cambia de estado y un texto anuncia "Compromiso cumplido. +25 puntos".
 - En móvil el hilo es vertical.
 
 ### 9.6 Duplicados lado a lado · `T-19`

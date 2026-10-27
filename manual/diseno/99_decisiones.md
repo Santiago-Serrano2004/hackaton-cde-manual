@@ -24,6 +24,8 @@
 | DEC-14 | El KPI «Empresas nuevas» muestra «—» con la nota «Se calcula con la fecha de inicio de actividad» porque `04` no define el total sembrado | No se inventan cifras; ver PD-03 |
 | DEC-15 | Estados de procedencia de las 7 empresas son de muestra (V/D/R) y la confianza se calcula con los pesos de RF-48 | `21_casos_demo` no define procedencia; `PROPUESTA` de muestra |
 | DEC-16 | Valores de ejemplo del mapa de calor (filas distintas de Alimentos·Finanzas) son del prototipo, no cifras del proyecto; solo «41 empresas afectadas» viene de `18` §5 y se declara «leída del seeder el 29-oct» | Regla «no inventar cifras» |
+| DEC-18 | El estado «por revisar» de un campo se asigna cuando choca con otra fuente (p. ej. B digitado frente a A importado con escritura distinta) y la persona decide en la fusión | `investigacion/06` RF-34 define los tres estados pero no cuándo aparece «por revisar»; `PROPUESTA` |
+| DEC-19 | En las 7 empresas de demostración ningún campo está «verificado» de origen: los NIT sintéticos no existen en el registro mercantil; «Verificado» solo aparece al aceptar una propuesta de RF-32 (consulta guardada de antemano, RNF-07) | Coherencia con RF-32 criterio 2 («No se encontró en el registro abierto») |
 | DEC-17 | El prototipo se entrega como HTML/CSS/JS sin dependencias de red; las fuentes y los iconos van locales | Regla de la misión; `00_investigacion.md` C23 |
 
 ## 2. Contradicciones con el manual
@@ -39,6 +41,7 @@
 | CON-07 | `06` §4 (wireframe E3: completitud 82 %) / `21_casos_demo` (100 %) | Dato distinto para la empresa protagonista | Se usa 100 % de `21_casos_demo` |
 | CON-08 | `21_casos_demo` §2 / RF-36 | NIT del duplicado de C1 `9001002001` frente a `9991002000` | DEC-07 |
 | CON-09 | `RF-48` / `06` §5 | `06` §5 está superado por `16` (C-22); no se usa su paleta | Se usa `16` |
+| CON-11 | `16` §9.5 y `06` §2.2 recomiendan el taller de finanzas «porque tu mayor brecha es finanzas»; `18` §5 dice «brecha mercadeo»; en `21_casos_demo` la dimensión más baja de Marcela es mercadeo (52) y finanzas es 71 | La tarjeta «Para ti» usa los motivos `M5.motivo_sector` y `M5.motivo_etapa`, que no dependen de la brecha |
 | CON-10 | `15` C-21 / `14` T-40 | T-40 = 1,0 h con ahorro de shadcn sin probar frente a 1,5 h sin él | `03_componentes.md` §3 |
 
 ## 3. Preguntas abiertas de diseño
@@ -51,6 +54,7 @@
 | PD-04 | ¿El CDE permite su paleta y un logotipo? | La marca provisional queda como texto | Ver PA-29 | Preguntar el 28-oct | CDE |
 | PD-05 | ¿La tabla de posiciones debe existir? | Puede desmotivar (DI-49 `[NO VERIFICADO]`) | (a) opcional por cohorte; (b) sin tabla | (a) opcional, apagada por defecto | María Paula |
 | PD-06 | ¿Qué valor de coincidencia debe mostrar la paleta? | 0,82 (`16`), 0,77 (`18`), 0,76 (`21`) | Leer del seeder | Leer del seeder el 29-oct | Santiago |
+| PD-08 | E1 (Panel del día) y la interfaz de E15 no tienen tarea propia en `backlog.csv` | Sin tarea nadie las construye | (a) añadir tareas (≈ 0,75 h y ≈ 0,5 h); (b) E1 dentro de T-45 y E15 dentro de T-10 | (b) y confirmar horas el 28-oct | Los tres |
 | PD-07 | ¿Se pueden usar insignias con figuras (libro, escudo, escalones) o debe haber texto sin arte? | Tono sobrio para adultos sin evidencia (DI-48) | (a) con arte; (b) solo texto | (a) y validar con el CDE | CDE |
 
 ## 4. Criterio de aceptación

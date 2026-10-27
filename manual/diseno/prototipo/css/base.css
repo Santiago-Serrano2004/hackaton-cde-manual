@@ -43,7 +43,7 @@ kbd{font:600 13px var(--f-cuerpo);border:1px solid var(--borde);border-radius:4p
 /* botones */
 .btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:var(--e2);min-height:44px;min-width:44px;padding:0 var(--e4);border:1px solid transparent;border-radius:var(--r-ctl);font:700 16px var(--f-cuerpo);cursor:pointer;text-decoration:none;transition:background var(--t-micro) var(--curva-in),transform var(--t-micro) var(--curva-in)}
 .btn-p{background:var(--naranja);color:var(--sobre-naranja)}
-.btn-p:hover{background:#E36F15;color:var(--sobre-naranja)}
+.btn-p:hover{background:#F89241;color:var(--sobre-naranja)}
 :root[data-theme="dark"] .btn-p:hover{background:#FFAD6E}
 .btn-s{background:var(--superficie);color:var(--tinta);border-color:var(--borde)}
 .btn-s:hover{background:var(--papel)}
@@ -340,7 +340,7 @@ dialog h2{margin-bottom:var(--e3)}
 .meta{display:flex;gap:var(--e4);flex-wrap:wrap;color:var(--texto-suave)}
 .meta span{display:inline-flex;gap:6px;align-items:center}
 /* estados forzados solo para la hoja de componentes */
-.btn-p.s-hover{background:#E36F15} :root[data-theme="dark"] .btn-p.s-hover{background:#FFAD6E}
+.btn-p.s-hover{background:#F89241} :root[data-theme="dark"] .btn-p.s-hover{background:#FFAD6E}
 .btn-s.s-hover{background:var(--papel)} .btn-g.s-hover{background:var(--info-bg)}
 .btn.s-foco,.s-foco{outline:3px solid var(--foco);outline-offset:2px}
 .btn.s-activo{transform:translateY(1px)}

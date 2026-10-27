@@ -145,3 +145,12 @@ window.ICONOS=window.ICONOS||"";
     if(e==="error") ul.innerHTML='<li role="presentation" style="padding:16px"><div class="banda-error" role="alert"><strong>No pudimos buscar.</strong><button class="btn btn-s" type="button">Reintentar</button></div></li>';
   });
 })();
+
+/* Regiones desplazables operables con teclado (axe: scrollable-region-focusable) */
+(function(){
+  function marcar(){document.querySelectorAll(".tabla-cont,.visor").forEach(el=>{
+    const sc=el.scrollWidth>el.clientWidth+1||el.scrollHeight>el.clientHeight+1;
+    if(sc){el.tabIndex=0;el.setAttribute("role","region");if(!el.getAttribute("aria-label")){const c=el.querySelector("caption");el.setAttribute("aria-label",(c?c.textContent.trim():"Tabla")+" (desplazable)");}}
+  });}
+  addEventListener("load",marcar);addEventListener("resize",marcar);
+})();

@@ -160,7 +160,7 @@ Criterios de evaluación: **F** = Funcionalidad 60 · **D** = Diferenciador 15 �
 
 | ID | Requisito de diseño | Origen | Evalúa | ISO | Prueba |
 |---|---|---|---|---|---|
-| RD-01 | La persona elige intensidad Completo, Discreto u Oculto; la elección se pregunta una vez y se cambia en dos toques | RF-17, RF-18, DEC-13 | F | CI | `05` T-03; `90` §6 |
+| RD-01 | La persona elige intensidad Completo, Discreto u Oculto; la elección se pregunta una vez y se cambia en dos toques | RF-17, RF-18, DEC-13 | F | CI | `05` PU-T3; `90` §6 |
 | RD-02 | Con `prefers-reduced-motion` el módulo muestra el mismo contenido sin movimiento y sin animaciones en curso | RNF-05, WCAG 2.3.3 (objetivo AAA) | F | CI | `90` §5 (0 animaciones) |
 | RD-03 | Ninguna celebración bloquea: sin modal, Esc cierra, el resto de la página sigue operable | RNF-04 | F | CI | `90` §6 |
 | RD-04 | Cada celebración parte de un hecho verificable y se anuncia una vez con `role="status"` | RF-17, WCAG 4.1.3 | F | CI, FI | `90` §6 |
@@ -172,7 +172,7 @@ Criterios de evaluación: **F** = Funcionalidad 60 · **D** = Diferenciador 15 �
 | RD-10 | El panel del equipo muestra solo agregados y suprime celdas de 1 o 2 personas | RNF-13, `04` §6 | F, N | SE | `90` §6 |
 | RD-11 | Los textos, puntos, niveles y fechas coinciden con `21_contenido_formacion.md` y `21_casos_demo.md` | C-38, C-39 | F | AF | `90` §7 |
 | RD-12 | Cero violaciones de axe-core; Lighthouse de accesibilidad 100; CLS ≤ 0,1 | RNF-05, `15` §8 | F | CI, ED | `90` §2 |
-| RD-13 | La interfaz se entiende sin leer: una persona ajena logra «ver mis puntos y mi próxima insignia» en ≤ 2 min | RNF-04, CRI-09 | F, N | CI | `05` T-01, T-02 |
+| RD-13 | La interfaz se entiende sin leer: una persona ajena logra «ver mis puntos y mi próxima insignia» en ≤ 2 min | RNF-04, CRI-09 | F, N | CI | `05` PU-T1, PU-T2 |
 | RD-14 | Costo declarado en horas y origen del tiempo para cada elemento | `CLAUDE.md` (Ronda 2) | E | MA | §10 |
 
 ## 10. Implementabilidad, tareas, requisitos y horas

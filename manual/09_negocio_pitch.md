@@ -53,6 +53,35 @@ Qué **no** es el diferenciador: tecnología de moda (IA). Se declara como evolu
 
 **Recomendación (PROPUESTA):** arrancar con **D + B** en la UNAB (piloto de un semestre con el CDE) y vender **A + C** a terceros.
 
+### 3.2.1 Modelo elegido: A · Licencia institucional anual (28-oct, decisión del equipo) `PROPUESTA`
+**Unidad de cobro.** Una licencia por institución y por año. El emprendedor no paga nunca. El despliegue es uno por cliente (sin multi-tenant), con su marca, sus catálogos y sus roles.
+
+| Incluye la licencia | No la incluye (se cobra aparte) |
+|---|---|
+| Uso del sistema completo (empresas, citas, eventos, diagnósticos, proyectos, recompensas, reportes) | **Puesta en marcha** (importación de hojas, depuración, capacitación): opción B, pago único |
+| N usuarios del equipo (N a fijar por tramo) y emprendedores ilimitados | **Reportes y tableros para terceros** bajo convenio: opción C, solo agregados |
+| Actualizaciones, correcciones y respaldo | Desarrollos a la medida fuera del catálogo de módulos |
+| Soporte en horario acordado | |
+
+**Tramos por tamaño (a validar).** El valor del cliente crece con las empresas que acompaña: tramo pequeño, mediano y grande según empresas atendidas al año (el CDE UNAB atiende 497). Los cortes y los precios no se fijan hoy: se definen después del piloto y con las cifras de costo de §3.3.
+
+**Equilibrio (sin inventar moneda).** Con `C_fijo` = costo anual de mantener el producto (mantenedor + infraestructura base), `c_var` = costo anual por cliente (servidor, soporte) y `P` = licencia anual media:
+
+`n* = C_fijo / (P − c_var)` instituciones para cubrir costos.
+
+Lectura sin cifras: si `P − c_var` equivale a la mitad de `C_fijo`, el equilibrio son 2 instituciones; a un tercio, 3; a un quinto, 5. Mientras la UNAB no informe el valor hora del mantenedor (Q-29, PA-24), se presenta la fórmula y esta lectura, no un monto. La UNAB, como cliente ancla, cubre la mayor parte de `C_fijo` durante el primer año; cada institución nueva reduce lo que paga la UNAB o financia nuevos módulos.
+
+**Ruta de venta.**
+1. **Cliente ancla: la UNAB.** Piloto de un semestre sin licencia (D + B); al cierre, licencia anual si se cumplen los indicadores de §3.8.
+2. **Primeros terceros:** los CDE vecinos de la red de Santander y otras universidades (`investigacion/04_ruta_comercial.md`), con la UNAB como caso de referencia.
+3. **Después:** incubadoras, cámaras de comercio, alcaldías y fundaciones.
+
+**Evidencia de interés que se busca el 28 a las 17:00 (rúbrica 3.3).** Carta de intención o compromiso del CDE de pasar a licencia anual tras el piloto.
+
+**Riesgos de A.** Ciclo de compras lento en universidades; dependencia de la persona que mantiene el producto; propiedad intelectual sin resolver (PA-36), que condiciona poder licenciar.
+
+**Rúbrica.** Responde a 3.3 (esquema de venta: licencia), 3.4 (costos, ingresos y equilibrio) y 3.2 (ruta por fases con hito: primera licencia pagada).
+
 ### 3.3 Costos operativos (supuestos para hacer cuentas; validar)
 
 > **R3 (J4, 4.1):** fórmula para presentar el costo sin inventar cifras: `costo anual = (horas de mantenimiento por semana × 52 × valor hora que informe la UNAB) + servidor + soporte + cumplimiento de datos`. Hasta tener los valores (Q-29, PA-24), se presenta la fórmula y su variable dominante (las horas de la persona mantenedora).

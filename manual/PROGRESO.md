@@ -85,3 +85,9 @@ Todas las fases F20–F24 completas. Nada de lo propuesto está aplicado: espera
 - Costo (estimación propia, **no medida**): MÍNIMA 1,30 h; ESTÁNDAR 2,85 h; COMPLETA ≈ 6,55 h. Colchón de María Paula: 1,5 h en A y 0 h en B → supuesto S-1 por confirmar al empezar T-44 (`01` §10, PD-G01).
 - Pendiente humano: decidir PD-G01..PD-G08 (`99_decisiones.md`); **hacer la prueba con ≥ 5 personas adultas** (`05_prueba_de_usuario.md`; no hay resultados todavía); lector de pantalla real, Firefox y Safari; medir en el portátil del laboratorio; aplicar los cambios propuestos de `99_cambios.md` §3 si se ratifica.
 - Los generadores de páginas, sprite, capturas y mediciones están en el espacio de trabajo de la sesión (no en el repositorio); el prototipo HTML/CSS/JS sí está en `diseno/gamificacion/prototipo/`.
+
+## Rúbrica oficial (28-oct)
+- [x] F25 Cruce con la rúbrica oficial del jurado (`24_rubrica_oficial.md`)
+
+### Notas
+- 2026-10-28 F25: la rúbrica reparte Funcionalidad en 10 subcriterios ISO/IEC 25010 (14/12/10/5/5/3/3/3/3/2), no en los seis aspectos de 10 puntos que suponían `13` y `20`. Hallazgos: sin evidencia de interés (3.3) y sin punto de equilibrio (3.4) el negocio queda en Satisfactorio como máximo; la validación 1 es hoy a las 17:00 y puntúa «capacidad de ejecución»; la regla del repo público (sin `.md`) choca con «documentación». Preguntas PA-38..PA-41. El estado de lo construido a las 08:40: solo datos (esquema, modelos, normalizador, 98 pruebas); nada demostrable aún. Nada de `20` ni `22` se reescribió; falta rehacer el simulacro de `22` con esta rúbrica.

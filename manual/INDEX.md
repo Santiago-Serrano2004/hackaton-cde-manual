@@ -65,6 +65,7 @@ Manual para construir, sin tomar decisiones adicionales, el sistema de gestión 
 | 23 | `21_contenido_formacion.md`, `21_microcopy.md`, `21_catalogos.csv`, `21_casos_demo.md` | 7 microlecciones, textos de interfaz, catálogos con códigos y 7 casos sintéticos | MP (contenido), J (casos y catálogos) |
 | 24 | `22_auditoria_adversarial.md` | Cinco jurados simulados, contradicciones, riesgos y cronometraje del pitch | Todos |
 | 25 | `23_contingencias_y_simulacro.md` | Árbol de fallos, simulacro de 90 min, lista de las 2 h finales, impresos | Todos |
+| 26 | `24_rubrica_oficial.md` | Rúbrica oficial del jurado (22 subcriterios) cruzada con el producto, el desarrollo y el pitch; hoja de autoevaluación | Todos |
 
 ## Antes del 28-oct (tareas previas, ~4 h en total; ver ajustes de la Ronda 2 abajo)
 1. Verificar lo `[NO VERIFICADO]` según `99` §J (**Ronda 2:** versiones y compatibilidad de paquetes ya verificadas en `12`; queda la instalación real, `12` pasos 1–7, ≈ 30 min).

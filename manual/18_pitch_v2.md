@@ -58,7 +58,7 @@ Voces: **S** técnica (Santiago), **MP** producto y negocio (María Paula), **J*
 | 0:40–2:40 | 120 | S narra · J maneja | **Demo** (§5) | App en vivo |
 | 2:40–3:10 | 30 | S | **Calidad ISO/IEC 25010 con evidencia**: una diapositiva con las 9 características y una evidencia por cada una (`05` §12), y la cifra real de pruebas (`pest` + `vitest`), el 403 de un intento no autorizado y el respaldo restaurado | Slide 4 |
 | 3:10–3:25 | 15 | S | **Qué es real y qué es simulado** (§9): datos sintéticos, correo a buzón de pruebas, 100 % del flujo con base de datos real | Slide 4 (pie) |
-| 3:25–4:15 | 50 | J | **Modelo de negocio y sostenibilidad**: quién paga (UNAB → otras unidades → otras universidades), piloto de un semestre (4+4 semanas + expansión), costos dominantes, tres horizontes, despliegue por institución | Slide 5 |
+| 3:25–4:15 | 50 | J | **Modelo de negocio y sostenibilidad**: quién paga (UNAB → otras unidades → venta a otras entidades interesadas: universidades, incubadoras, cámaras de comercio, alcaldías), piloto de un semestre (4+4 semanas + expansión), costos dominantes, tres horizontes, despliegue por institución | Slide 5 |
 | 4:15–4:45 | 30 | MP | **Diferenciador, posicionamiento y valor para la UNAB**: lo que combina (§8), a quién se dirige, 3 indicadores con línea base 36 %/37 % | Slide 6 |
 | 4:45–5:00 | 15 | Todos | «Le pedimos al CDE un piloto de un semestre.» Gracias | Slide 7 |
 

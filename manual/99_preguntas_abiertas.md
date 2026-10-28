@@ -320,4 +320,7 @@ Decisiones 11–18 añadidas a `INDEX.md`. Hallazgos de la auditoría: 8 contrad
 | RK-1..RK-8 | Ver `22` §7.4 (inyección CSV, límite de login en escena, punto único de falla, red, autocompletado, IP del código, proyector, fusión a las 2:00) | Mitigaciones en `22` | Varios |
 | PA-36 | ¿Quién es dueño del código y se puede declarar el uso de agentes de IA? El TyC no lo dice. Recomendación: preguntar el 28 a las 8:30 y declararlo | Bloquea la respuesta a Q35 y el cierre de negocio | CDE |
 | PA-37 | ¿Las pausas de 10 min cada 90 salen del colchón? Recomendación: sí, y hacerlas en V1, cena y receso cuando se pueda | Define la capacidad efectiva | Los tres, en T-01 |
-
+| PA-38 | La rúbrica oficial (`24`) pide «documentación» (Mantenibilidad, Replicabilidad) pero el repo público no admite `.md`. ¿Se permite un único `README` para el jurado? Recomendación: sí, solo ese archivo; si no, OpenAPI generado y comentarios | Hasta 3 puntos (1.8, 3.1) | Santiago |
+| PA-39 | ¿Qué programa académico cursa cada integrante y qué perfil cubre (tecnología, negocio, usuario y diseño, estrategia y comunicación)? Recomendación: declararlo tal cual en el pitch | Subcriterio 4.1 (3 pts) | Los tres |
+| PA-40 | ¿Qué evidencia de interés se consigue del CDE en la validación 1 (frase, carta de intención, piloto)? Recomendación: pedir una carta o compromiso de piloto el 28 a las 17:00 | Subcriterio 3.3 (4 pts); sin evidencia el máximo es Satisfactorio | Santiago, María Paula |
+| PA-41 | Punto de equilibrio: `09` no lo calcula. Recomendación: calcularlo con los costos de `09` §3.3 y el precio de la opción A, marcado `PROPUESTA` | Subcriterio 3.4 (3 pts) | María Paula |

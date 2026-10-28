@@ -40,7 +40,7 @@ Qué **no** es el diferenciador: tecnología de moda (IA). Se declara como evolu
 |---|---|---|---|
 | **Primario: la UNAB (CDE)** | Presupuesto institucional del CDE/Vicerrectoría | Uso, soporte y evolución del sistema | Ahorra horas operativas, reporta impacto para directivas y convocatorias, retiene emprendedores |
 | **Replicable: otras unidades de la UNAB** | Cada unidad (egresados, investigación, extensión) | Módulos reutilizables (CRM de personas, eventos, recompensas) | Misma base de personas y eventos |
-| **Replicable: otras universidades y centros de emprendimiento** | Cada institución | Instalación + soporte + personalización | Misma problemática: datos dispersos, medir impacto |
+| **Producto vendible: otras entidades interesadas** (universidades, incubadoras, centros de emprendimiento, cámaras de comercio, alcaldías, fundaciones, cooperantes) | Cada entidad | El mismo sistema desplegado con su marca, sus catálogos y sus roles; instalación + soporte + personalización | Misma problemática: datos dispersos, medir impacto y formar a sus emprendedores; evita construir uno propio o pagar un CRM genérico |
 | **Aliados (secundario)** | Cámaras de comercio, alcaldías, cooperantes | Tableros de caracterización/brechas y reportes bajo convenio | Necesitan evidencia del tejido empresarial |
 
 ### 3.2 Opciones de ingreso o ahorro (PROPUESTA)
@@ -72,7 +72,7 @@ Para un equipo de **5** operadores (supuesto): HubSpot Starter ≈ 5 × US$20 ×
 ### 3.5 Escalabilidad (3 horizontes)
 1. **0–6 meses:** CDE UNAB (497 empresas/año). Meta: uso semanal por todo el equipo; reporte de impacto 2026-2 generado sin consolidar a mano.
 2. **6–18 meses:** otras unidades UNAB (egresados, extensión) y segunda sede/ciudad.
-3. **18+ meses:** otras universidades y centros; multi-institución (un despliegue por cliente, no multi-tenant, para no dar riesgo con datos personales) `PROPUESTA`.
+3. **18+ meses:** vender el sistema a otras entidades interesadas (universidades, incubadoras, cámaras de comercio, alcaldías, fundaciones); multi-institución (un despliegue por cliente, no multi-tenant, para no dar riesgo con datos personales) `PROPUESTA`.
 Técnica: monolito modular en contenedores; despliegue por institución; catálogos configurables; importación de hojas.
 
 ### 3.6 Implementación en la UNAB (RN-04)
